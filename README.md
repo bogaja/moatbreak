@@ -1,11 +1,15 @@
 # Moatbreak
 
-Take an existing product apart and plan a better one. Moatbreak is a Claude
+Take an existing product apart and plan a better one. Moatbreak is an agent
 skill for competitor teardowns of apps, SaaS products, websites and online
 shops: it maps what the original does, ranks what its customers complain
 about, measures how close a rebuild is, and gives the new product an identity
 that keeps a safe distance. Built for agencies and founders working in the EU
 and DACH, with English and German throughout.
+
+It uses the open [Agent Skills](https://agentskills.io) format (a `SKILL.md`
+plus plain Python scripts), so it installs into Claude, Codex, Cursor, Gemini
+CLI, GitHub Copilot and other agents that read that format.
 
 ## The four modes
 
@@ -22,6 +26,17 @@ build, parity, then brand and the legal check. Results are written to a
 wrote. For client work there is an offer template and a report outline.
 
 ## Install
+
+### Any agent (skills CLI)
+
+```bash
+npx skills add bogaja/moatbreak
+```
+
+The [skills CLI](https://github.com/vercel-labs/skills) finds the agents you
+have installed (Codex, Cursor, Gemini CLI, GitHub Copilot, Claude Code and
+many more) and installs the skill for each one. Add `-g` to install it for
+your user instead of the current project.
 
 ### claude.ai (upload)
 
@@ -44,8 +59,9 @@ wrote. For client work there is an offer template and a report outline.
 
 ```bash
 git clone https://github.com/bogaja/moatbreak.git
-cp -r moatbreak/skills/moatbreak ~/.claude/skills/      # all your projects
-cp -r moatbreak/skills/moatbreak .claude/skills/        # or one project only
+cp -r moatbreak/skills/moatbreak ~/.claude/skills/      # Claude Code, all your projects
+cp -r moatbreak/skills/moatbreak .claude/skills/        # Claude Code, one project only
+cp -r moatbreak/skills/moatbreak .agents/skills/        # Codex, Cursor and other agents that read .agents/skills
 ```
 
 ## Example prompts
@@ -122,9 +138,13 @@ Onlineshop) und plant ein besseres. Die vier Modi:
 - **brand**: neuer Name mit Markenrecherche (DPMA, EUIPO, TMview), Farbabstand
   zum Original und Restesuche im Code
 
-Berichte und Skripte gibt es auf Deutsch (`--lang de`). Installation wie oben
-beschrieben: als `.skill`-Datei in claude.ai hochladen, als Plugin in Claude
-Code oder den Ordner `skills/moatbreak` nach `~/.claude/skills/` kopieren.
+Berichte und Skripte gibt es auf Deutsch (`--lang de`). Moatbreak nutzt das
+offene Agent-Skills-Format und läuft in Claude, Codex, Cursor, Gemini CLI,
+GitHub Copilot und anderen Agents. Installation wie oben beschrieben: mit
+`npx skills add bogaja/moatbreak` für alle installierten Agents, als
+`.skill`-Datei in claude.ai hochladen, als Plugin in Claude Code oder den
+Ordner `skills/moatbreak` in den Skill-Ordner des Agents kopieren
+(`~/.claude/skills/` oder `.agents/skills/`).
 Moatbreak ist keine Rechtsberatung: Die Checkliste zu UWG, Impressum, DSGVO
 und BFSG zeigt, was ein Anwalt prüfen sollte. Bewertungen, Zahlen oder
 Prüfergebnisse werden nie erfunden.
