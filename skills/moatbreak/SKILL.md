@@ -89,8 +89,8 @@ not just refuse.
   parity of 62 as 62.
 - **Screenshots are reference.** They live in `teardown/screens/`, are used
   to compare layouts, and never go into the product or a public document.
-- **The user decides, buys and signs.** Claude writes names, records,
-  commands and checklists; the user registers domains, enters payment
+- **The user decides, buys and signs.** Write names, records, commands and
+  checklists; the user registers domains, enters payment
   details and files trademarks.
 - **Write deliverables in the user's language.** German user, German
   reports (the scripts take `--lang de`). Keep code identifiers in English.
