@@ -1,0 +1,8 @@
+{
+  "_about": "Read by sweep.py (brand mode) and checked before launch. avoid: the original's names, company names and product names. domains: its domains. colors: its brand colours as hex. near: Delta E below which a colour counts as 'the same colour at a glance' (warning). allow: files where the name is there on purpose (licence attribution, a reviewed comparison page).",
+  "avoid": ["Original Name", "Original Company GmbH"],
+  "domains": ["original.com"],
+  "colors": ["#006bff"],
+  "near": 10,
+  "allow": ["LICENSE", "NOTICE.md"]
+}

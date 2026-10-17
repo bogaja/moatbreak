@@ -1,0 +1,20 @@
+feature,area,priority,original,clone,effort,notes
+Sign up with email or Google,onboarding,must,yes,no,S,
+Connect a calendar to read busy times,onboarding,must,yes,no,L,
+Set weekly availability,availability,must,yes,no,M,
+Create an event type (name length location),event types,must,yes,no,M,
+Public booking page with open slots,booking page,must,yes,no,L,
+Book a slot as a guest without an account,booking page,must,yes,no,M,
+Confirmation email to both sides,notifications,must,yes,no,S,
+Guest can reschedule or cancel from a link,booking page,must,yes,no,M,
+Time zone detection on the booking page,booking page,must,yes,no,S,
+Buffer time before and after meetings,availability,should,yes,no,S,
+Custom questions on the booking form,booking page,should,yes,no,M,
+Email reminders before the meeting,notifications,should,yes,no,S,
+Video link added to the invite,integrations,should,yes,no,M,
+Take payment at booking,payments,should,yes,no,L,
+Team round-robin,team,could,yes,no,L,
+Embed the booking page on a website,sharing,could,yes,no,S,
+Analytics on bookings,analytics,could,yes,no,M,
+Marketplace of third-party apps,integrations,could,yes,skip,,their partner network is not part of the product you can rebuild
+SMS reminders,notifications,should,no,no,M,ours: top request in reviews (see fixes.md)

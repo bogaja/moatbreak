@@ -1,0 +1,23 @@
+{
+  "name": "moatbreak",
+  "description": "Competitor teardown for apps, SaaS, websites and online shops: recon with effort estimate, voice of customer from public reviews, rebuild parity, and a new brand with a distance check. EU/DACH legal checklist, English and German.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bogachan Önal, Bogaja LLC",
+    "url": "https://github.com/bogaja"
+  },
+  "homepage": "https://github.com/bogaja/moatbreak",
+  "repository": "https://github.com/bogaja/moatbreak",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "claude-skills",
+    "competitor-analysis",
+    "teardown",
+    "voice-of-customer",
+    "feature-parity",
+    "branding",
+    "agency",
+    "dach"
+  ]
+}

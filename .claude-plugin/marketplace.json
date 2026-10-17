@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "moatbreak",
+  "description": "Moatbreak: competitor teardown skill for Claude.",
+  "owner": {
+    "name": "Bogaja LLC",
+    "url": "https://github.com/bogaja"
+  },
+  "plugins": [
+    {
+      "name": "moatbreak",
+      "description": "Competitor teardown for apps, SaaS, websites and online shops: recon with effort estimate, voice of customer from public reviews, rebuild parity, and a new brand with a distance check. EU/DACH legal checklist, English and German.",
+      "version": "1.0.0",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/bogaja/moatbreak"
+    }
+  ]
+}
