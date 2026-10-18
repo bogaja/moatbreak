@@ -146,6 +146,17 @@ class MatrixError(Exception):
 
 
 def load(path):
+    try:
+        return _load(path)
+    except UnicodeDecodeError:
+        raise MatrixError(NOT_UTF8 % path)
+
+
+NOT_UTF8 = ("%s is not UTF-8. Excel's 'CSV (Trennzeichen-getrennt)' saves Windows-1252: "
+            "save it again as 'CSV UTF-8 (durch Trennzeichen getrennt)' and run again")
+
+
+def _load(path):
     with open(path, newline="", encoding="utf-8-sig") as fh:
         # German Excel exports use ";". Decide from the header line only.
         header = fh.readline()
@@ -162,6 +173,10 @@ def load(path):
                                   % (path, need))
         rows = []
         for i, raw in enumerate(reader, start=2):
+            if None in raw:   # csv puts the cells beyond the header under None
+                raise MatrixError("%s line %d has more fields than the header; put quote marks "
+                                  "around a cell that contains a comma (\"Note, with a comma\")"
+                                  % (path, i))
             row = {(k or "").strip().lower(): (v or "").strip() for k, v in raw.items()}
             if not row.get("feature"):
                 continue

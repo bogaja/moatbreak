@@ -1,0 +1,10 @@
+{
+  "_about": "Synthetic eval fixture for the Moatbreak evals: ExampleSlot, ExampleSlot GmbH, Slotti and exampleslot.example.com are fictional. avoid, domains and colors describe the original; palette and pairs are the draft of the new product, read by contrast.py.",
+  "avoid": ["ExampleSlot", "ExampleSlot GmbH", "Slotti"],
+  "domains": ["exampleslot.example.com"],
+  "colors": ["#0b6bcb", "#ffd23f"],
+  "near": 10,
+  "allow": [],
+  "palette": {"text": "#1f2937", "muted": "#9ca3af", "bg": "#ffffff", "primary": "#1565c0", "on-primary": "#ffffff"},
+  "pairs": [["text", "bg"], ["muted", "bg"], ["on-primary", "primary"], ["primary", "bg", "ui"]]
+}

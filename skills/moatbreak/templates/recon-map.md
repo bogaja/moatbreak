@@ -11,6 +11,26 @@ Date: {{YYYY-MM-DD}}
 | --- | --- | --- | --- | --- |
 | 1 | help center | | | |
 
+## Messaging
+
+<!-- Quote their claim; never reuse it. Promise type: saves time, saves money,
+more revenue, fewer no-shows or errors, easier, control, trust and
+compliance, or another one, named. -->
+
+| product | hero claim (verbatim) | URL | read on | audience signal | promise type | what it leaves out (need in fixes.md) |
+| --- | --- | --- | --- | --- | --- | --- |
+| | "" | | | | | {{need n | not researched}} |
+
+## Recent moves (last 12 months)
+
+<!-- Only public, dated sources: changelog, pricing page, press page, app store
+version history. A move that touches a verified features.csv row: recheck it.
+A move that closes our gap or copies our differentiator: a threat in the SWOT. -->
+
+| date | what changed | type (price, feature, market, plan, partnership, funding) | link | touches features.csv line |
+| --- | --- | --- | --- | --- |
+| | | | | |
+
 ## Core loop
 
 {{one sentence: the thing customers pay for}}

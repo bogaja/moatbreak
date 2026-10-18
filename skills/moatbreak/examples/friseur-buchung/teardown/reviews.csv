@@ -1,0 +1,43 @@
+fiktiv / synthetic demo data,source,url,date,rating,text
+fiktiv,capterra,https://example.org/capterra/kammfux/101,2026-09-28,5,"Unsere Kundinnen buchen jetzt fast alles über die Buchungsseite, das Telefon klingelt viel seltener. Die Erinnerungen per E-Mail haben die Ausfälle spürbar gesenkt."
+fiktiv,capterra,https://example.org/capterra/kammfux/102,2026-08-14,4,"Gute Software für unseren Salon mit vier Stühlen. Leider kosten die SMS-Erinnerungen extra, das summiert sich."
+fiktiv,capterra,https://example.org/capterra/kammfux/103,2026-06-03,5,"Einrichtung in einem Nachmittag erledigt, der Support war am Telefon sehr geduldig."
+fiktiv,capterra,https://example.org/capterra/kammfux/104,2026-03-11,4,"Der Kalender ist übersichtlich und schnell. Was fehlt: Einwirkzeiten beim Färben, in der Zeit könnte die Kollegin eine andere Kundin schneiden."
+fiktiv,capterra,https://example.org/capterra/kammfux/105,2025-12-02,5,"Seit wir Kammfux nutzen, haben wir den Papierkalender abgeschafft. Wir sind vom Terminbuch zu Kammfux gewechselt und bereuen es nicht."
+fiktiv,capterra,https://example.org/capterra/kammfux/106,2025-10-20,4,"Solide Terminverwaltung. Dass Junior und Senior eigene Preise haben, ist für uns wichtig. Die Auswertungen könnten ausführlicher sein."
+fiktiv,capterra,https://example.org/capterra/kammfux/107,2026-10-05,2,"Zweimal in einem Monat doppelt gebucht, zwei Kundinnen standen gleichzeitig im Laden. Seitdem prüfe ich jeden Morgen den Kalender von Hand."
+fiktiv,capterra,https://example.org/capterra/kammfux/108,2025-07-15,5,Mit der App habe ich meine Termine auch unterwegs im Blick.
+fiktiv,capterra,https://example.org/capterra/kammfux/109,2026-04-22,4,Übersichtlich und stabil. Nur die Kündigungsfrist von drei Monaten zum Laufzeitende finde ich nicht mehr zeitgemäß.
+fiktiv,omr,https://example.org/omr/kammfux/201,2026-09-10,3,"Für einen Friseursalon fehlt mir die Einwirkzeit: Bei Strähnen ist die Kollegin 45 Minuten blockiert, obwohl sie in der Zeit schneiden könnte."
+fiktiv,omr,https://example.org/omr/kammfux/202,2026-07-30,2,"Die Preiserhöhung im Frühjahr kam per E-Mail, mit drei Wochen Vorlauf. Für drei Mitarbeiterinnen zahlen wir jetzt 69 Euro im Monat. Wenn das so weitergeht, werden wir kündigen."
+fiktiv,omr,https://example.org/omr/kammfux/203,2026-02-18,4,"Die Buchungsseite sieht gut aus und lässt sich auf der eigenen Website einbinden. Leider gibt es keine Anzahlung, No-Shows bleiben unser Risiko."
+fiktiv,omr,https://example.org/omr/kammfux/204,2025-11-05,3,"Doppelbuchungen passieren, wenn eine Kundin online bucht und wir gleichzeitig am Telefon einen Termin eintragen."
+fiktiv,omr,https://example.org/omr/kammfux/205,2025-05-20,4,"Gutes Preis-Leistungs-Verhältnis für kleine Salons, aber die Statistik ist sehr einfach."
+fiktiv,omr,https://example.org/omr/kammfux/206,2026-10-01,4,"Wir sind von Strähnwerk zu Kammfux gewechselt, weil die Buchungsseite hier schöner ist."
+fiktiv,omr,https://example.org/omr/kammfux/207,2026-05-12,3,"Der Support antwortet freundlich, aber oft erst nach zwei Tagen. Wenn morgens der Kalender hakt, ist das zu spät."
+fiktiv,omr,,2026-03-30,2,Auf dem iPad ist die Tagesansicht viel zu klein.
+fiktiv,trustpilot,https://example.org/trustpilot/kammfux/301,2026-09-18,1,"Kündigung nur per Brief, und dann wurde trotzdem noch ein Jahr abgebucht. Abzocke."
+fiktiv,trustpilot,https://example.org/trustpilot/kammfux/302,2026-08-02,1,"Support nicht erreichbar, drei E-Mails ohne Antwort. Wir haben gekündigt und sind zu Föhnora gewechselt."
+fiktiv,trustpilot,https://example.org/trustpilot/kammfux/303,2026-06-21,2,"Die SMS-Erinnerungen kosten pro Nachricht extra, das stand nicht klar auf der Preisseite."
+fiktiv,trustpilot,https://example.org/trustpilot/kammfux/304,2026-04-09,1,Two clients booked for the same slot twice this month. Support never replied to my ticket. We moved to Strähnwerk.
+fiktiv,trustpilot,https://example.org/trustpilot/kammfux/305,2026-01-14,2,"Automatisch um ein Jahr verlängert, obwohl ich rechtzeitig gekündigt hatte. Die Erstattung hat sechs Wochen gedauert."
+fiktiv,trustpilot,https://example.org/trustpilot/kammfux/306,2025-09-30,2,Der Preis pro Mitarbeiterin ist für einen kleinen Salon zu hoch. Ich suche eine Alternative.
+fiktiv,trustpilot,https://example.org/trustpilot/kammfux/307,2025-03-25,3,"Grundsätzlich okay, aber die Kündigung war ein Krampf."
+fiktiv,trustpilot,https://example.org/trustpilot/kammfux/308,2026-10-10,2,"Wieder doppelt gebucht. Ich bin zurück zum Papierkalender, da weiß ich wenigstens, was drinsteht."
+fiktiv,google-play,https://example.org/google-play/kammfux/401,2026-09-25,1,"Nach dem Update stürzt die App ab, sobald ich den Wochenkalender öffne."
+fiktiv,google-play,https://example.org/google-play/kammfux/402,2026-09-02,2,App crashes every time I open the week view since the latest update.
+fiktiv,google-play,https://example.org/google-play/kammfux/403,2026-07-22,3,"Termine werden zwischen Handy und PC nicht synchronisiert, manchmal erst nach einer Stunde."
+fiktiv,google-play,https://example.org/google-play/kammfux/404,2026-05-05,2,Die Benachrichtigung über neue Online-Buchungen kommt oft gar nicht.
+fiktiv,google-play,https://example.org/google-play/kammfux/405,2026-03-02,4,"Praktisch für den Salon, die Kundenkartei mit Notizen nutze ich täglich."
+fiktiv,google-play,https://example.org/google-play/kammfux/406,2025-12-15,1,Doppelte Termine nach jedem Sync. Unbrauchbar.
+fiktiv,google-play,https://example.org/google-play/kammfux/407,2025-08-08,3,"Die App ist langsam, der Kalender lädt ewig."
+fiktiv,google-play,https://example.org/google-play/kammfux/408,2026-10-12,1,"Kalender seit gestern leer, alle Termine verschwunden. Erst nach zwei Stunden waren sie wieder da."
+fiktiv,google-play,https://example.org/google-play/kammfux/409,2025-06-18,3,Gutscheine aus dem Laden kann man online nicht einlösen.
+fiktiv,app-store,https://example.org/app-store/kammfux/501,2026-09-14,2,"Ich wünsche mir eine Anzahlung bei der Buchung. Letzte Woche drei No-Shows, das sind 180 Euro Umsatz weg."
+fiktiv,app-store,https://example.org/app-store/kammfux/502,2026-08-20,4,"Schöne App, aber Einwirkzeiten beim Färben fehlen."
+fiktiv,app-store,https://example.org/app-store/kammfux/503,2026-06-09,5,"Die Buchungsseite ist super einfach, meine Kundinnen finden sie toll."
+fiktiv,app-store,https://example.org/app-store/kammfux/504,2026-04-30,1,"Support antwortet nicht, und die App hängt sich auf, sobald ich eine Buchung verschiebe."
+fiktiv,app-store,https://example.org/app-store/kammfux/505,2026-01-25,3,I wish it had a deposit option for no-shows. Otherwise fine for our small salon in Vienna.
+fiktiv,app-store,https://example.org/app-store/kammfux/506,2025-10-08,2,"Seit der neuen Version doppelt gebucht, zweimal in einer Woche."
+fiktiv,app-store,https://example.org/app-store/kammfux/507,2025-04-02,3,"Für Colorationen mit Einwirkzeit muss ich zwei Termine anlegen, das ist umständlich."
+fiktiv,app-store,https://example.org/app-store/kammfux/508,2026-06-22,2,"Die SMS-Erinnerungen kosten pro Nachricht extra, das stand nicht klar auf der Preisseite."

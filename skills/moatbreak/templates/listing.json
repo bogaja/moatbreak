@@ -1,0 +1,15 @@
+{
+  "_about": "Store texts of the new product, checked by listing.py before they are submitted: limits, empty fields, and the original's names from teardown/brand.json. Write them fresh from the angle in teardown/fixes.md, in the store's language; never the original's wording or name. Remove the store you do not publish to. For several store languages, put one block per language under \"locales\", e.g. {\"locales\": {\"de-DE\": {\"app_store\": {...}}, \"en-US\": {...}}}.",
+  "app_store": {
+    "name": "",
+    "subtitle": "",
+    "keywords": "",
+    "promotional_text": "",
+    "description": ""
+  },
+  "google_play": {
+    "title": "",
+    "short_description": "",
+    "full_description": ""
+  }
+}

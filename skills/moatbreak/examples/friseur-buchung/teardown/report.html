@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wettbewerbsanalyse: Kammfux (fiktiv / synthetic demo data)</title>
+<style>:root{--ink:#1c1917;--muted:#57534e;--line:#d6d3d1;--bg:#ffffff;--soft:#f5f5f4;
+--link:#1d4ed8;--warn:#9a3412;--warn-bg:#fff7ed}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,
+"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:62rem;margin:0 auto;padding:1.5rem 1rem 3rem}
+a{color:var(--link)}a:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0}.skip:focus{left:1rem;top:1rem;background:var(--bg);
+padding:.5rem 1rem;z-index:1}
+h1{font-size:2rem;line-height:1.2;margin:.5rem 0}h2{font-size:1.5rem;margin:2.5rem 0 .75rem;
+padding-top:1rem;border-top:2px solid var(--line)}h3{font-size:1.2rem;margin:1.75rem 0 .5rem}
+h4,h5,h6{font-size:1rem;margin:1.25rem 0 .5rem}
+.meta,.note{color:var(--muted)}nav ol{padding-left:1.25rem}
+.internal-flag,.missing{background:var(--warn-bg);color:var(--warn);border-left:4px solid
+var(--warn);padding:.5rem .75rem}
+.scroll{overflow-x:auto;margin:1rem 0}.scroll:focus-visible{outline:3px solid var(--link)}
+table{border-collapse:collapse;font-size:.875rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+pre{background:var(--soft);padding:.75rem;overflow-x:auto;font-size:.85rem}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+blockquote{margin:1rem 0;padding:.25rem 1rem;border-left:4px solid var(--line);color:var(--muted)}
+figure{margin:1rem 0}svg{max-width:100%;height:auto}
+li{margin:.2rem 0}
+footer{margin-top:3rem;font-size:.875rem;color:var(--muted)}
+@media print{.skip,nav{display:none}h2{break-before:page}a{color:inherit}}</style>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<div class="wrap">
+<header>
+<h1>Wettbewerbsanalyse: Kammfux (fiktiv / synthetic demo data)</h1>
+<p class="meta">Stand 17.10.2026. Erstellt aus den Dateien in teardown/; jede Aussage behält die Quelle und das Datum, die sie dort hat.</p>
+<p class="meta">Die Battle Card ist intern für das Team des Kunden: Sie zitiert Rezensenten und ist nicht zur Veröffentlichung bestimmt.</p>
+<nav aria-label="Inhalt"><h2 class="toc">Inhalt</h2><ol>
+<li><a href="#s-landscape">Marktüberblick</a></li>
+<li><a href="#s-recon">Produktkarte</a></li>
+<li><a href="#s-visibility">Wie das Original gefunden wird</a> (nicht recherchiert)</li>
+<li><a href="#s-feedback">Was Kunden stört und was sie sich wünschen</a></li>
+<li><a href="#s-fixes">Bedürfnisse, Fixes und Positionierung</a></li>
+<li><a href="#s-estimate">Umfang und Aufwand</a></li>
+<li><a href="#s-battlecard">Battle Card (intern)</a></li>
+<li><a href="#s-legal">Rechtliche Prüfliste (für einen Anwalt, keine Rechtsberatung)</a></li>
+</ol></nav>
+</header>
+<main id="main">
+<section id="s-landscape" aria-labelledby="h-landscape">
+<h2 id="h-landscape">Marktüberblick</h2>
+<h3>Marktüberblick: Buchungs-App für Friseure (fiktiv / synthetic demo data)</h3>
+<p>Produkte: 6, mit Beleg: 5, ungeprüft: 1. Markt geprüft gegen: DACH.</p>
+<h4>Vorschlag für die Analyse (nur belegt und passend, höchstens 5)</h4>
+<ul><li>☑ <a href="https://kammfux.example.com/">Kammfux</a>: aktiv: Changelog 2026-09; vom Nutzer am 2026-10-02 als Vorbild bestätigt (Beleg: <a href="https://kammfux.example.com/friseure">kammfux.example.com</a>)</li><li>☐ <a href="https://buerstbar.example.com/">Bürstbar</a>: aktiv: Changelog 2026-09; nur Preis pro Buchung, daher nicht auf der Karte (Beleg: <a href="https://buerstbar.example.com/fuer-salons">buerstbar.example.com</a>)</li><li>☐ <a href="https://foehnora.example.com/">Föhnora</a>: aktiv: App-Update 2026-08; erfüllt alle fünf Kriterien (Beleg: <a href="https://foehnora.example.com/friseursalon">foehnora.example.com</a>)</li><li>☐ <a href="https://straehnwerk.example.com/">Strähnwerk</a>: aktiv: Blogbeitrag 2026-07; erfüllt alle fünf Kriterien (Beleg: <a href="https://straehnwerk.example.com/funktionen">straehnwerk.example.com</a>)</li></ul>
+<p>Für die Analyse bestätigt: Kammfux. Nächster Schritt: Recon.</p>
+<h4>Marktmatrix</h4>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 1">
+<table>
+<thead><tr>
+<th scope="col">#</th>
+<th scope="col">Produkt</th>
+<th scope="col">Kategorie</th>
+<th scope="col">Zielkunde</th>
+<th scope="col">Markt</th>
+<th scope="col">Sprachen</th>
+<th scope="col">Preis ab</th>
+<th scope="col">Preismodell</th>
+<th scope="col">Kernaufgaben laut Website (von 8)</th>
+<th scope="col">Status</th>
+<th scope="col">Beleg</th>
+<th scope="col">gelesen am</th>
+</tr></thead><tbody>
+<tr><td>1</td><td><a href="https://kammfux.example.com/">Kammfux</a></td><td>Online-Terminbuchung und Salon-Kalender</td><td>Friseursalons mit 1 bis 15 Stühlen</td><td>DACH</td><td>de, en</td><td><a href="https://kammfux.example.com/preise">ab 39 € / Monat</a></td><td>pro Standort, netto, bis 2 Mitarbeiterinnen</td><td><a href="https://kammfux.example.com/funktionen">6</a></td><td>bestätigt</td><td><a href="https://kammfux.example.com/friseure">kammfux.example.com</a></td><td>2026-10-02</td></tr>
+<tr><td>2</td><td><a href="https://buerstbar.example.com/">Bürstbar</a></td><td>Buchungsportal mit Salon-App</td><td>Friseure und Kosmetikstudios</td><td>DACH</td><td>de</td><td>-</td><td>1,90 € pro vermittelter Neukunden-Buchung, kein Monatspreis</td><td><a href="https://buerstbar.example.com/fuer-salons">4</a></td><td>passt</td><td><a href="https://buerstbar.example.com/fuer-salons">buerstbar.example.com</a></td><td>2026-10-02</td></tr>
+<tr><td>3</td><td><a href="https://foehnora.example.com/">Föhnora</a></td><td>Termine und Kasse für Friseure</td><td>Friseursalons und Barbershops</td><td>DE, AT</td><td>de</td><td><a href="https://foehnora.example.com/preise">ab 49 € / Monat</a></td><td>pro Standort, netto, inkl. Kasse</td><td><a href="https://foehnora.example.com/funktionen">7</a></td><td>passt</td><td><a href="https://foehnora.example.com/friseursalon">foehnora.example.com</a></td><td>2026-10-02</td></tr>
+<tr><td>4</td><td><a href="https://straehnwerk.example.com/">Strähnwerk</a></td><td>Salonsoftware mit Online-Buchung</td><td>Friseursalons</td><td>DE</td><td>de</td><td><a href="https://straehnwerk.example.com/preise">ab 29 € / Monat</a></td><td>pro Standort, netto</td><td><a href="https://straehnwerk.example.com/funktionen">5</a></td><td>passt</td><td><a href="https://straehnwerk.example.com/funktionen">straehnwerk.example.com</a></td><td>2026-10-02</td></tr>
+<tr><td>5</td><td><a href="https://terminkoje.example.com/">Terminkoje</a></td><td>Terminbuchung für alle Dienstleister</td><td>Praxen, Studios, Beratung, Salons</td><td>EU</td><td>de, en, fr</td><td><a href="https://terminkoje.example.com/preise">ab 12 € / Monat</a></td><td>pro Konto mit einem Kalender, netto</td><td><a href="https://terminkoje.example.com/funktionen">3</a></td><td>angrenzend</td><td><a href="https://terminkoje.example.com/branchen">terminkoje.example.com</a></td><td>2026-10-02</td></tr>
+<tr><td>6</td><td><a href="https://frisierbox.example.com/">Frisierbox</a></td><td>Terminbuchung</td><td>Friseure</td><td>DE</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Kandidat (ungeprüft)</td><td><strong>ungeprüft</strong></td><td>-</td></tr>
+</tbody></table></div>
+<p>Ungeprüft (kein Beleg-Link): Frisierbox. Steht am Ende und wird nie vorgeschlagen. Die eigene Seite des Produkts öffnen und evidence_url ergänzen, oder die Zeile streichen.</p>
+<h4>Aussortiert</h4>
+<ul><li>Frisoplan: inaktiv: letzter Changelog-Eintrag 2024-03</li><li>ShearDock: nur USA: keine EUR-Preise, kein Impressum, keine deutsche Oberfläche</li></ul>
+<h4>Geplante Position (ein Plan, kein Befund)</h4>
+<ul><li>Eigenes Produkt (geplant): Plan: 7 von 8 Kernaufgaben, ohne mehrere Standorte</li></ul>
+<p>Nicht auf der Karte (keine Zahl für Preis ab (EUR/Monat, netto) oder Kernaufgaben laut Website (von 8)): Bürstbar; Frisierbox.</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" role="img" aria-labelledby="map-title" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="map-title">Positionierungskarte: Buchungs-App für Friseure (fiktiv / synthetic demo data)</title>
+<rect width="800" height="560" fill="#ffffff"/>
+<text x="80" y="34" font-size="16" font-weight="600" fill="#1f2933">Positionierungskarte: Buchungs-App für Friseure (fiktiv / synthetic demo data)</text>
+<line x1="80.0" y1="64" x2="80.0" y2="440" stroke="#e4e7eb"/>
+<text x="80.0" y="458" font-size="11" fill="#7b8794" text-anchor="middle">0</text>
+<line x1="202.0" y1="64" x2="202.0" y2="440" stroke="#e4e7eb"/>
+<text x="202.0" y="458" font-size="11" fill="#7b8794" text-anchor="middle">10</text>
+<line x1="324.0" y1="64" x2="324.0" y2="440" stroke="#e4e7eb"/>
+<text x="324.0" y="458" font-size="11" fill="#7b8794" text-anchor="middle">20</text>
+<line x1="446.0" y1="64" x2="446.0" y2="440" stroke="#e4e7eb"/>
+<text x="446.0" y="458" font-size="11" fill="#7b8794" text-anchor="middle">30</text>
+<line x1="568.0" y1="64" x2="568.0" y2="440" stroke="#e4e7eb"/>
+<text x="568.0" y="458" font-size="11" fill="#7b8794" text-anchor="middle">40</text>
+<line x1="690.0" y1="64" x2="690.0" y2="440" stroke="#e4e7eb"/>
+<text x="690.0" y="458" font-size="11" fill="#7b8794" text-anchor="middle">50</text>
+<line x1="80" y1="440.0" x2="690" y2="440.0" stroke="#e4e7eb"/>
+<text x="72" y="444.0" font-size="11" fill="#7b8794" text-anchor="end">0</text>
+<line x1="80" y1="346.0" x2="690" y2="346.0" stroke="#e4e7eb"/>
+<text x="72" y="350.0" font-size="11" fill="#7b8794" text-anchor="end">2</text>
+<line x1="80" y1="252.0" x2="690" y2="252.0" stroke="#e4e7eb"/>
+<text x="72" y="256.0" font-size="11" fill="#7b8794" text-anchor="end">4</text>
+<line x1="80" y1="158.0" x2="690" y2="158.0" stroke="#e4e7eb"/>
+<text x="72" y="162.0" font-size="11" fill="#7b8794" text-anchor="end">6</text>
+<line x1="80" y1="64.0" x2="690" y2="64.0" stroke="#e4e7eb"/>
+<text x="72" y="68.0" font-size="11" fill="#7b8794" text-anchor="end">8</text>
+<line x1="80" y1="440" x2="690" y2="440" stroke="#1f2933"/>
+<line x1="80" y1="64" x2="80" y2="440" stroke="#1f2933"/>
+<text x="385" y="482" font-size="13" fill="#1f2933" text-anchor="middle">Preis ab (EUR/Monat, netto)</text>
+<text x="22" y="252" font-size="13" fill="#1f2933" text-anchor="middle" transform="rotate(-90 22 252)">Kernaufgaben laut Website (von 8)</text>
+<circle cx="555.8" cy="158.0" r="6" fill="#1f5f99"/>
+<circle cx="555.8" cy="158.0" r="10" fill="none" stroke="#1f5f99" stroke-width="2"/>
+<circle cx="677.8" cy="111.0" r="6" fill="#1f5f99"/>
+<circle cx="433.8" cy="205.0" r="6" fill="#1f5f99"/>
+<circle cx="226.4" cy="299.0" r="6" fill="#8fb3d9"/>
+<polygon points="507.0,103.0 515.0,111.0 507.0,119.0 499.0,111.0" fill="#c2410c"/>
+<text x="568.8" y="162.0" font-size="12" fill="#1f2933">Kammfux</text>
+<text x="690.8" y="115.0" font-size="12" fill="#1f2933">Föhnora</text>
+<text x="446.8" y="209.0" font-size="12" fill="#1f2933">Strähnwerk</text>
+<text x="239.4" y="303.0" font-size="12" fill="#1f2933">Terminkoje</text>
+<text x="520.0" y="115.0" font-size="12" fill="#1f2933">Eigenes Produkt (geplant)</text>
+<circle cx="80" cy="516" r="6" fill="#1f5f99"/>
+<text x="94" y="520" font-size="12" fill="#1f2933">belegt</text>
+<circle cx="165" cy="516" r="6" fill="#1f5f99"/><circle cx="165" cy="516" r="10" fill="none" stroke="#1f5f99" stroke-width="2"/>
+<text x="179" y="520" font-size="12" fill="#1f2933">bestätigt</text>
+<circle cx="270" cy="516" r="6" fill="#8fb3d9"/>
+<text x="284" y="520" font-size="12" fill="#1f2933">angrenzend</text>
+<polygon points="382,509 389,516 382,523 375,516" fill="#c2410c"/>
+<text x="396" y="520" font-size="12" fill="#1f2933">geplant (eigenes Produkt)</text>
+<text x="80" y="546" font-size="11" fill="#7b8794">Werte von den verlinkten öffentlichen Seiten in der Marktmatrix.</text>
+</svg></figure>
+</section>
+<section id="s-recon" aria-labelledby="h-recon">
+<h2 id="h-recon">Produktkarte</h2>
+<blockquote><p><strong>fiktiv / synthetic demo data</strong>: Kammfux ist ein erfundenes Produkt. Alle Quellen unten sind erfunden und zeigen auf example.com. Nichts hier beschreibt eine echte Firma.</p></blockquote>
+<h3>Recon: Kammfux (SaaS mit Web-App und Apps für iOS und Android)</h3>
+<p>Umfang: der Kernablauf von der Online-Buchung bis zum Termin im Salon-Kalender, dazu Leistungen, Team, Kundenkartei und Tarif. Kasse und Salon-Verzeichnis nur als Grenze.<br>
+Für: Friseursalons mit 1 bis 10 Stühlen in Deutschland, Österreich und der Schweiz (DACH)<br>
+Zweck: Bauplan und Angebot<br>
+Datum: 2026-10-03 (Quellen gelesen am 02. und 03.10.2026)</p>
+<p>Marktüberblick: <code>landscape.md</code> und <code>landscape.svg</code>. Der Nutzer hat Kammfux am 02.10.2026 als Vorbild bestätigt.</p>
+<h4>Quellen</h4>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 1">
+<table>
+<thead><tr>
+<th scope="col">#</th>
+<th scope="col">Quelle</th>
+<th scope="col">URL</th>
+<th scope="col">gelesen am</th>
+<th scope="col">Notizen</th>
+</tr></thead><tbody>
+<tr><td>1</td><td>Branchenseite</td><td><a href="https://kammfux.example.com/friseure">https://kammfux.example.com/friseure</a></td><td>2026-10-02</td><td>Job und Zielkunde, Beleg in competitors.csv</td></tr>
+<tr><td>2</td><td>Funktionsseite</td><td><a href="https://kammfux.example.com/funktionen">https://kammfux.example.com/funktionen</a></td><td>2026-10-02</td><td>Buchungsseite, Kalender, mehrere Leistungen, Online-Zahlung, Auswertung, Kasse</td></tr>
+<tr><td>3</td><td>Preisseite</td><td><a href="https://kammfux.example.com/preise">https://kammfux.example.com/preise</a></td><td>2026-10-02</td><td>Tarife Basis, Plus, Premium</td></tr>
+<tr><td>4</td><td>Hilfe: Registrierung, Leistungen, Team, Benachrichtigungen, Absagen, Kundenkartei</td><td><a href="https://kammfux.example.com/hilfe/registrierung">https://kammfux.example.com/hilfe/registrierung</a> (und Nachbarseiten, siehe features.csv)</td><td>2026-10-02</td><td>Felder, Einstellungen, Grenzen</td></tr>
+<tr><td>5</td><td>Hilfe: Einwirkzeit</td><td><a href="https://kammfux.example.com/hilfe/einwirkzeit">https://kammfux.example.com/hilfe/einwirkzeit</a></td><td>2026-10-02</td><td>Einwirkzeiten werden nicht unterstützt</td></tr>
+<tr><td>6</td><td>Hilfe: Zahlungen</td><td><a href="https://kammfux.example.com/hilfe/zahlungen">https://kammfux.example.com/hilfe/zahlungen</a></td><td>2026-10-02</td><td>keine Anzahlungen</td></tr>
+<tr><td>7</td><td>Integrationen</td><td><a href="https://kammfux.example.com/integrationen">https://kammfux.example.com/integrationen</a></td><td>2026-10-02</td><td>Google-Kalender</td></tr>
+<tr><td>8</td><td>AGB</td><td><a href="https://kammfux.example.com/agb">https://kammfux.example.com/agb</a></td><td>2026-10-02</td><td>12 Monate Laufzeit, Kündigung schriftlich 3 Monate vor Ende</td></tr>
+<tr><td>9</td><td>Salon-Verzeichnis</td><td><a href="https://kammfux.example.com/finder">https://kammfux.example.com/finder</a></td><td>2026-10-02</td><td>Verzeichnis für Endkunden</td></tr>
+<tr><td>10</td><td>Testkonto des Nutzers</td><td>eigener Zugang, kein öffentlicher Link</td><td>2026-10-03</td><td>Telefon-Termine von Hand (S08)</td></tr>
+<tr><td>11</td><td>Funktionsseite, Vorab-Prüfung</td><td><a href="https://kammfux.example.com/funktionen">https://kammfux.example.com/funktionen</a></td><td>2026-06-30</td><td>Online-Zahlung; älter als 90 Tage, vor Verwendung neu prüfen</td></tr>
+</tbody></table></div>
+<p>Changelog-Eintrag 2026-09 (laut competitors.csv): das Produkt ist aktiv. Sichtbarkeit (Sitemap, Suche, KI-Antworten): nicht recherchiert.</p>
+<h4>Kernablauf</h4>
+<p>Eine Kundin bucht online eine Leistung bei einer Stylistin, und der Salon sieht den Termin sofort im Kalender.</p>
+<h4>Kernaufgaben der Nische (Achse der Positionierungskarte)</h4>
+<p>Für jede Zeile in <code>competitors.csv</code> gleich gezählt, von den öffentlichen Seiten:</p>
+<ol><li>Online-Buchung rund um die Uhr</li><li>mehrere Leistungen in einer Buchung</li><li>Einwirkzeit, in der die Stylistin frei ist</li><li>Preise nach Stylist-Stufe</li><li>Erinnerungen per E-Mail oder SMS</li><li>Anzahlung oder Ausfallgebühr bei No-Show</li><li>Kundenkartei mit Notizen</li><li>mehrere Standorte</li></ol>
+<p>Kammfux: 6 von 8 (es fehlen 3 und 6).</p>
+<h4>Inventar</h4>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 2">
+<table>
+<thead><tr>
+<th scope="col">ID</th>
+<th scope="col">Screen</th>
+<th scope="col">Route oder Weg</th>
+<th scope="col">Zweck</th>
+<th scope="col">Komponenten</th>
+<th scope="col">Zustände gesehen</th>
+</tr></thead><tbody>
+<tr><td>S01</td><td>Buchungsseite des Salons</td><td>öffentlicher Link des Salons</td><td>Einstieg für Kundinnen</td><td>Salon-Kopf, Leistungsliste</td><td>gefüllt, mobil</td></tr>
+<tr><td>S02</td><td>Leistung wählen</td><td>S01</td><td>eine oder mehrere Leistungen</td><td>Leistungskarten, Stylist-Auswahl</td><td>gefüllt, mehrere gewählt</td></tr>
+<tr><td>S03</td><td>Zeit wählen</td><td>S02</td><td>freie Zeiten</td><td>Datumsleiste, Zeitraster</td><td>gefüllt, keine Zeit diese Woche</td></tr>
+<tr><td>S04</td><td>Kontaktdaten</td><td>S03</td><td>Name, E-Mail, Telefon</td><td>Formular</td><td>leer, Fehler</td></tr>
+<tr><td>S05</td><td>Bestätigung</td><td>S04</td><td>Termin bestätigt</td><td>Zusammenfassung</td><td>gefüllt</td></tr>
+<tr><td>S06</td><td>Termin absagen</td><td>Link in der Bestätigungs-E-Mail</td><td>Absage durch die Kundin</td><td>Bestätigungsdialog</td><td>gefüllt</td></tr>
+<tr><td>S07</td><td>Salon-Kalender</td><td>Anmeldung, Start</td><td>Tag und Woche pro Mitarbeiterin</td><td>Kalenderraster, Spalten je Mitarbeiterin</td><td>leer, gefüllt, mobil</td></tr>
+<tr><td>S08</td><td>Termin eintragen</td><td>S07, freie Zeit antippen</td><td>Telefon-Termin von Hand</td><td>Dialog, Kundensuche</td><td>leer, Fehler</td></tr>
+<tr><td>S09</td><td>Leistungen und Preise</td><td>Einstellungen</td><td>Dauer und Preis je Stufe</td><td>Tabelle, Formular</td><td>leer, gefüllt</td></tr>
+<tr><td>S10</td><td>Team und Arbeitszeiten</td><td>Einstellungen</td><td>Mitarbeiterinnen und Zeiten</td><td>Liste, Wochenraster</td><td>leer, gefüllt</td></tr>
+<tr><td>S11</td><td>Kundenkartei</td><td>Menü</td><td>Verlauf und Notizen</td><td>Liste, Detailseite</td><td>leer, gefüllt</td></tr>
+<tr><td>S12</td><td>Konto und Tarif</td><td>Menü</td><td>Tarif, Rechnungen</td><td>Tarifkarte</td><td>gefüllt</td></tr>
+</tbody></table></div>
+<h4>Abläufe</h4>
+<pre><code>F01 Kundin bucht online
+    S01 -&gt; S02 -&gt; S03 -&gt; S04 -&gt; S05
+    Klicks im Normalfall: 4
+    Sonderfälle: keine freie Zeit diese Woche, Zeit wird während des Ausfüllens vergeben,
+                 mehrere Leistungen, Farbe mit Einwirkzeit (bei Kammfux zwei Termine)
+
+F02 Salon trägt einen Telefon-Termin ein
+    S07 -&gt; S08
+    Klicks im Normalfall: 3
+    Sonderfälle: gleiche Zeit wird gleichzeitig online gebucht (Bedürfnis 1 in fixes.md)
+
+F03 Kundin sagt ab
+    E-Mail-Link -&gt; S06
+    Klicks im Normalfall: 2
+    Sonderfälle: Verschieben statt Absagen
+
+F04 Salon kündigt den Tarif
+    kein Screen: laut AGB nur schriftlich, 3 Monate vor Ende der Laufzeit</code></pre>
+<h4>Komponenten</h4>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 3">
+<table>
+<thead><tr>
+<th scope="col">Komponente</th>
+<th scope="col">Varianten</th>
+<th scope="col">Zustände</th>
+<th scope="col">verwendet auf</th>
+</tr></thead><tbody>
+<tr><td>Button</td><td>primär, sekundär, Text</td><td>normal, Hover, Fokus, deaktiviert, lädt</td><td>alle</td></tr>
+<tr><td>Zeitraster</td><td>Tag, Woche</td><td>frei, belegt, gewählt</td><td>S03, S07</td></tr>
+<tr><td>Leistungskarte</td><td>einfach, mit Stufe</td><td>normal, gewählt</td><td>S02, S09</td></tr>
+<tr><td>Formularfeld</td><td>Text, E-Mail, Telefon</td><td>leer, gefüllt, Fehler</td><td>S04, S08</td></tr>
+<tr><td>Dialog</td><td>Bestätigung, Formular</td><td>offen</td><td>S06, S08</td></tr>
+</tbody></table></div>
+<h4>Signature-Elemente (nicht nachahmen)</h4>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 4">
+<table>
+<thead><tr>
+<th scope="col">Element</th>
+<th scope="col">wo</th>
+<th scope="col">warum unverwechselbar</th>
+</tr></thead><tbody>
+<tr><td>Fuchs-Maskottchen</td><td>Logo, leere Zustände</td><td>Bildmarke und Name gehören zusammen</td></tr>
+<tr><td>Farbpaar Orange #f26b1d und Petrol #0e5a63</td><td>überall</td><td>auf einen Blick Kammfux</td></tr>
+<tr><td>Name „Kammfux Finder“ für das Verzeichnis</td><td>Startseite, S01</td><td>Produktname des Originals</td></tr>
+</tbody></table></div>
+<p>Alle drei stehen in <code>features.csv</code> als skip und in <code>brand.json</code> unter avoid und colors.</p>
+<h4>Abgeleitetes Datenmodell</h4>
+<pre><code>Salon        name, adresse, tarif (basis | plus | premium)
+             Beleg: S12, Preisseite
+             Sicherheit: high
+Mitarbeiterin name, stufe (z. B. Junior, Senior), arbeitszeiten
+             Beleg: S10, Hilfe Team, Hilfe Leistungen
+             Sicherheit: high
+Leistung     name, dauer, preis je stufe
+             Beleg: S09, Hilfe Leistungen
+             Sicherheit: high
+Kundin       name, e_mail, telefon, notizen, allergie_notiz
+             Beleg: S04, S11, Hilfe Kundenkartei
+             Sicherheit: high; allergie_notiz ist ein Gesundheitsdatum (Art. 9 DSGVO)
+Termin       start, ende, status (bestätigt | abgesagt), mitarbeiterin, leistungen[], kundin
+             Beleg: S05, S06, S07
+             Sicherheit: high; Einwirkzeit gibt es beim Original nicht
+Benachrichtigung art (E-Mail | SMS), zeitpunkt, termin
+             Beleg: Hilfe Benachrichtigungen, Preisseite
+             Sicherheit: medium</code></pre>
+<p>Beziehungen: Salon 1-n Mitarbeiterin, Salon 1-n Leistung, Kundin 1-n Termin, Termin n-m Leistung, Termin 1-n Benachrichtigung.</p>
+<p>Personenbezogen: Kundin, Mitarbeiterin, Termin. Besondere Kategorie: allergie_notiz.</p>
+<h4>Kommerzielles Versprechen</h4>
+<p>Preise und Tarife (netto, pro Monat und Standort): Basis ab 39 € bis 2 Mitarbeiterinnen; Plus 69 € mit SMS-Erinnerungen zu 0,09 € pro SMS; Premium 119 € mit mehreren Standorten.<br>
+Laufzeit: 12 Monate, Kündigung schriftlich 3 Monate vor Ende.<br>
+Zahlungsarten der Kundinnen: Online-Zahlung bei der Buchung (Vorab-Prüfung 30.06.2026, neu prüfen). Keine Anzahlung.</p>
+<h4>Nischen-Delta</h4>
+<p>Was Friseure brauchen und Kammfux nicht hat: Einwirkzeit (Zeile 16) und Anzahlung gegen No-Shows (Zeile 21). Was Kammfux für Friseure schon hat: Preise nach Stylist-Stufe, mehrere Leistungen in einer Buchung, Allergie-Notiz. Was die Nische nicht braucht: das Salon-Verzeichnis für Endkunden (Netzwerk des Originals, skip).</p>
+<h4>Feature-Matrix</h4>
+<p>Siehe <code>features.csv</code>. Muss: 11, Soll: 10, Kann: 8, davon entfällt: 3. 6 Zeilen mit original = no sind eigene Lösungen aus <code>fixes.md</code>. 1 Zeile ist unbekannt (Gutscheine).</p>
+<p><code>features-before-build.csv</code> ist dieselbe Matrix am Tag des Angebots, mit clone = no. Daraus stammt <code>estimate.md</code>.</p>
+<h4>Nicht im Umfang</h4>
+<ul><li>Kasse mit TSE: eigenes, zertifizierungspflichtiges Produkt, besser eine Schnittstelle</li><li>Salon-Verzeichnis für Endkunden: Netzwerk und Reichweite des Originals</li><li>Fuchs-Maskottchen und Farbpaar: Signature-Elemente</li></ul>
+<h4>Größe und Aufwand</h4>
+<p>Screens 12, Flows 4, Entitäten 6.<br>
+Schwierige Teile: Kalender ohne Doppelbuchung bei gleichzeitiger Online- und Telefonbuchung, Abgleich aller Geräte, Termine mit Einwirkzeit (Lücken im Termin), Online-Zahlung und Anzahlung, Versand von E-Mail und SMS, Gesundheitsdaten in der Kundenkartei.<br>
+Größe: M (einige Wochen).<br>
+Aufwand (Personentage, aus <code>estimate.md</code>, mit 20 % Puffer, QA 15 %, PM 10 % und Pauschalen): MVP 31,2 - 66,5, + Soll 56,8 - 123,5, + Kann 66,5 - 147,5.</p>
+</section>
+<section id="s-visibility" aria-labelledby="h-visibility">
+<h2 id="h-visibility">Wie das Original gefunden wird</h2>
+<p class="missing">Nicht recherchiert: Die Sichtbarkeits-Analyse lief nicht, daher steht hier nichts. Das ist ein möglicher nächster Schritt, kein Befund.</p>
+</section>
+<section id="s-feedback" aria-labelledby="h-feedback">
+<h2 id="h-feedback">Was Kunden stört und was sie sich wünschen</h2>
+<h3>Kammfux (fiktiv): was Kunden stört und was sie sich wünschen</h3>
+<p>40 Bewertungen aus 5 Quellen (app-store, capterra, google-play, omr, trustpilot). 40 davon mit Sternen.<br>
+1 Zeilen verworfen: ohne Link oder ohne Text. Ohne Quelle zählt nichts.<br>
+1 doppelte Bewertungen entfernt.</p>
+<h4>Stichprobe nach Quelle</h4>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 1">
+<table>
+<thead><tr>
+<th scope="col">Quelle</th>
+<th scope="col">Bewertungen</th>
+<th scope="col">Anteil</th>
+<th scope="col">Ø Sterne</th>
+<th scope="col">von</th>
+<th scope="col">bis</th>
+</tr></thead><tbody>
+<tr><td>capterra</td><td>9</td><td>22%</td><td>4,2</td><td>15.07.2025</td><td>05.10.2026</td></tr>
+<tr><td>google-play</td><td>9</td><td>22%</td><td>2,2</td><td>18.06.2025</td><td>12.10.2026</td></tr>
+<tr><td>trustpilot</td><td>8</td><td>20%</td><td>1,8</td><td>25.03.2025</td><td>10.10.2026</td></tr>
+<tr><td>app-store</td><td>7</td><td>18%</td><td>2,9</td><td>02.04.2025</td><td>14.09.2026</td></tr>
+<tr><td>omr</td><td>7</td><td>18%</td><td>3,3</td><td>20.05.2025</td><td>01.10.2026</td></tr>
+<tr><td>alle</td><td>40</td><td>100%</td><td>2,9</td><td>25.03.2025</td><td>12.10.2026</td></tr>
+</tbody></table></div>
+<p>40 von 40 Bewertungen haben ein Datum, vom 25.03.2025 bis 12.10.2026. Das Alter zählt ab 17.10.2026.</p>
+<p>Schieflage der Stichprobe:</p>
+<ul><li>capterra vergibt im Schnitt 4,2 Sterne, 1,3 Sterne mehr als alle Bewertungen zusammen (2,9; dort 9 mit Sternen). Dort schreibt ein anderes Publikum: prüfen, ob dieselbe Kritik auch in anderen Quellen steht.</li><li>trustpilot vergibt im Schnitt 1,8 Sterne, 1,1 Sterne weniger als alle Bewertungen zusammen (2,9; dort 8 mit Sternen). Dort schreibt ein anderes Publikum: prüfen, ob dieselbe Kritik auch in anderen Quellen steht.</li></ul>
+<h4>Was sie stört</h4>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 2">
+<table>
+<thead><tr>
+<th scope="col">Rang</th>
+<th scope="col">Thema</th>
+<th scope="col">Score</th>
+<th scope="col">Bewertungen</th>
+<th scope="col">Anteil</th>
+<th scope="col">Ø Sterne</th>
+<th scope="col">Quellen</th>
+</tr></thead><tbody>
+<tr><td>1</td><td>Doppelbuchungen</td><td>5,0</td><td>6</td><td>15%</td><td>1,8</td><td>5</td></tr>
+<tr><td>2</td><td>Zahlung, Kündigung und Erstattung</td><td>4,3</td><td>6</td><td>15%</td><td>2,2</td><td>3</td></tr>
+<tr><td>3</td><td>Support antwortet nicht</td><td>3,6</td><td>4</td><td>10%</td><td>1,5</td><td>3</td></tr>
+<tr><td>4</td><td>Preis und Preis-Leistung</td><td>3,2</td><td>5</td><td>12%</td><td>2,8</td><td>3</td></tr>
+<tr><td>5</td><td>Fehler und Abstürze</td><td>2,8</td><td>3</td><td>8%</td><td>1,3</td><td>2</td></tr>
+<tr><td>6</td><td>Synchronisation und Datenverlust (dünn)</td><td>2,6</td><td>3</td><td>8%</td><td>1,7</td><td>1</td></tr>
+<tr><td>7</td><td>Update oder Redesign hat es verschlechtert</td><td>2,6</td><td>3</td><td>8%</td><td>1,7</td><td>2</td></tr>
+<tr><td>8</td><td>Benachrichtigungen und Spam</td><td>2,0</td><td>3</td><td>8%</td><td>2,7</td><td>3</td></tr>
+<tr><td>9</td><td>Online-Buchung für Kundinnen und Kunden (dünn)</td><td>0,8</td><td>1</td><td>2%</td><td>2,0</td><td>1</td></tr>
+<tr><td>10</td><td>Langsam und träge (dünn)</td><td>0,6</td><td>1</td><td>2%</td><td>3,0</td><td>1</td></tr>
+<tr><td>11</td><td>Umständlich und unübersichtlich (dünn)</td><td>0,3</td><td>1</td><td>2%</td><td>3,0</td><td>1</td></tr>
+</tbody></table></div>
+<p><strong>Doppelbuchungen</strong></p>
+<ul><li>&quot;Doppelte Termine nach jedem Sync.&quot; (google-play, 1*) <a href="https://example.org/google-play/kammfux/406">https://example.org/google-play/kammfux/406</a></li><li>&quot;Two clients booked for the same slot twice this month.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/304">https://example.org/trustpilot/kammfux/304</a></li><li>&quot;Wieder doppelt gebucht.&quot; (trustpilot, 2*) <a href="https://example.org/trustpilot/kammfux/308">https://example.org/trustpilot/kammfux/308</a></li></ul>
+<p><strong>Zahlung, Kündigung und Erstattung</strong></p>
+<ul><li>&quot;Wir haben gekündigt und sind zu Föhnora gewechselt.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/302">https://example.org/trustpilot/kammfux/302</a></li><li>&quot;Kündigung nur per Brief, und dann wurde trotzdem noch ein Jahr abgebucht.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/301">https://example.org/trustpilot/kammfux/301</a></li><li>&quot;Die Erstattung hat sechs Wochen gedauert.&quot; (trustpilot, 2*) <a href="https://example.org/trustpilot/kammfux/305">https://example.org/trustpilot/kammfux/305</a></li></ul>
+<p><strong>Support antwortet nicht</strong></p>
+<ul><li>&quot;Support never replied to my ticket.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/304">https://example.org/trustpilot/kammfux/304</a></li><li>&quot;Support nicht erreichbar, drei E-Mails ohne Antwort.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/302">https://example.org/trustpilot/kammfux/302</a></li><li>&quot;Support antwortet nicht, und die App hängt sich auf, sobald ich eine Buchung verschiebe.&quot; (app-store, 1*) <a href="https://example.org/app-store/kammfux/504">https://example.org/app-store/kammfux/504</a></li></ul>
+<p><strong>Preis und Preis-Leistung</strong></p>
+<ul><li>&quot;Der Preis pro Mitarbeiterin ist für einen kleinen Salon zu hoch.&quot; (trustpilot, 2*) <a href="https://example.org/trustpilot/kammfux/306">https://example.org/trustpilot/kammfux/306</a></li><li>&quot;Die Preiserhöhung im Frühjahr kam per E-Mail, mit drei Wochen Vorlauf.&quot; (omr, 2*) <a href="https://example.org/omr/kammfux/202">https://example.org/omr/kammfux/202</a></li><li>&quot;Die SMS-Erinnerungen kosten pro Nachricht extra, das stand nicht klar auf der Preisseite.&quot; (trustpilot, 2*) <a href="https://example.org/trustpilot/kammfux/303">https://example.org/trustpilot/kammfux/303</a></li></ul>
+<p><strong>Fehler und Abstürze</strong></p>
+<ul><li>&quot;Nach dem Update stürzt die App ab, sobald ich den Wochenkalender öffne.&quot; (google-play, 1*) <a href="https://example.org/google-play/kammfux/401">https://example.org/google-play/kammfux/401</a></li><li>&quot;Support antwortet nicht, und die App hängt sich auf, sobald ich eine Buchung verschiebe.&quot; (app-store, 1*) <a href="https://example.org/app-store/kammfux/504">https://example.org/app-store/kammfux/504</a></li><li>&quot;App crashes every time I open the week view since the latest update.&quot; (google-play, 2*) <a href="https://example.org/google-play/kammfux/402">https://example.org/google-play/kammfux/402</a></li></ul>
+<p><strong>Synchronisation und Datenverlust</strong></p>
+<ul><li>&quot;Doppelte Termine nach jedem Sync.&quot; (google-play, 1*) <a href="https://example.org/google-play/kammfux/406">https://example.org/google-play/kammfux/406</a></li><li>&quot;Kalender seit gestern leer, alle Termine verschwunden.&quot; (google-play, 1*) <a href="https://example.org/google-play/kammfux/408">https://example.org/google-play/kammfux/408</a></li><li>&quot;Termine werden zwischen Handy und PC nicht synchronisiert, manchmal erst nach einer Stunde.&quot; (google-play, 3*) <a href="https://example.org/google-play/kammfux/403">https://example.org/google-play/kammfux/403</a></li></ul>
+<p><strong>Update oder Redesign hat es verschlechtert</strong></p>
+<ul><li>&quot;Nach dem Update stürzt die App ab, sobald ich den Wochenkalender öffne.&quot; (google-play, 1*) <a href="https://example.org/google-play/kammfux/401">https://example.org/google-play/kammfux/401</a></li><li>&quot;Seit der neuen Version doppelt gebucht, zweimal in einer Woche.&quot; (app-store, 2*) <a href="https://example.org/app-store/kammfux/506">https://example.org/app-store/kammfux/506</a></li><li>&quot;App crashes every time I open the week view since the latest update.&quot; (google-play, 2*) <a href="https://example.org/google-play/kammfux/402">https://example.org/google-play/kammfux/402</a></li></ul>
+<p><strong>Benachrichtigungen und Spam</strong></p>
+<ul><li>&quot;Die Benachrichtigung über neue Online-Buchungen kommt oft gar nicht.&quot; (google-play, 2*) <a href="https://example.org/google-play/kammfux/404">https://example.org/google-play/kammfux/404</a></li><li>&quot;Die SMS-Erinnerungen kosten pro Nachricht extra, das stand nicht klar auf der Preisseite.&quot; (trustpilot, 2*) <a href="https://example.org/trustpilot/kammfux/303">https://example.org/trustpilot/kammfux/303</a></li><li>&quot;Leider kosten die SMS-Erinnerungen extra, das summiert sich.&quot; (capterra, 4*) <a href="https://example.org/capterra/kammfux/102">https://example.org/capterra/kammfux/102</a></li></ul>
+<p><strong>Online-Buchung für Kundinnen und Kunden</strong></p>
+<ul><li>&quot;Die Benachrichtigung über neue Online-Buchungen kommt oft gar nicht.&quot; (google-play, 2*) <a href="https://example.org/google-play/kammfux/404">https://example.org/google-play/kammfux/404</a></li></ul>
+<p><strong>Langsam und träge</strong></p>
+<ul><li>&quot;Die App ist langsam, der Kalender lädt ewig.&quot; (google-play, 3*) <a href="https://example.org/google-play/kammfux/407">https://example.org/google-play/kammfux/407</a></li></ul>
+<p><strong>Umständlich und unübersichtlich</strong></p>
+<ul><li>&quot;Für Colorationen mit Einwirkzeit muss ich zwei Termine anlegen, das ist umständlich.&quot; (app-store, 3*) <a href="https://example.org/app-store/kammfux/507">https://example.org/app-store/kammfux/507</a></li></ul>
+<h4>Was sie sich wünschen</h4>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 3">
+<table>
+<thead><tr>
+<th scope="col">Rang</th>
+<th scope="col">Thema</th>
+<th scope="col">Score</th>
+<th scope="col">Bewertungen</th>
+<th scope="col">Anteil</th>
+<th scope="col">Ø Sterne</th>
+<th scope="col">Quellen</th>
+</tr></thead><tbody>
+<tr><td>1</td><td>No-Shows, Anzahlung und Ausfallgebühr</td><td>1,8</td><td>3</td><td>8%</td><td>3,0</td><td>2</td></tr>
+<tr><td>2</td><td>Einwirkzeit bei Farbe und Strähnen</td><td>1,7</td><td>4</td><td>10%</td><td>3,5</td><td>3</td></tr>
+</tbody></table></div>
+<p><strong>No-Shows, Anzahlung und Ausfallgebühr</strong></p>
+<ul><li>&quot;Letzte Woche drei No-Shows, das sind 180 Euro Umsatz weg.&quot; (app-store, 2*) <a href="https://example.org/app-store/kammfux/501">https://example.org/app-store/kammfux/501</a></li><li>&quot;I wish it had a deposit option for no-shows.&quot; (app-store, 3*) <a href="https://example.org/app-store/kammfux/505">https://example.org/app-store/kammfux/505</a></li><li>&quot;Leider gibt es keine Anzahlung, No-Shows bleiben unser Risiko.&quot; (omr, 4*) <a href="https://example.org/omr/kammfux/203">https://example.org/omr/kammfux/203</a></li></ul>
+<p><strong>Einwirkzeit bei Farbe und Strähnen</strong></p>
+<ul><li>&quot;Für Colorationen mit Einwirkzeit muss ich zwei Termine anlegen, das ist umständlich.&quot; (app-store, 3*) <a href="https://example.org/app-store/kammfux/507">https://example.org/app-store/kammfux/507</a></li><li>&quot;Für einen Friseursalon fehlt mir die Einwirkzeit: Bei Strähnen ist die Kollegin 45 Minuten blockiert, obwohl sie in der Zeit schneiden könnte.&quot; (omr, 3*) <a href="https://example.org/omr/kammfux/201">https://example.org/omr/kammfux/201</a></li><li>&quot;Schöne App, aber Einwirkzeiten beim Färben fehlen.&quot; (app-store, 4*) <a href="https://example.org/app-store/kammfux/502">https://example.org/app-store/kammfux/502</a></li></ul>
+<p>Eine Bewertung kann zu mehreren Themen passen, die Anteile ergeben daher zusammen mehr als 100%.</p>
+<h4>Warum sie gehen</h4>
+<p>Bewertungen, in denen jemand schreibt, dass er gewechselt oder gekündigt hat oder eine Alternative sucht, je ein Satz im Wortlaut. Eine Alternative steht nur da, wo die Bewertung sie nennt.</p>
+<p>6 Bewertungen sagen, dass jemand gegangen ist oder gehen will.<br>
+Dieselben Bewertungen kritisieren: Zahlung, Kündigung und Erstattung (3), Doppelbuchungen (2), Preis und Preis-Leistung (2), Support antwortet nicht (2).<br>
+Wohin sie nach eigener Aussage gewechselt sind: Föhnora (1), Strähnwerk (1).</p>
+<ul><li>&quot;Wenn das so weitergeht, werden wir kündigen.&quot; (omr, 2*) <a href="https://example.org/omr/kammfux/202">https://example.org/omr/kammfux/202</a></li><li>&quot;Wir haben gekündigt und sind zu Föhnora gewechselt.&quot; (trustpilot, 1*, genannt: Föhnora) <a href="https://example.org/trustpilot/kammfux/302">https://example.org/trustpilot/kammfux/302</a></li><li>&quot;We moved to Strähnwerk.&quot; (trustpilot, 1*, genannt: Strähnwerk) <a href="https://example.org/trustpilot/kammfux/304">https://example.org/trustpilot/kammfux/304</a></li><li>&quot;Automatisch um ein Jahr verlängert, obwohl ich rechtzeitig gekündigt hatte.&quot; (trustpilot, 2*) <a href="https://example.org/trustpilot/kammfux/305">https://example.org/trustpilot/kammfux/305</a></li><li>&quot;Ich suche eine Alternative.&quot; (trustpilot, 2*) <a href="https://example.org/trustpilot/kammfux/306">https://example.org/trustpilot/kammfux/306</a></li><li>&quot;Ich bin zurück zum Papierkalender, da weiß ich wenigstens, was drinsteht.&quot; (trustpilot, 2*) <a href="https://example.org/trustpilot/kammfux/308">https://example.org/trustpilot/kammfux/308</a></li></ul>
+<p>Gewechselt zu Kammfux (fiktiv) (warum Leute kommen, nicht warum sie gehen):</p>
+<ul><li>&quot;Wir sind vom Terminbuch zu Kammfux gewechselt und bereuen es nicht.&quot; (capterra, 5*, genannt: Kammfux) <a href="https://example.org/capterra/kammfux/105">https://example.org/capterra/kammfux/105</a></li><li>&quot;Wir sind von Strähnwerk zu Kammfux gewechselt, weil die Buchungsseite hier schöner ist.&quot; (omr, 4*, genannt: Kammfux) <a href="https://example.org/omr/kammfux/206">https://example.org/omr/kammfux/206</a></li></ul>
+<h4>Was gelobt wird</h4>
+<p>Themen aus 4-5-Sterne-Bewertungen ohne Kritik. Wo das Original geliebt wird, nicht angreifen, sondern mithalten.</p>
+<ul><li><strong>Online-Buchung für Kundinnen und Kunden</strong> (4): &quot;Unsere Kundinnen buchen jetzt fast alles über die Buchungsseite, das Telefon klingelt viel seltener.&quot; (capterra, 5*) <a href="https://example.org/capterra/kammfux/101">https://example.org/capterra/kammfux/101</a></li><li><strong>Nützliche Erinnerungen und Benachrichtigungen</strong> (1): &quot;Die Erinnerungen per E-Mail haben die Ausfälle spürbar gesenkt.&quot; (capterra, 5*) <a href="https://example.org/capterra/kammfux/101">https://example.org/capterra/kammfux/101</a></li><li><strong>Preis und Preis-Leistung</strong> (1): &quot;Dass Junior und Senior eigene Preise haben, ist für uns wichtig.&quot; (capterra, 4*) <a href="https://example.org/capterra/kammfux/106">https://example.org/capterra/kammfux/106</a></li><li><strong>Hilfsbereiter Support</strong> (1): &quot;Einrichtung in einem Nachmittag erledigt, der Support war am Telefon sehr geduldig.&quot; (capterra, 5*) <a href="https://example.org/capterra/kammfux/103">https://example.org/capterra/kammfux/103</a></li></ul>
+<h4>Wünsche im O-Ton</h4>
+<ul><li>&quot;Was fehlt: Einwirkzeiten beim Färben, in der Zeit könnte die Kollegin eine andere Kundin schneiden.&quot; (capterra, 4*) <a href="https://example.org/capterra/kammfux/104">https://example.org/capterra/kammfux/104</a></li><li>&quot;Für einen Friseursalon fehlt mir die Einwirkzeit: Bei Strähnen ist die Kollegin 45 Minuten blockiert, obwohl sie in der Zeit schneiden könnte.&quot; (omr, 3*) <a href="https://example.org/omr/kammfux/201">https://example.org/omr/kammfux/201</a></li><li>&quot;Ich wünsche mir eine Anzahlung bei der Buchung.&quot; (app-store, 2*) <a href="https://example.org/app-store/kammfux/501">https://example.org/app-store/kammfux/501</a></li><li>&quot;Schöne App, aber Einwirkzeiten beim Färben fehlen.&quot; (app-store, 4*) <a href="https://example.org/app-store/kammfux/502">https://example.org/app-store/kammfux/502</a></li><li>&quot;I wish it had a deposit option for no-shows.&quot; (app-store, 3*) <a href="https://example.org/app-store/kammfux/505">https://example.org/app-store/kammfux/505</a></li></ul>
+<h4>Von Hand lesen</h4>
+<p>Bewertungen mit 3 Sternen oder weniger ohne Thema. Entweder Rauschen oder ein Thema, das in themes.json noch fehlt. Oft der wertvollste Teil.</p>
+<ul><li>(google-play, 3*) <a href="https://example.org/google-play/kammfux/409">https://example.org/google-play/kammfux/409</a>: &quot;Gutscheine aus dem Laden kann man online nicht einlösen.&quot;</li></ul>
+</section>
+<section id="s-fixes" aria-labelledby="h-fixes">
+<h2 id="h-fixes">Bedürfnisse, Fixes und Positionierung</h2>
+<blockquote><p><strong>fiktiv / synthetic demo data</strong>: Kammfux ist erfunden, alle Bewertungen sind synthetisch, alle Links zeigen auf example.org. Kein Zitat stammt von einem echten Menschen.</p></blockquote>
+<h3>Kammfux (fiktiv): Bedürfnisse, Fix-Plan und Winkel</h3>
+<p>Stand: 17.10.2026. Grundlage: <code>feedback.md</code> und <code>feedback.json</code> (reviews.py, <code>--as-of 2026-10-17</code>, <code>--themes teardown/themes.json</code>).</p>
+<h4>Stichprobe</h4>
+<p>40 Bewertungen aus 5 Quellen, alle mit Sternen und Datum, vom 25.03.2025 bis 12.10.2026. 1 Zeile ohne Link verworfen, 1 doppelte Bewertung entfernt. Das sind mehr als 30, aber weniger als die angestrebten 100: Die Rangfolge zeigt eine Richtung. Die Daten ballen sich nicht (15 von 40 aus den letzten 90 Tagen, 2 älter als 18 Monate).</p>
+<ul><li>capterra: 9 Bewertungen, Ø 4,2 Sterne. Erwartet: B2B-Käufer, eventuell eingeladene zufriedene Kunden. Bestätigt: 1,3 Sterne über dem Schnitt (2,9). Die Kritik dort (Doppelbuchung, SMS-Kosten, Kündigungsfrist) steht auch in anderen Quellen.</li><li>google-play: 9 Bewertungen, Ø 2,2 Sterne. Erwartet: Ärger direkt nach Updates. Bestätigt: 2 der 9 nennen ein Update mit Absturz; Synchronisation und Datenverlust kommen nur hier vor (dünn, eine Quelle).</li><li>trustpilot: 8 Bewertungen, Ø 1,8 Sterne. Erwartet: Ärger über Abrechnung. Bestätigt: 1,1 Sterne unter dem Schnitt; 4 der 6 Bewertungen zu Zahlung und Kündigung stammen von hier.</li><li>app-store: 7 Bewertungen, Ø 2,9 Sterne. Erwartet: Ärger nach Updates, kurze Urteile. Teilweise bestätigt: 1 Bewertung nennt eine neue Version; dazu kommen 2 der 3 Wünsche nach Anzahlung von hier.</li><li>omr: 7 Bewertungen, Ø 3,3 Sterne. Erwartet: B2B-Käufer mit höheren Sternen. Nicht bestätigt: der Schnitt liegt nur 0,4 Sterne über dem Gesamtschnitt.</li></ul>
+<h4>Bedürfnisse</h4>
+<h5>Bedürfnis 1: Sich auf den Kalender verlassen können</h5>
+<p>Spread: über Quellen. Themen: double_booking, data, bugs, updates. Bewertungen: 11 aus 5 Quellen. Gehen: 2.</p>
+<ul><li>&quot;Zweimal in einem Monat doppelt gebucht, zwei Kundinnen standen gleichzeitig im Laden.&quot; (capterra, 2*) <a href="https://example.org/capterra/kammfux/107">https://example.org/capterra/kammfux/107</a></li><li>&quot;Wieder doppelt gebucht.&quot; (trustpilot, 2*) <a href="https://example.org/trustpilot/kammfux/308">https://example.org/trustpilot/kammfux/308</a></li><li>&quot;Kalender seit gestern leer, alle Termine verschwunden.&quot; (google-play, 1*) <a href="https://example.org/google-play/kammfux/408">https://example.org/google-play/kammfux/408</a></li></ul>
+<p>Warum ein Bedürfnis: Doppelbuchung, verzögerter Abgleich und Abstürze nach Updates treffen dieselbe Aufgabe. Der Kalender muss stimmen, sonst stehen zwei Kundinnen im Laden.<br>
+Was das Original stattdessen tut: Online- und Telefonbuchungen landen im selben Kalender (recon.md, F01 und F02). Eine Sperre gegen gleichzeitige Buchungen steht auf keiner gelesenen Seite. Das ist nicht geprüft, deshalb hat features.csv Zeile 12 keine Quelle.</p>
+<h5>Bedürfnis 2: Wissen, was es kostet, und gehen können</h5>
+<p>Spread: über Quellen, mit Schwerpunkt trustpilot (6 von 9). Themen: pricing, billing. Bewertungen: 9 aus 3 Quellen (ohne omr/205, siehe Hinweis). Gehen: 4.</p>
+<ul><li>&quot;Kündigung nur per Brief, und dann wurde trotzdem noch ein Jahr abgebucht.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/301">https://example.org/trustpilot/kammfux/301</a></li><li>&quot;Leider kosten die SMS-Erinnerungen extra, das summiert sich.&quot; (capterra, 4*) <a href="https://example.org/capterra/kammfux/102">https://example.org/capterra/kammfux/102</a></li><li>&quot;Die Preiserhöhung im Frühjahr kam per E-Mail, mit drei Wochen Vorlauf.&quot; (omr, 2*) <a href="https://example.org/omr/kammfux/202">https://example.org/omr/kammfux/202</a></li></ul>
+<p>Warum ein Bedürfnis: SMS-Kosten pro Nachricht, Preiserhöhung und schwere Kündigung sind dieselbe Sorge. Man weiß nicht, was es kostet, und kommt nicht heraus.<br>
+Was das Original stattdessen tut: SMS erst im Tarif Plus (69 €), 0,09 € pro SMS (features.csv Zeile 14); 12 Monate Laufzeit, Kündigung schriftlich 3 Monate vor Ende (Zeile 19).<br>
+Hinweis: Die Bewertung omr/205 zählt das Skript als Preis-Beschwerde. Sie lobt aber das Preis-Leistungs-Verhältnis und kritisiert die Statistik. Sie ist hier kein Beleg und steht deshalb nicht in den 9 Bewertungen.</p>
+<h5>Bedürfnis 3: Die Einwirkzeit für die nächste Kundin nutzen</h5>
+<p>Spread: über Quellen. Themen: processing_time, ux. Bewertungen: 4 aus 3 Quellen. Gehen: 0.</p>
+<ul><li>&quot;Für einen Friseursalon fehlt mir die Einwirkzeit: Bei Strähnen ist die Kollegin 45 Minuten blockiert, obwohl sie in der Zeit schneiden könnte.&quot; (omr, 3*) <a href="https://example.org/omr/kammfux/201">https://example.org/omr/kammfux/201</a></li><li>&quot;Für Colorationen mit Einwirkzeit muss ich zwei Termine anlegen, das ist umständlich.&quot; (app-store, 3*) <a href="https://example.org/app-store/kammfux/507">https://example.org/app-store/kammfux/507</a></li><li>&quot;Was fehlt: Einwirkzeiten beim Färben, in der Zeit könnte die Kollegin eine andere Kundin schneiden.&quot; (capterra, 4*) <a href="https://example.org/capterra/kammfux/104">https://example.org/capterra/kammfux/104</a></li></ul>
+<p>Warum ein Bedürfnis: Alle drei wollen denselben Ablauf. Die Farbe wirkt ein, und die Stylistin nimmt in der Zeit die nächste Kundin.<br>
+Was das Original stattdessen tut: Laut Kammfux-Hilfe werden Einwirkzeiten nicht unterstützt (features.csv Zeile 16, geprüft am 02.10.2026). Salons legen zwei Termine an.</p>
+<h5>Bedürfnis 4: Nicht auf Ausfällen sitzen bleiben</h5>
+<p>Spread: über Quellen, knapp an der Schwelle (3 Bewertungen, 2 Quellen). Themen: no_show. Bewertungen: 3 aus 2 Quellen. Gehen: 0.</p>
+<ul><li>&quot;Letzte Woche drei No-Shows, das sind 180 Euro Umsatz weg.&quot; (app-store, 2*) <a href="https://example.org/app-store/kammfux/501">https://example.org/app-store/kammfux/501</a></li><li>&quot;Leider gibt es keine Anzahlung, No-Shows bleiben unser Risiko.&quot; (omr, 4*) <a href="https://example.org/omr/kammfux/203">https://example.org/omr/kammfux/203</a></li><li>&quot;I wish it had a deposit option for no-shows.&quot; (app-store, 3*) <a href="https://example.org/app-store/kammfux/505">https://example.org/app-store/kammfux/505</a> [DE: Ich wünschte, es gäbe eine Anzahlung gegen No-Shows.]</li></ul>
+<p>Warum ein Bedürfnis: Alle drei nennen dasselbe Geld, das bei einem Ausfall fehlt, und dieselbe Lösung, eine Anzahlung.<br>
+Was das Original stattdessen tut: Laut Kammfux-Hilfe gibt es keine Anzahlungen (features.csv Zeile 21). Gelobt werden die E-Mail-Erinnerungen, die Ausfälle senken (capterra/101). Dort mithalten.</p>
+<h5>Bedürfnis 5: Schnell Hilfe bekommen, wenn der Kalender hakt</h5>
+<p>Spread: über Quellen. Themen: support. Bewertungen: 4 aus 3 Quellen. Gehen: 2.</p>
+<ul><li>&quot;Support nicht erreichbar, drei E-Mails ohne Antwort.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/302">https://example.org/trustpilot/kammfux/302</a></li><li>&quot;Der Support antwortet freundlich, aber oft erst nach zwei Tagen.&quot; (omr, 3*) <a href="https://example.org/omr/kammfux/207">https://example.org/omr/kammfux/207</a></li><li>&quot;Support antwortet nicht, und die App hängt sich auf, sobald ich eine Buchung verschiebe.&quot; (app-store, 1*) <a href="https://example.org/app-store/kammfux/504">https://example.org/app-store/kammfux/504</a></li></ul>
+<p>Warum ein Bedürfnis: Alle drei warten auf Antwort, während der Salon läuft. capterra/103 lobt den Support am Telefon. Das Problem ist die Wartezeit, nicht der Ton.<br>
+Was das Original stattdessen tut: nicht recherchiert (Support-Zeiten und Kanäle nicht gelesen).</p>
+<h4>Warum sie gehen</h4>
+<p>6 Bewertungen sagen, dass jemand gegangen ist oder gehen will. Dieselben Bewertungen kritisieren Zahlung und Kündigung (3), Doppelbuchungen (2), Preis (2) und Support (2). Genannte Ziele: Föhnora (1) und Strähnwerk (1). Das sind Einzelfälle, keine Aussage über den Markt. Beide stehen in <code>landscape.md</code> als passend.</p>
+<p>Zu Kammfux gewechselt sind 2 Bewertungen: eine vom Terminbuch, eine von Strähnwerk wegen der Buchungsseite. Die Buchungsseite ist der Grund, warum Salons kommen. Das neue Produkt muss dort mithalten.</p>
+<h4>Fix-Plan</h4>
+<p>Sortiert nach Beleg (Bewertungen, Quellen, Gehen) mal Aufwand. Jede Zeile steht in <code>features.csv</code> mit original = no.</p>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 1">
+<table>
+<thead><tr>
+<th scope="col">#</th>
+<th scope="col">Änderung</th>
+<th scope="col">Aufwand</th>
+<th scope="col">Bedürfnis</th>
+<th scope="col">Beleg</th>
+<th scope="col">features.csv</th>
+</tr></thead><tbody>
+<tr><td>1</td><td>Zeit beim Buchen sperren, kein Doppeltermin</td><td>M</td><td>1</td><td>11 Bewertungen, 5 Quellen, 2 gehen</td><td>Zeile 12, Muss</td></tr>
+<tr><td>2</td><td>Abo im Konto selbst kündigen, monatlich</td><td>S</td><td>2</td><td>9 Bewertungen, 3 Quellen, 4 gehen</td><td>Zeile 19, Soll</td></tr>
+<tr><td>3</td><td>SMS-Erinnerung im Grundpreis</td><td>M</td><td>2</td><td>wie 2</td><td>Zeile 14, Soll</td></tr>
+<tr><td>4</td><td>Einwirkzeit: Mitarbeiterin in der Zeit buchbar</td><td>L</td><td>3</td><td>4 Bewertungen, 3 Quellen</td><td>Zeile 16, Soll</td></tr>
+<tr><td>5</td><td>Abgleich aller Geräte in unter 5 Sekunden</td><td>L</td><td>1</td><td>wie 1</td><td>Zeile 22, Soll</td></tr>
+<tr><td>6</td><td>Anzahlung oder Ausfallgebühr bei Online-Buchung</td><td>L</td><td>4</td><td>3 Bewertungen, 2 Quellen</td><td>Zeile 21, Soll</td></tr>
+<tr><td>7</td><td>Rückruf-Wunsch an den Support aus dem Kalender</td><td>S</td><td>5</td><td>4 Bewertungen, 3 Quellen, 2 gehen</td><td>Zeile 27, Kann</td></tr>
+</tbody></table></div>
+<p>Zeile 14 hat original = partial, weil Kammfux SMS im Tarif Plus anbietet. Für den Preis des neuen Produkts: monatlich kündbar, SMS ohne Aufpreis. Die Preisentscheidung trifft der Nutzer.</p>
+<p>Nicht angreifen, sondern mithalten: die Buchungsseite (4-mal gelobt, Grund für Wechsel zu Kammfux), die E-Mail-Erinnerungen und die Preise nach Stylist-Stufe (features.csv Zeile 17).</p>
+<h4>Winkel</h4>
+<p>A (empfohlen)<br>
+Für Salons mit 1 bis 10 Stühlen, die sich auf ihren Kalender verlassen wollen,<br>
+vergibt das neue Produkt jede Zeit nur einmal und hält Handy, PC und Online-Buchung in Sekunden gleich.<br>
+Beleg: Bedürfnis 1, 11 Bewertungen aus 5 Quellen, 2 davon gehen deswegen.</p>
+<p>B<br>
+Für Salons, die wissen wollen, was die Software kostet,<br>
+ist das neue Produkt monatlich kündbar, mit SMS-Erinnerungen ohne Aufpreis.<br>
+Beleg: Bedürfnis 2, 9 Bewertungen aus 3 Quellen, 4 davon gehen. 6 der 9 stammen von trustpilot.</p>
+<p>C<br>
+Für Salons mit vielen Farb- und Strähnenterminen,<br>
+plant das neue Produkt die Einwirkzeit ein, und die Stylistin bleibt in der Zeit buchbar.<br>
+Beleg: Bedürfnis 3, 4 Bewertungen aus 3 Quellen. Kammfux kann das laut eigener Hilfe nicht.</p>
+<p>Empfehlung A: der breiteste Beleg, über alle 5 Quellen. B ist der stärkste Wechselgrund, aber einseitig verteilt. B und C dienen als Belege im Verkauf.</p>
+<h4>Offene Fragen</h4>
+<ul><li>Gutscheine online einlösen: 1 Bewertung (google-play/409, &quot;Von Hand lesen&quot;). Bestätigen mit einer Interviewfrage: &quot;Wie lösen Ihre Kundinnen heute Gutscheine ein?&quot;</li><li>Tagesansicht auf dem iPad: Die Zeile hatte keinen Link und wurde verworfen. Erst mit Link sammeln, dann zählen.</li></ul>
+<h4>Annahmen für die ersten Interviews</h4>
+<ol><li>Salons mit Doppelbuchungen haben Online- und Telefonbuchung zur selben Zeit (omr/204 sagt das, die anderen nicht).</li><li>Salons zahlen für SMS-Erinnerungen lieber einen festen Monatspreis als pro Nachricht.</li><li>Salons würden eine Anzahlung verlangen, auch wenn ein Teil der Stammkundinnen das ablehnt.</li></ol>
+<h4>Zitatprüfung</h4>
+<p><code>python3 $SKILL/scripts/reviews.py teardown/reviews.csv --verify teardown/fixes.md --lang de</code>: 15 verlinkte Zitate geprüft, alle stehen wörtlich in teardown/reviews.csv (17.10.2026).</p>
+</section>
+<section id="s-estimate" aria-labelledby="h-estimate">
+<h2 id="h-estimate">Umfang und Aufwand</h2>
+<h3>Aufwandsschätzung</h3>
+<h4>Restaufwand (Personentage)</h4>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 1">
+<table>
+<thead><tr>
+<th scope="col">Umfang</th>
+<th scope="col">Features</th>
+<th scope="col">Feature-PT</th>
+<th scope="col">Zuschläge</th>
+<th scope="col">Pauschal</th>
+<th scope="col">Gesamt-PT</th>
+<th scope="col">EUR</th>
+</tr></thead><tbody>
+<tr><td>MVP (Muss)</td><td>11 (davon 1 eigene)</td><td>16,2 - 39,6</td><td>4 - 9,9</td><td>11 - 17</td><td>31,2 - 66,5</td><td>20.280 - 43.225</td></tr>
+<tr><td>+ Soll</td><td>21 (davon 5 eigene)</td><td>36,6 - 85,2</td><td>9,2 - 21,3</td><td>11 - 17</td><td>56,8 - 123,5</td><td>36.920 - 80.275</td></tr>
+<tr><td>+ Kann (alles)</td><td>26 (davon 6 eigene)</td><td>44,4 - 104,4</td><td>11,1 - 26,1</td><td>11 - 17</td><td>66,5 - 147,5</td><td>43.225 - 95.875</td></tr>
+</tbody></table></div>
+<p>Puffer: 20 % auf den Feature-Aufwand.<br>
+Zuschläge (in % vom Feature-Aufwand inkl. Puffer): QA 15 %, PM 10 %.<br>
+Pauschalen (Personentage, ohne Puffer): Workshop 2 - 3, Setup 2 - 3, Design 5 - 8, Go-live 2 - 3.</p>
+<p>Ungeprüft: 1 Zeilen mit original = unbekannt. Sie zählen als Features des Originals. Vor dem Angebot prüfen: Gutscheine online einlösen</p>
+<h4>Bewusst weggelassen (nicht bewertet, nicht in der Schätzung)</h4>
+<ul><li>Kasse mit TSE: eigenes, zertifizierungspflichtiges Produkt: Schnittstelle zu einer Kasse statt Nachbau</li><li>Salon-Verzeichnis für Endkunden: Netzwerk und Reichweite des Originals, nicht nachbaubar</li><li>Fuchs-Maskottchen und Farbpaar Orange-Petrol: Signature-Element, nicht nachahmen</li></ul>
+</section>
+<section id="s-battlecard" aria-labelledby="h-battlecard">
+<h2 id="h-battlecard">Battle Card (intern)</h2>
+<p class="internal-flag">Intern: für das Vertriebsteam des Kunden, nicht zur Veröffentlichung.</p>
+<h3>Battle Card: Taktilo (fiktiv) gegen Kammfux (fiktiv)</h3>
+<p>Stand 17.10.2026. Intern, für den Vertrieb: nicht zur Veröffentlichung. Jede Aussage über Kammfux (fiktiv) trägt ein Etikett: geprüft (in einer Primärquelle nachgesehen, mit Link und Datum), berichtet (was Rezensenten schreiben, mit Links), angenommen (nicht geprüft: nie gegenüber Interessenten behaupten). Jedes „zu schreiben“ ersetzen.</p>
+<h4>In einem Satz</h4>
+<p>zu schreiben: warum ein Kunde Taktilo (fiktiv) statt Kammfux (fiktiv) wählt, in einem Satz, aus dem Winkel in teardown/fixes.md, mit seinem Beleg.</p>
+<h4>Wo sie schwach sind</h4>
+<p>Die stärksten Beschwerde-Themen aus 40 Bewertungen. Danach fragen, nicht als Tatsache über Kammfux (fiktiv) behaupten.</p>
+<ol><li><strong>Doppelbuchungen</strong> [berichtet: 6 Bewertungen, 5 Quellen, Ø 1,8 Sterne]<ul><li>&quot;Doppelte Termine nach jedem Sync.&quot; (google-play, 1*) <a href="https://example.org/google-play/kammfux/406">https://example.org/google-play/kammfux/406</a></li><li>&quot;Two clients booked for the same slot twice this month.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/304">https://example.org/trustpilot/kammfux/304</a></li><li>Frage im Gespräch: zu schreiben</li></ul></li><li><strong>Zahlung, Kündigung und Erstattung</strong> [berichtet: 6 Bewertungen, 3 Quellen, Ø 2,2 Sterne]<ul><li>&quot;Wir haben gekündigt und sind zu Föhnora gewechselt.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/302">https://example.org/trustpilot/kammfux/302</a></li><li>&quot;Kündigung nur per Brief, und dann wurde trotzdem noch ein Jahr abgebucht.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/301">https://example.org/trustpilot/kammfux/301</a></li><li>Frage im Gespräch: zu schreiben</li></ul></li><li><strong>Support antwortet nicht</strong> [berichtet: 4 Bewertungen, 3 Quellen, Ø 1,5 Sterne]<ul><li>&quot;Support never replied to my ticket.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/304">https://example.org/trustpilot/kammfux/304</a></li><li>&quot;Support nicht erreichbar, drei E-Mails ohne Antwort.&quot; (trustpilot, 1*) <a href="https://example.org/trustpilot/kammfux/302">https://example.org/trustpilot/kammfux/302</a></li><li>Frage im Gespräch: zu schreiben</li></ul></li><li><strong>Preis und Preis-Leistung</strong> [berichtet: 5 Bewertungen, 3 Quellen, Ø 2,8 Sterne]<ul><li>&quot;Der Preis pro Mitarbeiterin ist für einen kleinen Salon zu hoch.&quot; (trustpilot, 2*) <a href="https://example.org/trustpilot/kammfux/306">https://example.org/trustpilot/kammfux/306</a></li><li>&quot;Die Preiserhöhung im Frühjahr kam per E-Mail, mit drei Wochen Vorlauf.&quot; (omr, 2*) <a href="https://example.org/omr/kammfux/202">https://example.org/omr/kammfux/202</a></li><li>Frage im Gespräch: zu schreiben</li></ul></li><li><strong>Fehler und Abstürze</strong> [berichtet: 3 Bewertungen, 2 Quellen, Ø 1,3 Sterne]<ul><li>&quot;Nach dem Update stürzt die App ab, sobald ich den Wochenkalender öffne.&quot; (google-play, 1*) <a href="https://example.org/google-play/kammfux/401">https://example.org/google-play/kammfux/401</a></li><li>&quot;Support antwortet nicht, und die App hängt sich auf, sobald ich eine Buchung verschiebe.&quot; (app-store, 1*) <a href="https://example.org/app-store/kammfux/504">https://example.org/app-store/kammfux/504</a></li><li>Frage im Gespräch: zu schreiben</li></ul></li></ol>
+<h4>Wo sie stark sind</h4>
+<p>Gelobt in 4-5-Sterne-Bewertungen. Hier nicht angreifen, sondern mithalten.</p>
+<ul><li><strong>Online-Buchung für Kundinnen und Kunden</strong> [berichtet: 4 Bewertungen, 3 Quellen]<ul><li>&quot;Unsere Kundinnen buchen jetzt fast alles über die Buchungsseite, das Telefon klingelt viel seltener.&quot; (capterra, 5*) <a href="https://example.org/capterra/kammfux/101">https://example.org/capterra/kammfux/101</a></li><li>&quot;Die Buchungsseite sieht gut aus und lässt sich auf der eigenen Website einbinden.&quot; (omr, 4*) <a href="https://example.org/omr/kammfux/203">https://example.org/omr/kammfux/203</a></li><li>In eigenen Worten: zu schreiben: wofür Kunden Kammfux (fiktiv) hier loben, in einem eigenen Satz, und unsere Linie: zustimmen, dann wie Taktilo (fiktiv) mithält.</li></ul></li><li><strong>Nützliche Erinnerungen und Benachrichtigungen</strong> [berichtet: 1 Bewertung, 1 Quelle]<ul><li>&quot;Die Erinnerungen per E-Mail haben die Ausfälle spürbar gesenkt.&quot; (capterra, 5*) <a href="https://example.org/capterra/kammfux/101">https://example.org/capterra/kammfux/101</a></li><li>In eigenen Worten: zu schreiben: wofür Kunden Kammfux (fiktiv) hier loben, in einem eigenen Satz, und unsere Linie: zustimmen, dann wie Taktilo (fiktiv) mithält.</li></ul></li><li><strong>Preis und Preis-Leistung</strong> [berichtet: 1 Bewertung, 1 Quelle]<ul><li>&quot;Dass Junior und Senior eigene Preise haben, ist für uns wichtig.&quot; (capterra, 4*) <a href="https://example.org/capterra/kammfux/106">https://example.org/capterra/kammfux/106</a></li><li>In eigenen Worten: zu schreiben: wofür Kunden Kammfux (fiktiv) hier loben, in einem eigenen Satz, und unsere Linie: zustimmen, dann wie Taktilo (fiktiv) mithält.</li></ul></li></ul>
+<h4>Was nur wir haben</h4>
+<p>Was Taktilo (fiktiv) fertig hat (clone = ja) und Kammfux (fiktiv) nicht oder nur teilweise kann.</p>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 1">
+<table>
+<thead><tr>
+<th scope="col">Priorität</th>
+<th scope="col">Feature</th>
+<th scope="col">Kammfux (fiktiv)</th>
+<th scope="col">Aussage über Kammfux (fiktiv)</th>
+<th scope="col">Zeile</th>
+</tr></thead><tbody>
+<tr><td>Muss</td><td>Zeit beim Buchen sperren, kein Doppeltermin</td><td>nein</td><td>[angenommen: keine Quelle, kein Prüfdatum]</td><td>12</td></tr>
+<tr><td>Soll</td><td>SMS-Erinnerung im Grundpreis</td><td>teilweise</td><td>[geprüft am 02.10.2026: <a href="https://kammfux.example.com/preise">https://kammfux.example.com/preise</a>]</td><td>14</td></tr>
+<tr><td>Soll</td><td>Einwirkzeit: Mitarbeiterin in der Zeit buchbar</td><td>nein</td><td>[geprüft am 02.10.2026: <a href="https://kammfux.example.com/hilfe/einwirkzeit">https://kammfux.example.com/hilfe/einwirkzeit</a>]</td><td>16</td></tr>
+<tr><td>Soll</td><td>Abo im Konto selbst kündigen, monatlich</td><td>nein</td><td>[geprüft am 02.10.2026: <a href="https://kammfux.example.com/agb">https://kammfux.example.com/agb</a>]</td><td>19</td></tr>
+<tr><td>Soll</td><td>Abgleich aller Geräte in unter 5 Sekunden</td><td>nein</td><td>[angenommen: keine Quelle, kein Prüfdatum]</td><td>22</td></tr>
+</tbody></table></div>
+<p>Noch nicht behaupten, eigene Features noch nicht fertig: Anzahlung oder Ausfallgebühr bei Online-Buchung (Zeile 21, nein); Rückruf-Wunsch an den Support aus dem Kalender (Zeile 27, nein).</p>
+<h4>Einwände</h4>
+<p>Jede Antwort schreibt ein Mensch: wahr, kurz, keine ungeprüfte Aussage über Kammfux (fiktiv).</p>
+<ol><li>„Kammfux (fiktiv) hat das: Termin per Link verschieben oder absagen. Und Taktilo (fiktiv)?“<br>
+Daten: features.csv Zeile 8; Kammfux (fiktiv): ja [geprüft am 02.10.2026: <a href="https://kammfux.example.com/hilfe/absagen">https://kammfux.example.com/hilfe/absagen</a>]; Taktilo (fiktiv): teilweise. Antwort: zu schreiben</li><li>„Kammfux (fiktiv) hat das: Online-Zahlung bei der Buchung. Und Taktilo (fiktiv)?“<br>
+Daten: features.csv Zeile 20; Kammfux (fiktiv): ja [geprüft am 30.06.2026, veraltet: <a href="https://kammfux.example.com/funktionen">https://kammfux.example.com/funktionen</a>]; Taktilo (fiktiv): nein. Antwort: zu schreiben</li><li>„Kammfux (fiktiv) hat das: Preise nach Stylist-Stufe. Und Taktilo (fiktiv)?“<br>
+Daten: features.csv Zeile 17; Kammfux (fiktiv): ja [geprüft am 02.10.2026: <a href="https://kammfux.example.com/hilfe/leistungen">https://kammfux.example.com/hilfe/leistungen</a>]; Taktilo (fiktiv): teilweise. Antwort: zu schreiben</li><li>„Wir sind mit Kammfux (fiktiv) zufrieden.“<br>
+Daten: feedback.json praise/online_booking, gelobtes Thema Online-Buchung für Kundinnen und Kunden (4 Bewertungen), z. B. „Unsere Kundinnen buchen jetzt fast alles über die Buchungsseite, das Telefon klingelt viel seltener.“ <a href="https://example.org/capterra/kammfux/101">https://example.org/capterra/kammfux/101</a>. Antwort: zu schreiben</li><li>„Wir sind mit Kammfux (fiktiv) zufrieden.“<br>
+Daten: feedback.json praise/notifications, gelobtes Thema Nützliche Erinnerungen und Benachrichtigungen (1 Bewertung), z. B. „Die Erinnerungen per E-Mail haben die Ausfälle spürbar gesenkt.“ <a href="https://example.org/capterra/kammfux/101">https://example.org/capterra/kammfux/101</a>. Antwort: zu schreiben</li><li>„Wir sind mit Kammfux (fiktiv) zufrieden.“<br>
+Daten: feedback.json praise/pricing, gelobtes Thema Preis und Preis-Leistung (1 Bewertung), z. B. „Dass Junior und Senior eigene Preise haben, ist für uns wichtig.“ <a href="https://example.org/capterra/kammfux/106">https://example.org/capterra/kammfux/106</a>. Antwort: zu schreiben</li></ol>
+<h4>Preise</h4>
+<p>zu schreiben: jeder Tarif von Kammfux (fiktiv) mit Preis, Abrechnungszeitraum, netto oder brutto, Prüfdatum und Link zur Preisseite, daneben der vergleichbare Tarif von Taktilo (fiktiv). Kein Preis ohne Datum.</p>
+<hr>
+<h4>SWOT: Taktilo (fiktiv) gegen Kammfux (fiktiv)</h4>
+<p>Nur aus features.csv und der Bewertungsanalyse; jede Zeile nennt ihre Quelle.</p>
+<p><strong>Stärken</strong> (Taktilo (fiktiv))</p>
+<ul><li>[Muss] Zeit beim Buchen sperren, kein Doppeltermin: Kammfux (fiktiv) nein, Taktilo (fiktiv) ja (features.csv Zeile 12) [angenommen: keine Quelle, kein Prüfdatum]</li><li>[Soll] SMS-Erinnerung im Grundpreis: Kammfux (fiktiv) teilweise, Taktilo (fiktiv) ja (features.csv Zeile 14) [geprüft am 02.10.2026: <a href="https://kammfux.example.com/preise">https://kammfux.example.com/preise</a>]</li><li>[Soll] Einwirkzeit: Mitarbeiterin in der Zeit buchbar: Kammfux (fiktiv) nein, Taktilo (fiktiv) ja (features.csv Zeile 16) [geprüft am 02.10.2026: <a href="https://kammfux.example.com/hilfe/einwirkzeit">https://kammfux.example.com/hilfe/einwirkzeit</a>]</li><li>[Soll] Abo im Konto selbst kündigen, monatlich: Kammfux (fiktiv) nein, Taktilo (fiktiv) ja (features.csv Zeile 19) [geprüft am 02.10.2026: <a href="https://kammfux.example.com/agb">https://kammfux.example.com/agb</a>]</li><li>[Soll] Abgleich aller Geräte in unter 5 Sekunden: Kammfux (fiktiv) nein, Taktilo (fiktiv) ja (features.csv Zeile 22) [angenommen: keine Quelle, kein Prüfdatum]</li></ul>
+<p><strong>Schwächen</strong> (Taktilo (fiktiv))</p>
+<ul><li>[Muss] Termin per Link verschieben oder absagen: Kammfux (fiktiv) ja, Taktilo (fiktiv) teilweise (features.csv Zeile 8) [geprüft am 02.10.2026: <a href="https://kammfux.example.com/hilfe/absagen">https://kammfux.example.com/hilfe/absagen</a>]</li><li>[Soll] Online-Zahlung bei der Buchung: Kammfux (fiktiv) ja, Taktilo (fiktiv) nein (features.csv Zeile 20) [geprüft am 30.06.2026, veraltet: <a href="https://kammfux.example.com/funktionen">https://kammfux.example.com/funktionen</a>]</li><li>[Soll] Preise nach Stylist-Stufe: Kammfux (fiktiv) ja, Taktilo (fiktiv) teilweise (features.csv Zeile 17) [geprüft am 02.10.2026: <a href="https://kammfux.example.com/hilfe/leistungen">https://kammfux.example.com/hilfe/leistungen</a>]</li><li>[Kann] Google-Kalender der Mitarbeiterin abgleichen: Kammfux (fiktiv) ja, Taktilo (fiktiv) nein (features.csv Zeile 23) [geprüft am 02.10.2026: <a href="https://kammfux.example.com/integrationen">https://kammfux.example.com/integrationen</a>]</li><li>[Kann] Mehrere Standorte: Kammfux (fiktiv) ja, Taktilo (fiktiv) nein (features.csv Zeile 24) [geprüft am 02.10.2026: <a href="https://kammfux.example.com/preise">https://kammfux.example.com/preise</a>]</li><li>[Kann] Gutscheine online einlösen: Kammfux (fiktiv) unbekannt, Taktilo (fiktiv) nein (features.csv Zeile 26) [angenommen: Original unbekannt, keine Quelle, kein Prüfdatum]</li><li>[Kann] Auswertung Umsatz und Auslastung: Kammfux (fiktiv) ja, Taktilo (fiktiv) teilweise (features.csv Zeile 25) [geprüft am 02.10.2026: <a href="https://kammfux.example.com/funktionen">https://kammfux.example.com/funktionen</a>]</li></ul>
+<p><strong>Chancen</strong></p>
+<ul><li>Doppelbuchungen: 6 Beschwerden, 5 Quellen (feedback.json themes/double_booking)</li><li>Zahlung, Kündigung und Erstattung: 6 Beschwerden, 3 Quellen (feedback.json themes/billing)</li><li>Support antwortet nicht: 4 Beschwerden, 3 Quellen (feedback.json themes/support)</li><li>Preis und Preis-Leistung: 5 Beschwerden, 3 Quellen (feedback.json themes/pricing)</li><li>Fehler und Abstürze: 3 Beschwerden, 2 Quellen (feedback.json themes/bugs)</li><li>Gewünscht: No-Shows, Anzahlung und Ausfallgebühr: 3 Bewertungen, 2 Quellen (feedback.json themes/no_show)</li><li>Gewünscht: Einwirkzeit bei Farbe und Strähnen: 4 Bewertungen, 3 Quellen (feedback.json themes/processing_time)</li></ul>
+<p><strong>Risiken</strong></p>
+<ul><li>Online-Buchung für Kundinnen und Kunden: gelobt in 4 Bewertungen (feedback.json praise/online_booking)</li><li>Nützliche Erinnerungen und Benachrichtigungen: gelobt in 1 Bewertung (feedback.json praise/notifications)</li><li>Preis und Preis-Leistung: gelobt in 1 Bewertung (feedback.json praise/pricing)</li></ul>
+<h4>Für eine Vergleichsseite</h4>
+<p>Nur geprüfte Aussagen mit öffentlichem Link, höchstens 90 Tage vor dem 17.10.2026 geprüft. Bewertungen kommen nie auf die Seite. Vor der Veröffentlichung: die Checkliste in references/battlecard.md, von einem Anwalt geprüft.</p>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 2">
+<table>
+<thead><tr>
+<th scope="col">Feature</th>
+<th scope="col">Taktilo (fiktiv)</th>
+<th scope="col">Kammfux (fiktiv)</th>
+<th scope="col">Quelle</th>
+<th scope="col">geprüft</th>
+</tr></thead><tbody>
+<tr><td>Salon-Konto mit E-Mail anlegen</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/hilfe/registrierung">https://kammfux.example.com/hilfe/registrierung</a></td><td>02.10.2026</td></tr>
+<tr><td>Leistungen mit Dauer und Preis anlegen</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/hilfe/leistungen">https://kammfux.example.com/hilfe/leistungen</a></td><td>02.10.2026</td></tr>
+<tr><td>Mitarbeiterinnen mit Arbeitszeiten</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/hilfe/team">https://kammfux.example.com/hilfe/team</a></td><td>02.10.2026</td></tr>
+<tr><td>Öffentliche Buchungsseite mit freien Zeiten</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/funktionen">https://kammfux.example.com/funktionen</a></td><td>02.10.2026</td></tr>
+<tr><td>Termin als Gast ohne Konto buchen</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/funktionen">https://kammfux.example.com/funktionen</a></td><td>02.10.2026</td></tr>
+<tr><td>Bestätigung per E-Mail an Kundin und Salon</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/hilfe/benachrichtigungen">https://kammfux.example.com/hilfe/benachrichtigungen</a></td><td>02.10.2026</td></tr>
+<tr><td>Termin per Link verschieben oder absagen</td><td>teilweise</td><td>ja</td><td><a href="https://kammfux.example.com/hilfe/absagen">https://kammfux.example.com/hilfe/absagen</a></td><td>02.10.2026</td></tr>
+<tr><td>Salon-Kalender Tag und Woche pro Mitarbeiterin</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/funktionen">https://kammfux.example.com/funktionen</a></td><td>02.10.2026</td></tr>
+<tr><td>Kundenkartei mit Terminverlauf</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/hilfe/kundenkartei">https://kammfux.example.com/hilfe/kundenkartei</a></td><td>02.10.2026</td></tr>
+<tr><td>Erinnerung per E-Mail 24 Stunden vorher</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/hilfe/benachrichtigungen">https://kammfux.example.com/hilfe/benachrichtigungen</a></td><td>02.10.2026</td></tr>
+<tr><td>SMS-Erinnerung im Grundpreis</td><td>ja</td><td>teilweise</td><td><a href="https://kammfux.example.com/preise">https://kammfux.example.com/preise</a></td><td>02.10.2026</td></tr>
+<tr><td>Mehrere Leistungen in einer Buchung</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/funktionen">https://kammfux.example.com/funktionen</a></td><td>02.10.2026</td></tr>
+<tr><td>Einwirkzeit: Mitarbeiterin in der Zeit buchbar</td><td>ja</td><td>nein</td><td><a href="https://kammfux.example.com/hilfe/einwirkzeit">https://kammfux.example.com/hilfe/einwirkzeit</a></td><td>02.10.2026</td></tr>
+<tr><td>Preise nach Stylist-Stufe</td><td>teilweise</td><td>ja</td><td><a href="https://kammfux.example.com/hilfe/leistungen">https://kammfux.example.com/hilfe/leistungen</a></td><td>02.10.2026</td></tr>
+<tr><td>Allergie-Notiz mit ausdrücklicher Einwilligung</td><td>ja</td><td>ja</td><td><a href="https://kammfux.example.com/hilfe/kundenkartei">https://kammfux.example.com/hilfe/kundenkartei</a></td><td>02.10.2026</td></tr>
+<tr><td>Abo im Konto selbst kündigen, monatlich</td><td>ja</td><td>nein</td><td><a href="https://kammfux.example.com/agb">https://kammfux.example.com/agb</a></td><td>02.10.2026</td></tr>
+<tr><td>Google-Kalender der Mitarbeiterin abgleichen</td><td>nein</td><td>ja</td><td><a href="https://kammfux.example.com/integrationen">https://kammfux.example.com/integrationen</a></td><td>02.10.2026</td></tr>
+<tr><td>Mehrere Standorte</td><td>nein</td><td>ja</td><td><a href="https://kammfux.example.com/preise">https://kammfux.example.com/preise</a></td><td>02.10.2026</td></tr>
+<tr><td>Auswertung Umsatz und Auslastung</td><td>teilweise</td><td>ja</td><td><a href="https://kammfux.example.com/funktionen">https://kammfux.example.com/funktionen</a></td><td>02.10.2026</td></tr>
+</tbody></table></div>
+<p>Vorn: Taktilo (fiktiv) 3, Kammfux (fiktiv) 5; gleich: 11.</p>
+<p>Noch nicht verwendbar:</p>
+<ul><li>Quelle ist kein öffentlicher Link: Telefon-Termine von Hand eintragen (Zeile 10)</li><li>keine Quelle, kein Prüfdatum: Zeit beim Buchen sperren, kein Doppeltermin (Zeile 12); Abgleich aller Geräte in unter 5 Sekunden (Zeile 22)</li><li>veraltet, neu prüfen: Online-Zahlung bei der Buchung (Zeile 20)</li><li>Original unbekannt, keine Quelle, kein Prüfdatum: Gutscheine online einlösen (Zeile 26)</li></ul>
+<h4>Quellen und Stichprobe</h4>
+<p>Bewertungen: 40 aus 5 Quellen (app-store, capterra, google-play, omr, trustpilot); mit Sternen: 40; verworfen (ohne Link oder Text): 1; doppelt: 1.<br>
+Feature-Matrix: 29 Zeilen; Aussagen über Kammfux (fiktiv): 21 geprüft (davon 1 veraltet), 3 angenommen.<br>
+Geprüft zwischen 30.06.2026 und 03.10.2026.<br>
+Stand der Karte: 17.10.2026. Veraltet heißt: mehr als 90 Tage vor diesem Datum geprüft.</p>
+</section>
+<section id="s-legal" aria-labelledby="h-legal">
+<h2 id="h-legal">Rechtliche Prüfliste (für einen Anwalt, keine Rechtsberatung)</h2>
+<blockquote><p><strong>fiktiv / synthetic demo data</strong>: Kammfux und Taktilo sind erfunden. Diese Datei ist eine Prüfliste für einen Anwalt, keine Rechtsberatung. Kein Punkt wurde von einem Anwalt geprüft.</p></blockquote>
+<h3>Recht: Abstandsprüfung und Pflichten zum Start (Taktilo gegen Kammfux, fiktiv)</h3>
+<p>Stand: 17.10.2026. Markt: Deutschland, Österreich, Schweiz. Grundlage: <code>references/legal-eu-dach.md</code>, Abschnitte 3 und 5. Vor dem Start prüft ein Fachanwalt für gewerblichen Rechtsschutz oder IT-Recht die Abstandsprüfung und die Startseiten.</p>
+<h4>Abstandsprüfung</h4>
+<p>Bewertung je Zeile: gleich, ähnlich oder verschieden, mit Beleg. Eine Zeile ohne Beleg bleibt „zu prüfen“.</p>
+<div class="scroll" role="region" tabindex="0" aria-label="Tabelle 1">
+<table>
+<thead><tr>
+<th scope="col">Dimension</th>
+<th scope="col">gefordert</th>
+<th scope="col">Bewertung</th>
+<th scope="col">Beleg</th>
+</tr></thead><tbody>
+<tr><td>Name</td><td>verschieden</td><td>zu prüfen</td><td><code>brand.md</code>: Websuche am 17.10.2026 ohne Treffer, Registerprüfungen noch offen</td></tr>
+<tr><td>Logo und App-Icon</td><td>verschieden</td><td>zu prüfen</td><td>Logo-Brief in <code>brand.md</code>; Entwürfe gibt es noch nicht</td></tr>
+<tr><td>Signature-Elemente (Fuchs, Farbpaar, „Kammfux Finder“)</td><td>verschieden, keins übernommen</td><td>zu prüfen</td><td><code>features.csv</code> Zeilen 29 und 30 stehen auf skip; der Nachbau ist noch neben das Original zu legen</td></tr>
+<tr><td>Primärfarbe und Farbpaar</td><td>verschieden</td><td>verschieden</td><td>Violett #5a3d9a; kleinster Abstand der Palette zu den Kammfux-Farben ΔE 27,3 (Schwelle 10), <code>brand.md</code></td></tr>
+<tr><td>Schrift</td><td>verschieden, falls ihre eigen ist</td><td>zu prüfen</td><td>Schrift des Originals nicht erfasst</td></tr>
+<tr><td>Texte und Mikrotexte</td><td>verschieden</td><td>zu prüfen</td><td>10 Texte neu geschrieben (<code>brand.md</code>); Stichprobe im fertigen Produkt fehlt</td></tr>
+<tr><td>Bilder, Icons, Illustrationen</td><td>verschieden</td><td>zu prüfen</td><td>Lizenzliste im Projekt fehlt noch</td></tr>
+<tr><td>Gesamteindruck der Hauptscreens</td><td>ähnlich nur, wenn alle Zeilen oben verschieden sind</td><td>zu prüfen</td><td>imgdiff.py braucht Screenshots beider Produkte (<code>parity.md</code> enthält keinen Layout-Vergleich)</td></tr>
+<tr><td>Domain, Handles, Store-Eintrag</td><td>verschieden</td><td>zu prüfen</td><td>Domains und Handles in <code>brand.md</code> noch offen; kein „Kammfux“ im App-Namen</td></tr>
+<tr><td>Herkunft des Wissens</td><td>nur öffentlich oder eigenes Konto</td><td>öffentlich und eigenes Konto</td><td>Quellentabelle in <code>recon.md</code>: öffentliche Seiten und das Testkonto des Nutzers</td></tr>
+</tbody></table></div>
+<p>Ergebnis: nicht startbereit. 8 Zeilen sind noch zu prüfen.</p>
+<h4>Pflichten zum Start</h4>
+<p>Taktilo verkauft an Salons (B2B). Die Buchungsseite benutzen aber Verbraucherinnen und Verbraucher. Welche Pflicht beim Salon liegt und welche bei Taktilo, klärt der Anwalt.</p>
+<ul><li>☐ zu prüfen: Impressum auf Website und Buchungsseite (§ 5 DDG; Österreich § 5 ECG und § 25 MedienG; Schweiz Art. 3 Abs. 1 lit. s UWG).</li><li>☐ zu prüfen: Datenschutzerklärung (Art. 13 DSGVO) und Auftragsverarbeitungsvertrag mit jedem Salon (Art. 28), dazu Verträge mit Hosting, E-Mail- und SMS-Versand.</li><li>☐ zu prüfen: Allergie-Notiz ist ein Gesundheitsdatum (Art. 9 DSGVO): ausdrückliche Einwilligung, enge Zugriffsrechte, Datenschutz-Folgenabschätzung erwägen (<code>features.csv</code> Zeile 18).</li><li>☐ zu prüfen: Erinnerungen an gebuchte Termine sind Transaktionsnachrichten; Werbung per E-Mail oder SMS braucht die vorherige ausdrückliche Einwilligung (§ 7 Abs. 2 UWG), in der Praxis per Double-Opt-in nachgewiesen.</li><li>☐ zu prüfen: Cookies und Tracking nur nach Einwilligung (§ 25 TDDDG), oder Analyse ohne Cookies.</li><li>☐ zu prüfen: Barrierefreiheit: Gilt das BFSG für die Buchungsseite? Kleinstunternehmen sind für Dienstleistungen ausgenommen. Gebaut wird ohnehin nach WCAG 2.2 AA (<code>build-brief.md</code>). Informationen zur Barrierefreiheit nach § 14 BFSG mit Anlage 3 (wie die Dienstleistung die Anforderungen erfüllt), in den AGB oder auf einer Seite; eine nicht erfüllte Anforderung ist nur unter den Ausnahmen des Gesetzes zulässig (grundlegende Veränderung, unverhältnismäßige Belastung), mit dokumentierter Beurteilung. Den Inhalt bestätigt der Anwalt.</li><li>☐ zu prüfen: Buchung mit Anzahlung: Button-Text „Zahlungspflichtig buchen“ (§ 312j Abs. 3 BGB) und Informationen vor dem Vertrag (Art. 246a EGBGB).</li><li>☐ zu prüfen: Ausfallgebühren für No-Shows: vorher klar vereinbart, angemessen zum tatsächlichen Schaden, Nachweis eines geringeren Schadens möglich (§ 309 Nr. 5 BGB). Die Vorlage für die AGB der Salons gehört dazu.</li><li>☐ zu prüfen: Preise auf der Buchungsseite als Endpreise inkl. Umsatzsteuer (PAngV).</li><li>☐ zu prüfen: Kündigungsbutton (§ 312k BGB) gilt für Verbraucherverträge. Für Salons ist er keine Pflicht, aber Teil des Winkels (<code>features.csv</code> Zeile 19).</li><li>☐ zu prüfen: E-Rechnung: Taktilo muss E-Rechnungen empfangen können; die Pflicht zum Versenden an Salons beginnt stufenweise ab 2027.</li><li>☐ zu prüfen: Schweiz: revidiertes Datenschutzgesetz (revDSG), falls Salons in der Schweiz Kunden werden.</li></ul>
+<h4>Werbung gegen Kammfux</h4>
+<p>Eine Vergleichsseite ist nicht beauftragt. <code>battlecard.md</code> ist intern. Bevor etwas mit dem Namen Kammfux nach außen geht (Vergleichsseite, Präsentation, Anzeige), gilt die Checkliste in <code>references/battlecard.md</code> (§ 6 UWG), Punkt für Punkt vom Anwalt geprüft.</p>
+<h4>Entscheidung des Nutzers</h4>
+<p>Ob ein Anwalt die Abstandsprüfung und die Startseiten prüft: noch nicht entschieden (zu prüfen).</p>
+</section>
+</main>
+<footer><p>Erstellt mit Moatbreak report.py aus den Markdown-Dateien in teardown/. Rechtliche Abschnitte sind eine Prüfliste für einen Anwalt, keine Rechtsberatung.</p></footer>
+</div>
+</body>
+</html>

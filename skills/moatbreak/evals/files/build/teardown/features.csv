@@ -1,0 +1,18 @@
+synthetic test data,feature,area,priority,original,clone,effort,notes,source,checked
+synthetic,Public booking page with open slots,booking,must,yes,yes,L,,https://exampleslot.example.com/hilfe/buchungsseite,2026-10-01
+synthetic,Book without an account,booking,must,yes,yes,M,,https://exampleslot.example.com/hilfe/gastbuchung,2026-10-01
+synthetic,Sync with Google Calendar,integrations,must,yes,partial,L,ours: read-only today; two-way sync missing,https://exampleslot.example.com/hilfe/kalender,2026-09-20
+synthetic,Several services in one booking,booking,must,yes,no,M,,https://exampleslot.example.com/hilfe/mehrere-leistungen,2026-09-20
+synthetic,Processing time during which the stylist is free,availability,must,no,no,M,niche need: Einwirkzeit,,
+synthetic,Email confirmation to salon and client,notifications,must,yes,yes,S,,https://exampleslot.example.com/hilfe/bestaetigung,2026-10-01
+synthetic,Reschedule or cancel from a link,booking,must,yes,no,M,,https://exampleslot.example.com/hilfe/umbuchen,2026-10-01
+synthetic,SMS reminders,notifications,should,no,yes,M,ours: top request in reviews; their plan table lists email reminders only,https://exampleslot.example.com/preise,2026-10-01
+synthetic,Deposit for no-shows per service,payments,should,partial,yes,M,theirs: one flat deposit for all services and only in the Pro plan,https://exampleslot.example.com/preise,2026-10-01
+synthetic,Waitlist for cancelled slots,booking,should,unknown,no,S,not found in their help center,,
+synthetic,Stylist levels with different prices,team,should,yes,no,M,,https://exampleslot.example.com/hilfe/preisstufen,2026-05-02
+synthetic,DATEV export,integrations,should,no,yes,M,ours; their export help page names CSV only,https://exampleslot.example.com/hilfe/export,2026-06-01
+synthetic,Analytics dashboard,reports,could,yes,no,M,,https://exampleslot.example.com/hilfe/statistik,2026-10-01
+synthetic,Gift vouchers,payments,could,yes,no,,,https://exampleslot.example.com/hilfe/gutscheine,2026-10-01
+synthetic,Marketplace listing of salons,marketing,could,yes,skip,,their network of salons and clients is not part of the product we can rebuild,,
+synthetic,Mascot Slotti on the booking page,branding,could,yes,skip,,signature element: do not imitate,,
+synthetic,Online payment at booking,payments,must,yes,yes,L,,teardown/screens/S09.png,2026-10-01

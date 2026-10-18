@@ -1,0 +1,2 @@
+name,url,evidence_url,category,customer,market,languages,price_from,price_model,price_url,axis_x,axis_y,axis_url,status,read_on,notes,company,seat,founded,size,company_url
+Example Booking (sample row - delete it),https://booking.example/,https://booking.example/for-salons,online appointment booking,hair salons,"DE, AT, CH","de, en",from 29 EUR per month,"per location, net",https://booking.example/pricing,,6,https://booking.example/features,candidate,2026-10-17,sample only: landscape.py drops .example rows,,,,,

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic test data for evals/evals.json (eval 15): ExampleSlot is fictional. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://exampleslot.example.com/de/</loc><lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://exampleslot.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exampleslot.example.com/en/"/></url>
+  <url><loc>https://exampleslot.example.com/en/</loc><lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://exampleslot.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exampleslot.example.com/en/"/></url>
+  <url><loc>https://exampleslot.example.com/de/preise</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://exampleslot.example.com/en/pricing</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/funktionen/online-buchung</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/funktionen/kalender</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/hilfe/termin-verschieben</loc><lastmod>2026-07-02</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/hilfe/abo-kuendigen</loc><lastmod>2026-07-02</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/blog/no-shows-vermeiden</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/blog/friseur-marketing</loc><lastmod>2025-11-10</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/exampleslot-vs-altslot</loc><lastmod>2026-06-01</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/alternative-zu-otherslot</loc><lastmod>2026-06-01</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/standorte/berlin</loc><lastmod>2026-05-12</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/standorte/wien</loc><lastmod>2026-05-12</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/impressum</loc><lastmod>2026-01-05</lastmod></url>
+  <url><loc>https://exampleslot.example.com/de/datenschutz</loc><lastmod>2026-01-05</lastmod></url>
+</urlset>

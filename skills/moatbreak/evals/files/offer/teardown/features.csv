@@ -1,0 +1,20 @@
+synthetic test data,feature,area,priority,original,clone,effort,notes,source,checked
+synthetic,Public booking page with open slots,booking,must,yes,no,L,,https://exampleslot.example.com/hilfe/buchungsseite,2026-10-01
+synthetic,Book without an account,booking,must,yes,no,M,,https://exampleslot.example.com/hilfe/gastbuchung,2026-10-01
+synthetic,Sign-in for salon staff,onboarding,must,yes,no,S,,https://exampleslot.example.com/hilfe/anmelden,2026-10-01
+synthetic,Opening hours and staff availability,availability,must,yes,no,M,,https://exampleslot.example.com/hilfe/verfuegbarkeit,2026-10-01
+synthetic,Several services in one booking,booking,must,yes,no,M,,https://exampleslot.example.com/hilfe/mehrere-leistungen,2026-10-01
+synthetic,Processing time during which the stylist is free,availability,must,no,no,M,niche need: Einwirkzeit,,
+synthetic,Email confirmation to salon and client,notifications,must,yes,no,S,,https://exampleslot.example.com/hilfe/bestaetigung,2026-10-01
+synthetic,Reschedule or cancel from a link,booking,must,yes,no,M,,https://exampleslot.example.com/hilfe/umbuchen,2026-10-01
+synthetic,Sync with Google Calendar,integrations,should,yes,no,L,,https://exampleslot.example.com/hilfe/kalender,2026-10-01
+synthetic,SMS reminders,notifications,should,no,no,M,fix: requested in reviews,,
+synthetic,Deposit for no-shows per service,payments,should,partial,no,M,theirs: one flat deposit for all services,https://exampleslot.example.com/preise,2026-10-01
+synthetic,Stylist levels with different prices,team,should,yes,no,M,,https://exampleslot.example.com/hilfe/preisstufen,2026-10-01
+synthetic,Allergy and treatment notes per client,clients,should,yes,no,S,health data: Art. 9 GDPR,https://exampleslot.example.com/hilfe/kundenkartei,2026-10-01
+synthetic,Three locations under one account,team,should,yes,no,L,the client runs three salons,https://exampleslot.example.com/preise,2026-10-01
+synthetic,Analytics dashboard,reports,could,yes,no,M,,https://exampleslot.example.com/hilfe/statistik,2026-10-01
+synthetic,Gift vouchers,payments,could,yes,no,,not estimated yet,https://exampleslot.example.com/hilfe/gutscheine,2026-10-01
+synthetic,DATEV export,integrations,could,no,no,M,ours: requested in reviews,,
+synthetic,Marketplace listing of salons,marketing,could,yes,skip,,their network of salons and clients is not part of the product we can rebuild,,
+synthetic,Mascot on the booking page,branding,could,yes,skip,,signature element: do not imitate,,

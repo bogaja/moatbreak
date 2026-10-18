@@ -1,0 +1,824 @@
+{
+  "reviews": 40,
+  "sources": [
+    "app-store",
+    "capterra",
+    "google-play",
+    "omr",
+    "trustpilot"
+  ],
+  "rated": 40,
+  "by_source": [
+    {
+      "source": "capterra",
+      "count": 9,
+      "avg_rating": 4.22,
+      "rated": 9,
+      "share_pct": 22.5,
+      "first_date": "2025-07-15",
+      "last_date": "2026-10-05"
+    },
+    {
+      "source": "google-play",
+      "count": 9,
+      "avg_rating": 2.22,
+      "rated": 9,
+      "share_pct": 22.5,
+      "first_date": "2025-06-18",
+      "last_date": "2026-10-12"
+    },
+    {
+      "source": "trustpilot",
+      "count": 8,
+      "avg_rating": 1.75,
+      "rated": 8,
+      "share_pct": 20.0,
+      "first_date": "2025-03-25",
+      "last_date": "2026-10-10"
+    },
+    {
+      "source": "app-store",
+      "count": 7,
+      "avg_rating": 2.86,
+      "rated": 7,
+      "share_pct": 17.5,
+      "first_date": "2025-04-02",
+      "last_date": "2026-09-14"
+    },
+    {
+      "source": "omr",
+      "count": 7,
+      "avg_rating": 3.29,
+      "rated": 7,
+      "share_pct": 17.5,
+      "first_date": "2025-05-20",
+      "last_date": "2026-10-01"
+    }
+  ],
+  "dominant_source": null,
+  "themes": [
+    {
+      "id": "double_booking",
+      "label": {
+        "en": "Double bookings",
+        "de": "Doppelbuchungen"
+      },
+      "kind": "complaint",
+      "score": 5.0,
+      "count": 6,
+      "share_pct": 15.0,
+      "avg_rating": 1.83,
+      "sources": [
+        "app-store",
+        "capterra",
+        "google-play",
+        "omr",
+        "trustpilot"
+      ],
+      "thin": false,
+      "quotes": [
+        {
+          "quote": "Doppelte Termine nach jedem Sync.",
+          "url": "https://example.org/google-play/kammfux/406",
+          "source": "google-play",
+          "rating": 1.0
+        },
+        {
+          "quote": "Two clients booked for the same slot twice this month.",
+          "url": "https://example.org/trustpilot/kammfux/304",
+          "source": "trustpilot",
+          "rating": 1.0
+        },
+        {
+          "quote": "Wieder doppelt gebucht.",
+          "url": "https://example.org/trustpilot/kammfux/308",
+          "source": "trustpilot",
+          "rating": 2.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "billing",
+      "label": {
+        "en": "Payments, cancelling and refunds",
+        "de": "Zahlung, Kündigung und Erstattung"
+      },
+      "kind": "complaint",
+      "score": 4.3,
+      "count": 6,
+      "share_pct": 15.0,
+      "avg_rating": 2.17,
+      "sources": [
+        "capterra",
+        "omr",
+        "trustpilot"
+      ],
+      "thin": false,
+      "quotes": [
+        {
+          "quote": "Wir haben gekündigt und sind zu Föhnora gewechselt.",
+          "url": "https://example.org/trustpilot/kammfux/302",
+          "source": "trustpilot",
+          "rating": 1.0
+        },
+        {
+          "quote": "Kündigung nur per Brief, und dann wurde trotzdem noch ein Jahr abgebucht.",
+          "url": "https://example.org/trustpilot/kammfux/301",
+          "source": "trustpilot",
+          "rating": 1.0
+        },
+        {
+          "quote": "Die Erstattung hat sechs Wochen gedauert.",
+          "url": "https://example.org/trustpilot/kammfux/305",
+          "source": "trustpilot",
+          "rating": 2.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "support",
+      "label": {
+        "en": "Support that does not answer",
+        "de": "Support antwortet nicht"
+      },
+      "kind": "complaint",
+      "score": 3.6,
+      "count": 4,
+      "share_pct": 10.0,
+      "avg_rating": 1.5,
+      "sources": [
+        "app-store",
+        "omr",
+        "trustpilot"
+      ],
+      "thin": false,
+      "quotes": [
+        {
+          "quote": "Support never replied to my ticket.",
+          "url": "https://example.org/trustpilot/kammfux/304",
+          "source": "trustpilot",
+          "rating": 1.0
+        },
+        {
+          "quote": "Support nicht erreichbar, drei E-Mails ohne Antwort.",
+          "url": "https://example.org/trustpilot/kammfux/302",
+          "source": "trustpilot",
+          "rating": 1.0
+        },
+        {
+          "quote": "Support antwortet nicht, und die App hängt sich auf, sobald ich eine Buchung verschiebe.",
+          "url": "https://example.org/app-store/kammfux/504",
+          "source": "app-store",
+          "rating": 1.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "pricing",
+      "label": {
+        "en": "Price and value",
+        "de": "Preis und Preis-Leistung"
+      },
+      "kind": "complaint",
+      "score": 3.2,
+      "count": 5,
+      "share_pct": 12.5,
+      "avg_rating": 2.8,
+      "sources": [
+        "capterra",
+        "omr",
+        "trustpilot"
+      ],
+      "thin": false,
+      "quotes": [
+        {
+          "quote": "Der Preis pro Mitarbeiterin ist für einen kleinen Salon zu hoch.",
+          "url": "https://example.org/trustpilot/kammfux/306",
+          "source": "trustpilot",
+          "rating": 2.0
+        },
+        {
+          "quote": "Die Preiserhöhung im Frühjahr kam per E-Mail, mit drei Wochen Vorlauf.",
+          "url": "https://example.org/omr/kammfux/202",
+          "source": "omr",
+          "rating": 2.0
+        },
+        {
+          "quote": "Die SMS-Erinnerungen kosten pro Nachricht extra, das stand nicht klar auf der Preisseite.",
+          "url": "https://example.org/trustpilot/kammfux/303",
+          "source": "trustpilot",
+          "rating": 2.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "bugs",
+      "label": {
+        "en": "Bugs and crashes",
+        "de": "Fehler und Abstürze"
+      },
+      "kind": "complaint",
+      "score": 2.8,
+      "count": 3,
+      "share_pct": 7.5,
+      "avg_rating": 1.33,
+      "sources": [
+        "app-store",
+        "google-play"
+      ],
+      "thin": false,
+      "quotes": [
+        {
+          "quote": "Nach dem Update stürzt die App ab, sobald ich den Wochenkalender öffne.",
+          "url": "https://example.org/google-play/kammfux/401",
+          "source": "google-play",
+          "rating": 1.0
+        },
+        {
+          "quote": "Support antwortet nicht, und die App hängt sich auf, sobald ich eine Buchung verschiebe.",
+          "url": "https://example.org/app-store/kammfux/504",
+          "source": "app-store",
+          "rating": 1.0
+        },
+        {
+          "quote": "App crashes every time I open the week view since the latest update.",
+          "url": "https://example.org/google-play/kammfux/402",
+          "source": "google-play",
+          "rating": 2.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "data",
+      "label": {
+        "en": "Sync and lost data",
+        "de": "Synchronisation und Datenverlust"
+      },
+      "kind": "complaint",
+      "score": 2.6,
+      "count": 3,
+      "share_pct": 7.5,
+      "avg_rating": 1.67,
+      "sources": [
+        "google-play"
+      ],
+      "thin": true,
+      "quotes": [
+        {
+          "quote": "Doppelte Termine nach jedem Sync.",
+          "url": "https://example.org/google-play/kammfux/406",
+          "source": "google-play",
+          "rating": 1.0
+        },
+        {
+          "quote": "Kalender seit gestern leer, alle Termine verschwunden.",
+          "url": "https://example.org/google-play/kammfux/408",
+          "source": "google-play",
+          "rating": 1.0
+        },
+        {
+          "quote": "Termine werden zwischen Handy und PC nicht synchronisiert, manchmal erst nach einer Stunde.",
+          "url": "https://example.org/google-play/kammfux/403",
+          "source": "google-play",
+          "rating": 3.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "updates",
+      "label": {
+        "en": "A redesign or update made it worse",
+        "de": "Update oder Redesign hat es verschlechtert"
+      },
+      "kind": "complaint",
+      "score": 2.6,
+      "count": 3,
+      "share_pct": 7.5,
+      "avg_rating": 1.67,
+      "sources": [
+        "app-store",
+        "google-play"
+      ],
+      "thin": false,
+      "quotes": [
+        {
+          "quote": "Nach dem Update stürzt die App ab, sobald ich den Wochenkalender öffne.",
+          "url": "https://example.org/google-play/kammfux/401",
+          "source": "google-play",
+          "rating": 1.0
+        },
+        {
+          "quote": "Seit der neuen Version doppelt gebucht, zweimal in einer Woche.",
+          "url": "https://example.org/app-store/kammfux/506",
+          "source": "app-store",
+          "rating": 2.0
+        },
+        {
+          "quote": "App crashes every time I open the week view since the latest update.",
+          "url": "https://example.org/google-play/kammfux/402",
+          "source": "google-play",
+          "rating": 2.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "notifications",
+      "label": {
+        "en": "Notifications and spam",
+        "de": "Benachrichtigungen und Spam"
+      },
+      "kind": "complaint",
+      "score": 2.0,
+      "count": 3,
+      "share_pct": 7.5,
+      "avg_rating": 2.67,
+      "sources": [
+        "capterra",
+        "google-play",
+        "trustpilot"
+      ],
+      "thin": false,
+      "quotes": [
+        {
+          "quote": "Die Benachrichtigung über neue Online-Buchungen kommt oft gar nicht.",
+          "url": "https://example.org/google-play/kammfux/404",
+          "source": "google-play",
+          "rating": 2.0
+        },
+        {
+          "quote": "Die SMS-Erinnerungen kosten pro Nachricht extra, das stand nicht klar auf der Preisseite.",
+          "url": "https://example.org/trustpilot/kammfux/303",
+          "source": "trustpilot",
+          "rating": 2.0
+        },
+        {
+          "quote": "Leider kosten die SMS-Erinnerungen extra, das summiert sich.",
+          "url": "https://example.org/capterra/kammfux/102",
+          "source": "capterra",
+          "rating": 4.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "no_show",
+      "label": {
+        "en": "No-shows, deposits and cancellation fees",
+        "de": "No-Shows, Anzahlung und Ausfallgebühr"
+      },
+      "kind": "request",
+      "score": 1.8,
+      "count": 3,
+      "share_pct": 7.5,
+      "avg_rating": 3.0,
+      "sources": [
+        "app-store",
+        "omr"
+      ],
+      "thin": false,
+      "quotes": [
+        {
+          "quote": "Letzte Woche drei No-Shows, das sind 180 Euro Umsatz weg.",
+          "url": "https://example.org/app-store/kammfux/501",
+          "source": "app-store",
+          "rating": 2.0
+        },
+        {
+          "quote": "I wish it had a deposit option for no-shows.",
+          "url": "https://example.org/app-store/kammfux/505",
+          "source": "app-store",
+          "rating": 3.0
+        },
+        {
+          "quote": "Leider gibt es keine Anzahlung, No-Shows bleiben unser Risiko.",
+          "url": "https://example.org/omr/kammfux/203",
+          "source": "omr",
+          "rating": 4.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "processing_time",
+      "label": {
+        "en": "Processing time for colour and highlights",
+        "de": "Einwirkzeit bei Farbe und Strähnen"
+      },
+      "kind": "request",
+      "score": 1.7,
+      "count": 4,
+      "share_pct": 10.0,
+      "avg_rating": 3.5,
+      "sources": [
+        "app-store",
+        "capterra",
+        "omr"
+      ],
+      "thin": false,
+      "quotes": [
+        {
+          "quote": "Für Colorationen mit Einwirkzeit muss ich zwei Termine anlegen, das ist umständlich.",
+          "url": "https://example.org/app-store/kammfux/507",
+          "source": "app-store",
+          "rating": 3.0
+        },
+        {
+          "quote": "Für einen Friseursalon fehlt mir die Einwirkzeit: Bei Strähnen ist die Kollegin 45 Minuten blockiert, obwohl sie in der Zeit schneiden könnte.",
+          "url": "https://example.org/omr/kammfux/201",
+          "source": "omr",
+          "rating": 3.0
+        },
+        {
+          "quote": "Schöne App, aber Einwirkzeiten beim Färben fehlen.",
+          "url": "https://example.org/app-store/kammfux/502",
+          "source": "app-store",
+          "rating": 4.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "online_booking",
+      "label": {
+        "en": "Online booking for clients",
+        "de": "Online-Buchung für Kundinnen und Kunden"
+      },
+      "kind": "complaint",
+      "score": 0.8,
+      "count": 1,
+      "share_pct": 2.5,
+      "avg_rating": 2.0,
+      "sources": [
+        "google-play"
+      ],
+      "thin": true,
+      "quotes": [
+        {
+          "quote": "Die Benachrichtigung über neue Online-Buchungen kommt oft gar nicht.",
+          "url": "https://example.org/google-play/kammfux/404",
+          "source": "google-play",
+          "rating": 2.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "performance",
+      "label": {
+        "en": "Slow, laggy, heavy",
+        "de": "Langsam und träge"
+      },
+      "kind": "complaint",
+      "score": 0.6,
+      "count": 1,
+      "share_pct": 2.5,
+      "avg_rating": 3.0,
+      "sources": [
+        "google-play"
+      ],
+      "thin": true,
+      "quotes": [
+        {
+          "quote": "Die App ist langsam, der Kalender lädt ewig.",
+          "url": "https://example.org/google-play/kammfux/407",
+          "source": "google-play",
+          "rating": 3.0
+        }
+      ],
+      "segments": []
+    },
+    {
+      "id": "ux",
+      "label": {
+        "en": "Confusing or clunky to use",
+        "de": "Umständlich und unübersichtlich"
+      },
+      "kind": "complaint",
+      "score": 0.3,
+      "count": 1,
+      "share_pct": 2.5,
+      "avg_rating": 3.0,
+      "sources": [
+        "app-store"
+      ],
+      "thin": true,
+      "quotes": [
+        {
+          "quote": "Für Colorationen mit Einwirkzeit muss ich zwei Termine anlegen, das ist umständlich.",
+          "url": "https://example.org/app-store/kammfux/507",
+          "source": "app-store",
+          "rating": 3.0
+        }
+      ],
+      "segments": []
+    }
+  ],
+  "praise": [
+    {
+      "id": "online_booking",
+      "label": {
+        "en": "Online booking for clients",
+        "de": "Online-Buchung für Kundinnen und Kunden"
+      },
+      "count": 4,
+      "sources": [
+        "app-store",
+        "capterra",
+        "omr"
+      ],
+      "quotes": [
+        {
+          "quote": "Unsere Kundinnen buchen jetzt fast alles über die Buchungsseite, das Telefon klingelt viel seltener.",
+          "url": "https://example.org/capterra/kammfux/101",
+          "source": "capterra",
+          "rating": 5.0
+        },
+        {
+          "quote": "Die Buchungsseite sieht gut aus und lässt sich auf der eigenen Website einbinden.",
+          "url": "https://example.org/omr/kammfux/203",
+          "source": "omr",
+          "rating": 4.0
+        }
+      ]
+    },
+    {
+      "id": "notifications",
+      "label": {
+        "en": "Useful reminders and notifications",
+        "de": "Nützliche Erinnerungen und Benachrichtigungen"
+      },
+      "count": 1,
+      "sources": [
+        "capterra"
+      ],
+      "quotes": [
+        {
+          "quote": "Die Erinnerungen per E-Mail haben die Ausfälle spürbar gesenkt.",
+          "url": "https://example.org/capterra/kammfux/101",
+          "source": "capterra",
+          "rating": 5.0
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "label": {
+        "en": "Price and value",
+        "de": "Preis und Preis-Leistung"
+      },
+      "count": 1,
+      "sources": [
+        "capterra"
+      ],
+      "quotes": [
+        {
+          "quote": "Dass Junior und Senior eigene Preise haben, ist für uns wichtig.",
+          "url": "https://example.org/capterra/kammfux/106",
+          "source": "capterra",
+          "rating": 4.0
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "label": {
+        "en": "Helpful support",
+        "de": "Hilfsbereiter Support"
+      },
+      "count": 1,
+      "sources": [
+        "capterra"
+      ],
+      "quotes": [
+        {
+          "quote": "Einrichtung in einem Nachmittag erledigt, der Support war am Telefon sehr geduldig.",
+          "url": "https://example.org/capterra/kammfux/103",
+          "source": "capterra",
+          "rating": 5.0
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "quote": "Was fehlt: Einwirkzeiten beim Färben, in der Zeit könnte die Kollegin eine andere Kundin schneiden.",
+      "url": "https://example.org/capterra/kammfux/104",
+      "source": "capterra",
+      "rating": 4.0
+    },
+    {
+      "quote": "Für einen Friseursalon fehlt mir die Einwirkzeit: Bei Strähnen ist die Kollegin 45 Minuten blockiert, obwohl sie in der Zeit schneiden könnte.",
+      "url": "https://example.org/omr/kammfux/201",
+      "source": "omr",
+      "rating": 3.0
+    },
+    {
+      "quote": "Ich wünsche mir eine Anzahlung bei der Buchung.",
+      "url": "https://example.org/app-store/kammfux/501",
+      "source": "app-store",
+      "rating": 2.0
+    },
+    {
+      "quote": "Schöne App, aber Einwirkzeiten beim Färben fehlen.",
+      "url": "https://example.org/app-store/kammfux/502",
+      "source": "app-store",
+      "rating": 4.0
+    },
+    {
+      "quote": "I wish it had a deposit option for no-shows.",
+      "url": "https://example.org/app-store/kammfux/505",
+      "source": "app-store",
+      "rating": 3.0
+    }
+  ],
+  "unthemed_negative": [
+    {
+      "url": "https://example.org/google-play/kammfux/409",
+      "source": "google-play",
+      "rating": 3.0,
+      "text": "Gutscheine aus dem Laden kann man online nicht einlösen."
+    }
+  ],
+  "as_of": "2026-10-17",
+  "source_bias": {
+    "overall_avg_rating": 2.88,
+    "dated": 40,
+    "first_date": "2025-03-25",
+    "last_date": "2026-10-12",
+    "recent_share_pct": 37.5,
+    "recent_since": "2026-07-19",
+    "old_share_pct": 5.0,
+    "old_before": "2025-04-18",
+    "warnings": [
+      {
+        "kind": "rating_gap",
+        "source": "capterra",
+        "avg_rating": 4.22,
+        "overall_avg_rating": 2.88,
+        "gap": 1.34,
+        "rated": 9
+      },
+      {
+        "kind": "rating_gap",
+        "source": "trustpilot",
+        "avg_rating": 1.75,
+        "overall_avg_rating": 2.88,
+        "gap": -1.13,
+        "rated": 8
+      }
+    ]
+  },
+  "switching": {
+    "away": [
+      {
+        "quote": "Wenn das so weitergeht, werden wir kündigen.",
+        "url": "https://example.org/omr/kammfux/202",
+        "source": "omr",
+        "rating": 2.0,
+        "date": "2026-07-30",
+        "alternative": null,
+        "themes": [
+          "pricing",
+          "billing"
+        ]
+      },
+      {
+        "quote": "Wir haben gekündigt und sind zu Föhnora gewechselt.",
+        "url": "https://example.org/trustpilot/kammfux/302",
+        "source": "trustpilot",
+        "rating": 1.0,
+        "date": "2026-08-02",
+        "alternative": "Föhnora",
+        "themes": [
+          "billing",
+          "support"
+        ]
+      },
+      {
+        "quote": "We moved to Strähnwerk.",
+        "url": "https://example.org/trustpilot/kammfux/304",
+        "source": "trustpilot",
+        "rating": 1.0,
+        "date": "2026-04-09",
+        "alternative": "Strähnwerk",
+        "themes": [
+          "double_booking",
+          "support"
+        ]
+      },
+      {
+        "quote": "Automatisch um ein Jahr verlängert, obwohl ich rechtzeitig gekündigt hatte.",
+        "url": "https://example.org/trustpilot/kammfux/305",
+        "source": "trustpilot",
+        "rating": 2.0,
+        "date": "2026-01-14",
+        "alternative": null,
+        "themes": [
+          "billing"
+        ]
+      },
+      {
+        "quote": "Ich suche eine Alternative.",
+        "url": "https://example.org/trustpilot/kammfux/306",
+        "source": "trustpilot",
+        "rating": 2.0,
+        "date": "2025-09-30",
+        "alternative": null,
+        "themes": [
+          "pricing"
+        ]
+      },
+      {
+        "quote": "Ich bin zurück zum Papierkalender, da weiß ich wenigstens, was drinsteht.",
+        "url": "https://example.org/trustpilot/kammfux/308",
+        "source": "trustpilot",
+        "rating": 2.0,
+        "date": "2026-10-10",
+        "alternative": null,
+        "themes": [
+          "double_booking"
+        ]
+      }
+    ],
+    "toward_original": [
+      {
+        "quote": "Wir sind vom Terminbuch zu Kammfux gewechselt und bereuen es nicht.",
+        "url": "https://example.org/capterra/kammfux/105",
+        "source": "capterra",
+        "rating": 5.0,
+        "date": "2025-12-02",
+        "alternative": "Kammfux",
+        "themes": []
+      },
+      {
+        "quote": "Wir sind von Strähnwerk zu Kammfux gewechselt, weil die Buchungsseite hier schöner ist.",
+        "url": "https://example.org/omr/kammfux/206",
+        "source": "omr",
+        "rating": 4.0,
+        "date": "2026-10-01",
+        "alternative": "Kammfux",
+        "themes": []
+      }
+    ],
+    "reasons": [
+      {
+        "id": "billing",
+        "label": {
+          "en": "Payments, cancelling and refunds",
+          "de": "Zahlung, Kündigung und Erstattung"
+        },
+        "count": 3
+      },
+      {
+        "id": "double_booking",
+        "label": {
+          "en": "Double bookings",
+          "de": "Doppelbuchungen"
+        },
+        "count": 2
+      },
+      {
+        "id": "pricing",
+        "label": {
+          "en": "Price and value",
+          "de": "Preis und Preis-Leistung"
+        },
+        "count": 2
+      },
+      {
+        "id": "support",
+        "label": {
+          "en": "Support that does not answer",
+          "de": "Support antwortet nicht"
+        },
+        "count": 2
+      }
+    ],
+    "alternatives": [
+      {
+        "name": "Föhnora",
+        "count": 1,
+        "sources": [
+          "trustpilot"
+        ]
+      },
+      {
+        "name": "Strähnwerk",
+        "count": 1,
+        "sources": [
+          "trustpilot"
+        ]
+      }
+    ]
+  },
+  "by_segment": null,
+  "dropped": 1,
+  "duplicates": 1
+}

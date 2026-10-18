@@ -33,8 +33,9 @@ The feature matrix with effort is the core. Build the offer in this order:
    Use the agency's own historical numbers. If there are none, the values
    above are placeholders: say in the offer notes that they are assumptions,
    so the team can challenge them.
-2. **Ranges, not points.** Every number is low-high. State the contingency.
-   If the ranges are wide (recon from assumptions, many unknown rows), say so
+2. **Ranges, not points.** Every number is low-high, copied from
+   `teardown/estimate.md` exactly as printed, without rounding, in the
+   offer and in the answer. State the contingency. If the ranges are wide (recon from assumptions, many unknown rows), say so
    and offer a paid discovery phase that turns them into a fixed price.
 3. **Assumptions and exclusions.** List the `skip` rows (with reasons), the
    unverified and unestimated rows, the hard parts from recon, and what the
@@ -50,35 +51,70 @@ The feature matrix with effort is the core. Build the offer in this order:
 6. **Legal flags**, short: what the distance check requires and which
    launch obligations apply (`legal-eu-dach.md`). Recommend a legal review;
    do not give legal advice.
+7. **What done means.** For a build offer, attach the milestones and
+   must-feature acceptance criteria from `teardown/build-brief.md`, so the
+   client signs off on testable criteria, not on a feeling.
 
 ## The report
 
 Structure for a competitor teardown report (also works as the first chapter
-of an offer):
+of an offer). A section whose mode or add-on was not run says "not
+researched" and offers it as a next step; it is never filled from general
+knowledge.
 
 1. **Summary**: five bullets. What the original does, what its customers
    hate (with sample size), the opportunity, the recommended scope, the
    effort range.
-2. **Product map**: core loop, screens or page types, flows, with counts.
-3. **What customers hate and ask for**: top themes with numbers and one or
-   two linked quotes each; thin themes marked thin. If voice of customer was
-   not run, write "not researched" and offer it as a next step; never fill
-   it from general knowledge.
-4. **Opportunity and positioning**: the recommended angle and why.
-5. **Scope options**: MVP / Plus / Full with features, person-days and price
+2. **Market overview** (when discover ran, or the client asks who else is
+   out there): the landscape matrix and positioning map from
+   `teardown/landscape.md` and `teardown/landscape.svg`, every cell linked
+   to its source; unverified rows marked or left out. When the client named
+   the reference product, one line saying so is enough.
+3. **Product map**: core loop, screens or page types, flows, with counts.
+4. **How it is found** (the visibility add-on): page types and counts,
+   markets, search data with tool and date, the AI-answer sample as "named
+   in x of y". Values nobody measured say "not measured".
+5. **What customers hate and ask for**: top themes with numbers and one or
+   two linked quotes each, thin themes marked thin, the sample bias by
+   source, and why customers leave and where they go. Run
+   `reviews.py --verify` on the report before it is sent.
+6. **Opportunity and positioning**: the needs and the recommended angle,
+   and why. If the client's sales team competes against the original,
+   attach the battle card (`references/battlecard.md`); it is internal to
+   the client, because reviewer quotes are on it.
+7. **Scope options**: MVP / Plus / Full with features, person-days and price
    range.
-6. **Build or buy**.
-7. **Risks**: technical hard parts, legal flags, dependencies.
-8. **Next steps**: what the client decides, what happens after.
+8. **Build or buy**.
+9. **Risks**: technical hard parts, legal flags (including accessibility
+   under the BFSG), dependencies.
+10. **Next steps**: what the client decides, what happens after.
 
-Deliver it in whatever format the session supports best: a document or page
-artifact, a PDF, or a Word file if the client wants to edit it.
+Write the report as `teardown/report.md` in the client's language, then
+build one HTML file from it and the teardown files behind it:
+
+```bash
+python3 $SKILL/scripts/report.py teardown --lang de --title "Wettbewerbsanalyse: X" \
+  --as-of 2026-10-17 --out teardown/report.html
+```
+
+`report.html` is self-contained (no external fonts, scripts or images, so it
+opens offline and can be forwarded or printed to PDF) and accessible
+(language set, landmarks, a skip link, real headings and table headers). It
+puts `report.md` first, then the market overview with the map inlined, the
+product map, how the original is found, the reviews analysis, the needs and
+fixes, the estimate, the battle card marked internal, and the legal
+checklist. A section whose mode did not run says "not researched". Run
+`reviews.py --verify` on `report.md` and the other quoted files before
+building it. If the client wants to edit the report, hand over a document
+or Word file made from `report.md` instead.
 
 ## Things that do not go into client material
 
 - Screenshots of the original in anything public (internal reports to the
   client are fine).
 - Reviewer quotes as testimonials.
-- Claims about the original that are not backed by a linked source.
+- Claims about the original that are not backed by a linked source, and in
+  anything public (a comparison page, a sales deck) any claim that is not
+  verified and dated (`references/battlecard.md`).
 - Internal notes, margins, doubts about the team's estimates.
 - Promises of a "perfect copy" or of legal safety.

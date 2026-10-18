@@ -1,8 +1,10 @@
 {
-  "_about": "Read by sweep.py (brand mode) and checked before launch. avoid: the original's names, company names and product names. domains: its domains. colors: its brand colours as hex. near: Delta E below which a colour counts as 'the same colour at a glance' (warning). allow: files where the name is there on purpose (licence attribution, a reviewed comparison page).",
+  "_about": "Read by sweep.py (brand mode) and checked before launch. avoid: the original's names, company names and product names. domains: its domains. colors: its brand colours as hex. near: Delta E below which a colour counts as 'the same colour at a glance' (warning). allow: files where the name is there on purpose (licence attribution, a reviewed comparison page). palette and pairs: the new product's colours and the combinations the design uses, read by contrast.py (sweep.py ignores them).",
   "avoid": ["Original Name", "Original Company GmbH"],
   "domains": ["original.com"],
   "colors": ["#006bff"],
   "near": 10,
-  "allow": ["LICENSE", "NOTICE.md"]
+  "allow": ["LICENSE", "NOTICE.md"],
+  "palette": {"text": "#1c1917", "bg": "#ffffff", "primary": "#c2410c", "on-primary": "#ffffff"},
+  "pairs": [["text", "bg"], ["on-primary", "primary"], ["primary", "bg", "ui"]]
 }
