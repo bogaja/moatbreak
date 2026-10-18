@@ -34,6 +34,9 @@ conduct.
 - **Databases** (EU database right, § 87a ff. UrhG): taking a substantial
   part of a catalogue, listing set or review corpus can infringe even if no
   single entry is protected. Do not import the original's product data.
+  The legal way to fill the new product: its users enter their own data or
+  import their own export, or an official API or partner feed is used
+  within its terms.
 - **Imitation as unfair competition.**
   - Germany, § 4 Nr. 3 UWG: offering an imitation of a product with
     "wettbewerbliche Eigenart" (competitive individuality) is unfair if it
@@ -73,11 +76,60 @@ signature elements is the classic case for confusion about origin. Any
 
 ## 4. Marketing against the original
 
-- **Comparative advertising** (Germany § 6 UWG, based on the EU directive)
-  is allowed if it compares relevant, verifiable features objectively,
-  without denigrating, causing confusion or riding on the original's
-  reputation. A comparison or "alternative to X" page is possible, but
-  have it reviewed.
+Any advertising that makes the competitor or its products identifiable is
+comparative advertising (Germany § 6 (1) UWG): an "X alternative" page, an
+"X vs us" table, a sales slide, what a rep sends to a prospect. Austria
+(§ 2a UWG) and Switzerland (Art. 3 (1) lit. e UWG) have their own rules;
+the EU baseline is Directive 2006/114/EC, Art. 4. `references/battlecard.md`
+turns this section into a checklist for the lawyer, and `battlecard.py`
+lists which feature claims are verified, fresh and backed by a public link.
+
+- **Comparative advertising is allowed only if all six hold** (§ 6 (2)
+  UWG):
+  1. the products meet the same need or serve the same purpose;
+  2. the comparison is objective and about one or more material, relevant,
+     verifiable and typical features, or the price;
+  3. it causes no confusion between the advertiser and the competitor, their
+     products or their marks;
+  4. it does not take unfair advantage of, or damage, the reputation of the
+     competitor's mark;
+  5. it does not denigrate the competitor's products, activities or
+     business;
+  6. it does not present the product as an imitation or replica of one sold
+     under a protected mark. "X clone", "like X but cheaper" and "our X
+     copy" fail here, which matters for every rebuild.
+- **Misleading claims and omissions** apply on top. § 5 UWG covers
+  statements in comparative advertising too: every statement about them and
+  about you must be true and current when it is seen, and "the only", "the
+  first" or "the best" need proof of a clear lead. § 5a UWG makes leaving out
+  what the reader needs misleading as well: the feature they have and you
+  lack, the add-on price of your feature, the plan a feature requires. A
+  table that shows only the rows you win can mislead when the left-out rows
+  matter for the decision; a selection as such is allowed (CJEU, Lidl
+  Belgium, C-356/04).
+- **Verifiable means checkable.** Say where and how the reader can check
+  each claim (CJEU, Lidl Belgium, C-356/04, 2006), and keep the proof: a
+  dated PDF or archive copy of their page, so a challenge can be answered.
+  Reviews of their product are not proof of a fact about it, and quoting
+  them on a page invites a denigration claim (also § 4 nos. 1 and 2 UWG:
+  disparaging a competitor, or spreading claims about it that cannot be
+  proven).
+- **Price comparisons** compare like with like: same plan level, scope and
+  billing period, the same currency, net or gross on both sides, mandatory
+  extras included; consumers see total prices including VAT (PAngV). Give
+  the date and the source ("Stand: 17.10.2026", their pricing page). When
+  their prices change, update or remove the comparison: an outdated price
+  comparison is misleading.
+- **Their name and mark on your page.** Use the word as far as needed to say
+  who is compared (title, table header, URL path on your own domain). No
+  logo, colours, trade dress, screenshots or copied text; add that the mark
+  belongs to its owner and that there is no affiliation. A comparison that
+  meets all conditions of comparative advertising cannot be stopped under
+  trademark law (CJEU, O2 v Hutchison, C-533/06, 2008); one that presents
+  your product as a replica takes unfair advantage of the mark (CJEU,
+  L'Oréal v Bellure, C-487/07, 2009). Their mark never goes into your
+  domain, product name or app name. Have every comparison page reviewed
+  before it goes live.
 - **Search ads.** Bidding on the competitor's brand as a keyword is
   generally allowed in the EU (CJEU, Google France, 2010) as long as the ad
   makes clear it is not from them. Do not use their mark in the ad text,
@@ -113,7 +165,12 @@ US templates usually miss these. Check the ones that apply to the product.
   e-commerce services (online shops, booking and banking services, apps used
   to conclude consumer contracts). Micro-enterprises (under 10 employees and
   at most EUR 2 million turnover or balance sheet) are exempt for services.
-  Practical bar: WCAG 2.1 AA (EN 301 549), plus an accessibility statement.
+  Practical bar: WCAG 2.1 AA (EN 301 549). For the lawyer: accessibility
+  information under § 14 BFSG with Anlage 3 (a description of the service
+  and how it meets the requirements), in the terms or in another clearly
+  visible way. A requirement that is not met is allowed only under the
+  Act's exceptions (fundamental alteration, disproportionate burden), with a
+  documented assessment. The lawyer confirms the content.
 
 **Selling to consumers online (shops, subscriptions, paid apps)**
 - Withdrawal: cancellation policy (Widerrufsbelehrung) and model withdrawal
@@ -162,3 +219,16 @@ US templates usually miss these. Check the ones that apply to the product.
   into public material, ads or the store listing.
 - Do not contact the original's employees for internal information, and do
   not use documents from former employees or partners.
+- **Research data is personal data** (DSGVO), for the lawyer to confirm: the
+  review sample (`teardown/reviews.csv`; its URLs often lead to a reviewer's
+  profile), the quotes in every report and battle card, the saved files in
+  `teardown/visibility/` (AI answers verbatim) and `teardown/proof/`. The
+  legal basis is usually legitimate interests (Art. 6 (1) (f) DSGVO); write
+  the balancing down once per project. Data minimisation: no author names or
+  handles in any file; names of staff, customers or reviewers left out of
+  quotes with "..." (`reviews.py --verify` accepts the cut). A battle card
+  hands reviewer quotes to a client's sales team: it stays internal to that
+  team. Keep `teardown/` out of public repositories, and delete the review
+  sample, the saved answers and the proof copies when the project ends,
+  unless a claim still in use needs its proof; then keep only that proof,
+  with the date it may be deleted.

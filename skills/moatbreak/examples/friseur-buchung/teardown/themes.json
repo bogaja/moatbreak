@@ -1,0 +1,183 @@
+{
+  "_demo": "fiktiv / synthetic demo data. Copy of scripts/themes.json, tuned for a hair salon booking app: four category themes at the top of themes (double_booking, online_booking, processing_time, no_show), 'doppelt' removed from the general theme data, and two category leaving phrases (back to the paper diary) added to switch_patterns.",
+  "_about": "Themes reviews.py sorts feedback into. Patterns are Python regular expressions, matched case-insensitively against the review text, grouped by language (add a key such as \"tr\" or \"fr\" for more). kind is complaint (something users hate) or request (something users want that is missing). Labels can be a string or {\"en\": ..., \"de\": ...}. Edit freely and add the category's own words (for a booking app: double booking, time zone, no-show; for a shop: the brand's product names). switch_patterns find reviews that say the writer left, cancelled or is looking for something else. In a pattern, {alt} marks where a named alternative stands: the words there are reported as the alternative only when they start with a capital letter or a digit (copied, never guessed), and a pattern with {alt} only counts when it finds such a name. The shipped patterns are written in the first person (I, we, or a sentence that starts with the verb), so 'the salon cancelled my appointment' or 'let me switch to dark mode' do not count as someone leaving; add the category's own leaving words in the same way. A number alone or a common word that German or a UI capitalises (Konkurrenten, Anbieter, Dark Mode, Premium) is never reported as a name.",
+  "switch_patterns": {
+      "en": [
+          "\\b(i|we)('ve| have| had)?( finally| just| already| now| then| all)? (switched|migrated) (over |back |away )?(to|from)\\b",
+          "^(switched|migrated) (over |back |away )?(to|from)\\b",
+          "\\b(i|we)('re| are|'m| am)( now| currently)? (switching|migrating) (over |back |away )?(to|from)\\b",
+          "\\b(i|we)('ve| have| had)?( finally| just| already| now| then| all)? moved (over to|back to|away from)\\b",
+          "\\b(i|we)('ve| have| had)?( finally| just| already| now| then| all)? moved (over |back )?to (a |an |another |the )?(different |new |other )?(app|tool|software|provider|system|solution|competitor|platform|service)\\b",
+          "(^|\\b(i|we|and|so|then)('ve| have| had)?( finally| just| already| now| then| also)? )cancel+ed\\b(?! (my |our |the |a |an |this |that |all |every |two |three |several )?(\\w+ )?(appointments?|bookings?|meetings?|events?|orders?|reservations?|sessions?|calls?|classes|lessons?|slots?|visits?)\\b)",
+          "\\bcancel+(ed|ing) (my|our) (subscription|account|plan|membership|contract|licen[cs]e)\\b",
+          "\\bunsubscribed\\b(?! from (the |their |all |your )?(e-?mails?|newsletters?|mailing|marketing|notifications?|sms|texts?)\\b)",
+          "\\blooking for (an |another )?alternatives?\\b",
+          "\\b(i|we)('ll| will|'m going to| am going to|'re going to| are going to|'m gonna| am gonna|'m about to| am about to|'re about to| are about to) (cancel|uninstall|leave|switch (to|from|away|providers|tools|apps))\\b(?! (a |an |this |my |our )?(reviews?|comments?|feedback|ratings?|notes?|messages?|tips?)\\b)(?! (my |our |the |a |an |this |that |all |every |two |three |several )?(\\w+ )?(appointments?|bookings?|meetings?|events?|orders?|reservations?|sessions?|calls?|classes|lessons?|slots?|visits?)\\b)",
+          "\\buninstall(ed|ing)\\b(?! and (then )?re-?install)",
+          "\\bdeleted (the|this) app\\b",
+          "\\breplaced (it|them|this) with\\b",
+          "(\\b(i|we)('ve| have| had|'re| are|'m| am)?( finally| just| already| now| then| all| currently)? |^|(?<=[.!?]\\s))(switched|switching|migrated|migrating) (over |back )?(from [^.!?,]{1,40}? )?to {alt}",
+          "\\bwe('ve| have| had)?( finally| just| already| now| then| all)? moved (over |back )?(from [^.!?,]{1,40}? )?to {alt}",
+          "\\bi('ve| have| had)?( finally| just| already| now| then)? moved (over to|back to|from [^.!?,]{1,40}? to) {alt}",
+          "(\\b(i|we)('m| am|'re| are|'ll| will)? |^|(?<=[.!?]\\s))(going|went|go) back to {alt}",
+          "\\b(i|we)('ve| have| had|'re| are|'m| am)?( finally| just| already| now)? (left|leaving) \\w+ for {alt}",
+          "\\breplaced (it|them|this) with {alt}",
+          "\\bback to (paper|a paper (diary|calendar))\\b"
+      ],
+      "de": [
+          "\\b(bin|sind)\\b[^.!?]{0,60}\\bgewechselt\\b",
+          "\\b(habe|haben|hab)\\b[^.!?]{0,20}\\b(den anbieter|die software|das tool|das programm|die app|das system) gewechselt\\b",
+          "\\bgek(ü|ue)ndigt\\b",
+          "\\babo (beendet|storniert)\\b",
+          "\\bnutze (jetzt|nun|inzwischen|mittlerweile) (lieber|stattdessen|wieder)\\b",
+          "\\bsuche (jetzt |nun |dringend |schon )?(nach )?(einer |eine )?alternative",
+          "\\bsteige (jetzt |nun |bald )?(auf [^.!?]{1,40} )?um\\b",
+          "\\bumgestiegen\\b",
+          "\\b(werde|werden|will|wollen) (\\w+ )?(wechseln|k(ü|ue)ndigen|umsteigen)\\b",
+          "\\bdeinstalliert\\b",
+          "\\bapp gel(ö|oe)scht\\b",
+          "\\bzu {alt} gewechselt\\b",
+          "\\bgewechselt (zu|auf) {alt}",
+          "\\bwechsle (jetzt |bald |nun )?(zu|auf) {alt}",
+          "\\bauf {alt} umgestiegen\\b",
+          "\\bsteige (jetzt |nun |bald )?auf {alt} um\\b",
+          "\\bnutze (jetzt|nun|inzwischen|mittlerweile) (lieber |stattdessen |wieder )?{alt}",
+          "\\bzur(ü|ue)ck zum (papier|termin)(kalender|buch)\\b"
+      ]
+  },
+  "request_patterns": {
+      "en": [
+          "\\bi wish\\b",
+          "\\bplease add\\b",
+          "\\bwould be (nice|great|good|helpful)\\b",
+          "\\bwould love\\b",
+          "\\bneeds? (a|an|the|to|more)\\b",
+          "\\bno way to\\b",
+          "\\bthere'?s no (way|option)\\b",
+          "\\b(can'?t|cannot|unable to) (even )?(add|change|edit|set|choose|export|import|customi[sz]e|connect|undo|delete|turn off)\\b",
+          "\\b(missing|lacks|lacking)\\b",
+          "\\bdoesn'?t (have|support|let|allow)\\b",
+          "\\bif only\\b",
+          "\\bfeature request\\b",
+          "\\bwhy (can'?t|isn'?t|doesn'?t)\\b"
+      ],
+      "de": [
+          "\\bich w(ü|ue)nschte\\b",
+          "\\bw(ü|ue)nsche mir\\b",
+          "\\bh(ä|ae)tte (gerne?|lieber)\\b",
+          "\\bw(ä|ae)re (schön|schoen|toll|gut|super|klasse|praktisch|hilfreich|nett)\\b",
+          "\\bbitte (f(ü|ue)gt|f(ü|ue)ge|baut|bringt|macht|erg(ä|ae)nzt)\\b",
+          "\\bfehlt\\b",
+          "\\bfehlen\\b",
+          "\\bvermisse\\b",
+          "\\bes gibt (leider )?keine (m(ö|oe)glichkeit|option|funktion)\\b",
+          "\\bkeine (m(ö|oe)glichkeit|option) (zu|f(ü|ue)r)\\b",
+          "\\b(kann|k(ö|oe)nnte) man (leider )?(nicht|kein)",
+          "\\bman kann (leider )?(nicht|kein)",
+          "\\bwarum (kann|gibt|ist|geht)\\b",
+          "\\bleider (keine?) (m(ö|oe)glichkeit|option|funktion|export|schnittstelle)\\b"
+      ]
+  },
+  "themes": [
+    {"id": "double_booking", "label": {"en": "Double bookings", "de": "Doppelbuchungen"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bdouble.?book", "\\bbooked twice\\b", "\\bsame (slot|time)\\b", "\\boverlapping (appointments|bookings)\\b"],
+       "de": ["\\bdoppelt (gebucht|vergeben|belegt)\\b", "\\bdoppelbuchung", "\\bdoppelte (termine|buchungen)\\b", "\\bgleichzeitig im (laden|salon)\\b"]}},
+    {"id": "online_booking", "label": {"en": "Online booking for clients", "de": "Online-Buchung für Kundinnen und Kunden"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bonline booking\\b", "\\bbooking page\\b", "\\bbook online\\b"],
+       "de": ["\\bbuchungsseite\\b", "\\bonline.?buchung", "\\bonline (buchen|gebucht)\\b"]}},
+    {"id": "processing_time", "label": {"en": "Processing time for colour and highlights", "de": "Einwirkzeit bei Farbe und Strähnen"}, "kind": "request",
+     "patterns": {
+       "en": ["\\bprocessing time\\b"],
+       "de": ["\\beinwirkzeit"]}},
+    {"id": "no_show", "label": {"en": "No-shows, deposits and cancellation fees", "de": "No-Shows, Anzahlung und Ausfallgebühr"}, "kind": "request",
+     "patterns": {
+       "en": ["\\bno.?shows?\\b", "\\bdeposit", "\\bcancellation fee"],
+       "de": ["\\bno.?shows?\\b", "\\banzahlung", "\\bausfallgeb(ü|ue)hr", "\\bnicht erschienen\\b"]}},
+    {"id": "pricing", "label": {"en": "Price and value", "de": "Preis und Preis-Leistung"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bexpensive\\b", "\\boverpriced\\b", "\\bpric(e|es|ey|ing)\\b", "\\bpaywall", "\\bsubscription\\b", "\\bper (month|seat|user)\\b", "\\bfree (plan|tier|version)\\b", "\\bupgrade to\\b", "\\bpremium\\b", "\\bnot worth\\b", "\\bcost(s|ly)?\\b"],
+       "de": ["\\bteuer", "\\b(ü|ue)berteuert\\b", "\\bpreis", "\\babo\\b", "\\babonnement\\b", "\\bkostenpflichtig\\b", "\\bbezahlschranke\\b", "\\bpro (monat|nutzer|benutzer|lizenz|platz)\\b", "\\bkostenlose (version|variante)\\b", "\\bnicht (sein |das )?geld wert\\b", "\\bpreiserh(ö|oe)hung\\b", "\\bkosten\\b"]}},
+    {"id": "billing", "label": {"en": "Payments, cancelling and refunds", "de": "Zahlung, Kündigung und Erstattung"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bcharged\\b", "\\brefund", "\\bcancel(l?ing|l?ed|lation)?\\b", "\\bauto.?renew", "\\bhidden (fee|charge)", "\\bbilling\\b", "\\bscam\\b", "\\bcredit card\\b"],
+       "de": ["\\babgebucht\\b", "\\b(r(ü|ue)ck)?erstattung\\b", "\\bk(ü|ue)ndig", "\\bgek(ü|ue)ndigt\\b","\\babo.?falle\\b", "\\bautomatisch verl(ä|ae)ngert\\b", "\\bversteckte (kosten|geb(ü|ue)hren)\\b", "\\babzocke\\b", "\\bbetrug\\b", "\\bkreditkarte\\b", "\\blastschrift\\b"]}},
+    {"id": "bugs", "label": {"en": "Bugs and crashes", "de": "Fehler und Abstürze"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bcrash(es|ed|ing)?\\b", "\\bbugs?\\b", "\\bbuggy\\b", "\\bglitch", "\\bfreez(e|es|ing)\\b", "\\bbroken\\b", "\\b(doesn'?t|does not|stopped) work", "\\bnot working\\b", "\\berror\\b"],
+       "de": ["\\bst(ü|ue)rzt\\b", "\\babgest(ü|ue)rzt\\b", "\\babsturz", "\\bfehler(haft)?\\b", "\\bfunktioniert (nicht|gar nicht|nicht mehr|kaum)\\b", "\\bgeht (nicht|gar nicht|nicht mehr)\\b", "\\bh(ä|ae)ngt sich auf\\b", "\\bkaputt\\b", "\\bverbuggt\\b"]}},
+    {"id": "performance", "label": {"en": "Slow, laggy, heavy", "de": "Langsam und träge"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bslow\\b", "\\blag(gy|s)?\\b", "\\bloading\\b", "\\btakes forever\\b", "\\bbattery\\b", "\\bsluggish\\b", "\\bheavy\\b"],
+       "de": ["\\blangsam\\b", "\\bl(ä|ae)dt (ewig|st(ä|ae)ndig|lange|zu lange)\\b", "\\bladezeit", "\\bruckel", "\\btr(ä|ae)ge\\b", "\\bakku\\b"]}},
+    {"id": "data", "label": {"en": "Sync and lost data", "de": "Synchronisation und Datenverlust"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bsync(ing|s|ed)?\\b", "\\blost (my|all)\\b", "\\bdisappear", "\\bdata loss\\b", "\\bwiped\\b", "\\bbackup\\b", "\\bduplicat"],
+       "de": ["\\bsynchronisier", "\\bdaten (sind |waren )?(weg|verloren|gel(ö|oe)scht)\\b", "\\bverschwunden\\b", "\\bdatenverlust\\b", "\\bsicherung\\b"]}},
+    {"id": "ux", "label": {"en": "Confusing or clunky to use", "de": "Umständlich und unübersichtlich"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bconfus", "\\bhard to (use|find|navigate|understand)\\b", "\\bcomplicated\\b", "\\bcluttered\\b", "\\bunintuitive\\b", "\\bnot intuitive\\b", "\\bclunky\\b", "\\btoo many (steps|clicks|taps)\\b", "\\blearning curve\\b", "\\bcan'?t find\\b"],
+       "de": ["\\bun(ü|ue)bersichtlich\\b", "\\bkompliziert\\b", "\\bumst(ä|ae)ndlich\\b", "\\bverwirrend\\b", "\\b(nicht |un)intuitiv\\b", "\\bzu viele (schritte|klicks)\\b", "\\b(schwer|kaum) zu finden\\b", "\\bfindet man nicht\\b", "\\bbenutzerunfreundlich\\b"]}},
+    {"id": "support", "label": {"en": "Support that does not answer", "de": "Support antwortet nicht"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bcustomer (service|support)\\b", "\\bsupport (team|is|was)\\b", "\\bno (response|reply)\\b", "\\bnever (replied|responded|heard back)\\b", "\\bticket\\b", "\\bchat ?bot\\b"],
+       "de": ["\\bkundenservice\\b", "\\bkundendienst\\b", "\\bder support\\b", "\\bsupport (ist|war|hat|antwortet|reagiert)\\b", "\\bkeine (antwort|r(ü|ue)ckmeldung)\\b", "\\b(nie|nicht) (geantwortet|zur(ü|ue)ckgemeldet)\\b", "\\bnicht erreichbar\\b", "\\bhotline\\b"]}},
+    {"id": "account", "label": {"en": "Login and account problems", "de": "Login und Konto"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\blog ?in\\b", "\\bsign ?in\\b", "\\bpassword\\b", "\\blocked out\\b", "\\bverification\\b", "\\b2fa\\b", "\\bdelete (my )?account\\b"],
+       "de": ["\\banmeld(en|ung)\\b", "\\beinloggen\\b", "\\bpasswort\\b", "\\bgesperrt\\b", "\\bverifizier", "\\bkonto (l(ö|oe)schen|gel(ö|oe)scht)\\b", "\\bzwei.?faktor\\b"]}},
+    {"id": "notifications", "label": {"en": "Notifications and spam", "de": "Benachrichtigungen und Spam"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bnotification", "\\bspam", "\\btoo many emails\\b", "\\bpush\\b", "\\breminders?\\b"],
+       "de": ["\\bbenachrichtigung", "\\bzu viele (mails|e-mails|nachrichten)\\b", "\\berinnerung"]}},
+    {"id": "ads", "label": {"en": "Ads", "de": "Werbung"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bads\\b", "\\badvert", "\\bad.?supported\\b", "\\bpop.?ups?\\b"],
+       "de": ["\\bwerbung\\b", "\\bwerbeanzeigen?\\b"]}},
+    {"id": "updates", "label": {"en": "A redesign or update made it worse", "de": "Update oder Redesign hat es verschlechtert"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\b(new|latest|recent) (update|version|design)\\b", "\\bredesign", "\\bused to be\\b", "\\bbring back\\b", "\\bsince the update\\b"],
+       "de": ["\\b(seit|nach) (dem|der) (letzten |neuen )?(update|version)\\b", "\\bneues design\\b", "\\bfr(ü|ue)her (war|ging|konnte)\\b", "\\bwieder zur(ü|ue)ck\\b"]}},
+    {"id": "privacy", "label": {"en": "Privacy and permissions", "de": "Datenschutz und Berechtigungen"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bprivacy\\b", "\\btracking\\b(?! (number|link|code))", "\\bsell(s|ing)? (my )?data\\b", "\\bpermissions?\\b", "\\bcreepy\\b"],
+       "de": ["\\bdatenschutz", "\\bdsgvo\\b", "\\bberechtigungen\\b", "\\bdaten (weiter|verkauf)"]}},
+    {"id": "shipping", "label": {"en": "Shipping and delivery", "de": "Versand und Lieferung"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bshipping\\b", "\\bdelivery\\b", "\\barrived (late|damaged|broken)\\b", "\\bnever (arrived|received)\\b", "\\btracking (number|link|code)\\b", "\\bcourier\\b", "\\bfree shipping\\b", "\\b(dhl|ups|fedex|usps)\\b"],
+       "de": ["versand", "\\bliefer(ung|zeit|dauer|termin)", "\\bgeliefert\\b", "\\bnie (angekommen|geliefert)\\b", "\\bzustell", "\\bpaket\\b.{0,30}\\b(nie|besch(ä|ae)digt|versp(ä|ae)tet|zu sp(ä|ae)t)\\b", "\\bsendungsverfolgung\\b", "\\b(dhl|hermes|dpd|gls)\\b"]}},
+    {"id": "returns", "label": {"en": "Returns and exchanges", "de": "Retouren und Umtausch"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\breturn (policy|label|process|window)\\b", "\\breturned (it|the|my)\\b", "\\bexchange\\b", "\\bsent (it )?back\\b"],
+       "de": ["\\bretoure", "\\br(ü|ue)cksendung\\b", "\\bumtausch", "\\bzur(ü|ue)ckgeschickt\\b", "\\bwiderruf"]}},
+    {"id": "quality", "label": {"en": "Product quality", "de": "Produktqualität"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bpoor quality\\b", "\\bcheap(ly made)?\\b", "\\bbroke after\\b", "\\bnot as (described|pictured)\\b", "\\bfake\\b"],
+       "de": ["\\bqualit(ä|ae)t\\b", "\\bbillig\\b", "\\bnach (\\w+ )?(tagen|wochen) kaputt\\b", "\\bnicht wie (beschrieben|abgebildet)\\b", "\\bf(ä|ae)lschung\\b"]}},
+    {"id": "size_fit", "label": {"en": "Size and fit", "de": "Größe und Passform"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bruns (small|large|big)\\b", "\\btoo (small|tight|loose|big|large)\\b", "\\bsize (chart|guide)\\b", "\\bsizing\\b", "\\bdoesn'?t fit\\b", "\\bfit(s)? (badly|poorly)\\b"],
+       "de": ["\\bf(ä|ae)llt (klein|gro(ß|ss)|eng|weit)", "gr(ö|oe)(ß|ss)entabelle", "\\bpassform\\b", "\\bzu (klein|gro(ß|ss)|eng|weit)\\b", "\\bpasst (leider )?nicht\\b"]}},
+    {"id": "checkout", "label": {"en": "Checkout and payment options", "de": "Kasse und Zahlungsarten"}, "kind": "complaint",
+     "patterns": {
+       "en": ["\\bcheckout\\b", "\\bpayment (failed|options?|methods?)\\b", "\\bpaypal\\b", "\\bklarna\\b", "\\bapple pay\\b", "\\b(coupon|discount|promo) code\\b"],
+       "de": ["\\bbezahlvorgang\\b", "\\bzahlungsa(rt|rten)\\b", "\\bzahlungsmethode", "\\bkasse\\b", "\\bwarenkorb\\b", "\\b(gutschein|rabatt)code\\b", "\\bkauf auf rechnung\\b", "\\bper rechnung (zahlen|kaufen|bezahlen)\\b", "\\brechnungskauf\\b"]}},
+    {"id": "integrations", "label": {"en": "Integrations, import and export", "de": "Schnittstellen, Import und Export"}, "kind": "request",
+     "patterns": {
+       "en": ["\\bintegrat", "\\bzapier\\b", "\\bgoogle (calendar|sheets|drive)\\b", "\\boutlook\\b", "\\bslack\\b", "\\bapi\\b", "\\bexport\\b", "\\bimport\\b", "\\bcsv\\b", "\\bwebhook"],
+       "de": ["\\bschnittstelle", "\\banbindung\\b", "\\bdatev\\b", "\\blexoffice\\b", "\\bsevdesk\\b", "\\bexportieren\\b", "\\bimportieren\\b"]}},
+    {"id": "platforms", "label": {"en": "Platforms, offline and mobile", "de": "Plattformen, offline und mobil"}, "kind": "request",
+     "patterns": {
+       "en": ["\\boffline\\b", "\\bandroid\\b", "\\bipad\\b", "\\btablet\\b", "\\bdesktop app\\b", "\\bmac app\\b", "\\bwindows\\b", "\\bmobile (app|version)\\b", "\\bweb version\\b"],
+       "de": ["\\bdesktop.?app\\b", "\\bmac.?app\\b", "\\bweb.?version\\b", "\\bkeine app\\b", "\\bapp f(ü|ue)r (android|ios|das ipad)\\b"]}},
+    {"id": "customisation", "label": {"en": "Customisation and control", "de": "Anpassung und Kontrolle"}, "kind": "request",
+     "patterns": {
+       "en": ["\\bcustomi[sz]", "\\bdark mode\\b", "\\btheme\\b", "\\bbranding\\b", "\\bwhite.?label\\b", "\\btemplates?\\b", "\\bsettings?\\b", "\\boption to\\b"],
+       "de": ["\\banpass(en|bar|ung)", "\\bindividualisier", "\\bdunkelmodus\\b", "\\bvorlagen?\\b", "\\beinstellung(en)?\\b"]}},
+    {"id": "collaboration", "label": {"en": "Teams and sharing", "de": "Teams und Teilen"}, "kind": "request",
+     "patterns": {
+       "en": ["\\bteam(s|mates?)?\\b", "\\bshar(e|ing)\\b", "\\bcollaborat", "\\bmultiple (users|accounts|people)\\b", "\\broles?\\b", "\\bpermissions for\\b"],
+       "de": ["\\bteilen\\b", "\\bzusammenarbeit\\b", "\\bmehrere (nutzer|benutzer|personen|konten|mitarbeiter)\\b", "\\brollen\\b", "\\bnutzerrechte\\b"]}}
+  ]
+}

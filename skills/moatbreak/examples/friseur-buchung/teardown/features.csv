@@ -1,0 +1,30 @@
+fiktiv / synthetic demo data,feature,area,priority,original,clone,effort,notes,source,checked
+fiktiv,Salon-Konto mit E-Mail anlegen,onboarding,must,yes,yes,S,,https://kammfux.example.com/hilfe/registrierung,2026-10-02
+fiktiv,Leistungen mit Dauer und Preis anlegen,leistungen,must,yes,yes,M,,https://kammfux.example.com/hilfe/leistungen,2026-10-02
+fiktiv,Mitarbeiterinnen mit Arbeitszeiten,team,must,yes,yes,M,,https://kammfux.example.com/hilfe/team,2026-10-02
+fiktiv,Öffentliche Buchungsseite mit freien Zeiten,buchungsseite,must,yes,yes,L,,https://kammfux.example.com/funktionen,2026-10-02
+fiktiv,Termin als Gast ohne Konto buchen,buchungsseite,must,yes,yes,M,,https://kammfux.example.com/funktionen,2026-10-02
+fiktiv,Bestätigung per E-Mail an Kundin und Salon,benachrichtigungen,must,yes,yes,S,,https://kammfux.example.com/hilfe/benachrichtigungen,2026-10-02
+fiktiv,Termin per Link verschieben oder absagen,buchungsseite,must,yes,partial,M,"absagen fertig, verschieben fehlt",https://kammfux.example.com/hilfe/absagen,2026-10-02
+fiktiv,Salon-Kalender Tag und Woche pro Mitarbeiterin,kalender,must,yes,yes,L,,https://kammfux.example.com/funktionen,2026-10-02
+fiktiv,Telefon-Termine von Hand eintragen,kalender,must,yes,yes,S,,"Testkonto des Nutzers, eigener Zugang",2026-10-03
+fiktiv,Kundenkartei mit Terminverlauf,kunden,must,yes,yes,M,,https://kammfux.example.com/hilfe/kundenkartei,2026-10-02
+fiktiv,"Zeit beim Buchen sperren, kein Doppeltermin",kalender,must,no,yes,M,"eigene Lösung, Bedürfnis 1 in fixes.md",,
+fiktiv,Erinnerung per E-Mail 24 Stunden vorher,benachrichtigungen,should,yes,yes,S,,https://kammfux.example.com/hilfe/benachrichtigungen,2026-10-02
+fiktiv,SMS-Erinnerung im Grundpreis,benachrichtigungen,should,partial,yes,M,"Kammfux: SMS erst im Tarif Plus (69 €), 0,09 € pro SMS; Bedürfnis 2",https://kammfux.example.com/preise,2026-10-02
+fiktiv,Mehrere Leistungen in einer Buchung,buchungsseite,should,yes,yes,M,,https://kammfux.example.com/funktionen,2026-10-02
+fiktiv,Einwirkzeit: Mitarbeiterin in der Zeit buchbar,kalender,should,no,yes,L,"Friseur-Nische, Bedürfnis 3; Kammfux-Hilfe: wird nicht unterstützt",https://kammfux.example.com/hilfe/einwirkzeit,2026-10-02
+fiktiv,Preise nach Stylist-Stufe,leistungen,should,yes,partial,M,"zwei feste Stufen fertig, frei benennbare Stufen fehlen",https://kammfux.example.com/hilfe/leistungen,2026-10-02
+fiktiv,Allergie-Notiz mit ausdrücklicher Einwilligung,kunden,should,yes,yes,M,"Gesundheitsdaten, Art. 9 DSGVO",https://kammfux.example.com/hilfe/kundenkartei,2026-10-02
+fiktiv,"Abo im Konto selbst kündigen, monatlich",konto,should,no,yes,S,"Bedürfnis 2; Kammfux-AGB: Laufzeit 12 Monate, Kündigung schriftlich 3 Monate vor Ende",https://kammfux.example.com/agb,2026-10-02
+fiktiv,Online-Zahlung bei der Buchung,zahlungen,should,yes,no,L,aus einer Vorab-Prüfung,https://kammfux.example.com/funktionen,2026-06-30
+fiktiv,Anzahlung oder Ausfallgebühr bei Online-Buchung,zahlungen,should,no,no,L,"Bedürfnis 4; braucht Online-Zahlung; Kammfux-Hilfe: keine Anzahlungen",https://kammfux.example.com/hilfe/zahlungen,2026-10-02
+fiktiv,Abgleich aller Geräte in unter 5 Sekunden,kalender,should,no,yes,L,Bedürfnis 1,,
+fiktiv,Google-Kalender der Mitarbeiterin abgleichen,integrationen,could,yes,no,M,,https://kammfux.example.com/integrationen,2026-10-02
+fiktiv,Mehrere Standorte,team,could,yes,no,L,Kammfux: erst im Tarif Premium (119 €),https://kammfux.example.com/preise,2026-10-02
+fiktiv,Auswertung Umsatz und Auslastung,auswertung,could,yes,partial,M,"Auslastung fertig, Umsatz fehlt",https://kammfux.example.com/funktionen,2026-10-02
+fiktiv,Gutscheine online einlösen,kasse,could,unknown,no,M,"Wunsch aus einer Bewertung, beim Original nicht geprüft",,
+fiktiv,Rückruf-Wunsch an den Support aus dem Kalender,konto,could,no,no,S,Bedürfnis 5,,
+fiktiv,Kasse mit TSE,kasse,could,yes,skip,,"eigenes, zertifizierungspflichtiges Produkt: Schnittstelle zu einer Kasse statt Nachbau",https://kammfux.example.com/funktionen,2026-10-02
+fiktiv,Salon-Verzeichnis für Endkunden,marketing,could,yes,skip,,"Netzwerk und Reichweite des Originals, nicht nachbaubar",https://kammfux.example.com/finder,2026-10-02
+fiktiv,Fuchs-Maskottchen und Farbpaar Orange-Petrol,marke,could,yes,skip,,"Signature-Element, nicht nachahmen",https://kammfux.example.com/,2026-10-02

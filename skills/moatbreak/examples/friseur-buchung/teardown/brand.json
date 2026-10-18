@@ -1,0 +1,15 @@
+{
+  "_demo": "fiktiv / synthetic demo data. Kammfux is an invented product; its names, domain and colours below are invented too. palette and pairs are the new product Taktilo (also invented), checked by contrast.py.",
+  "_about": "Read by sweep.py (brand mode) and checked before launch. avoid: the original's names, company names and product names. domains: its domains. colors: its brand colours as hex. near: Delta E below which a colour counts as 'the same colour at a glance' (warning). allow: files where the name is there on purpose (licence attribution, a reviewed comparison page). palette and pairs: the new product's colours and the combinations the design uses, read by contrast.py (sweep.py ignores them).",
+  "avoid": ["Kammfux", "Kammfux Software GmbH", "Kammfux Finder"],
+  "domains": ["kammfux.example.com"],
+  "colors": ["#f26b1d", "#0e5a63"],
+  "near": 10,
+  "allow": ["LICENSE", "NOTICE.md"],
+  "palette": {"text": "#1d1a22", "muted": "#76707e", "bg": "#faf8f5", "surface": "#ffffff",
+              "primary": "#5a3d9a", "on-primary": "#ffffff", "free": "#2f7a4f",
+              "error": "#b3261e", "border": "#8b8496"},
+  "pairs": [["text", "bg"], ["muted", "bg"], ["text", "surface"], ["on-primary", "primary"],
+            ["primary", "bg", "ui"], ["free", "surface", "ui"], ["error", "surface"],
+            ["border", "surface", "ui"]]
+}

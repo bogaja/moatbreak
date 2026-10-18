@@ -17,7 +17,23 @@ customer), diff (now parity) and brand skills, merged into one skill with
 four modes, and the scripts `reviews.py`, `parity.py`, `sweep.py` and
 `imgdiff.py` (imgdiff.py is unchanged apart from its header).
 
-Not taken: architect, design, build, backend, test, launch and deploy.
+Not taken: architect, design, build, backend, test, launch and deploy. The
+launch reference and `listing.py` added in 1.1.0 were written fresh from the
+stores' published limits and Moatbreak's own rules, without using Replica's
+launch skill or its `listing.py`.
+
+New in 1.1.0 and not derived from Replica: discover mode and
+`landscape.py`, the visibility add-on and `sitemap.py`, the build handoff
+(`references/build-handoff.md`, `templates/build-brief.md`), `contrast.py`
+(written fresh from the WCAG 2.2 definitions of relative luminance and
+contrast ratio, without using Replica's `contrast.py`), the battle card
+(`battlecard.py`, `references/battlecard.md`, `templates/battlecard.md`),
+`seo.py`, `sources.py`, `report.py`, `listing.py` and `references/launch.md`,
+the quote check, source-bias, segment and switching parts of `reviews.py`,
+the worked example in `examples/` and the evals in `evals/`. All of it is
+new work by Bogaja LLC. The build handoff writes a brief for whatever
+build tools the session has; it does not take over Replica's architect,
+build, test or deploy skills.
 
 ## What changed
 
@@ -52,4 +68,4 @@ Not taken: architect, design, build, backend, test, launch and deploy.
   planning folder.
 - Brand checks extended with DPMA, TMview, Swissreg, see.ip, company
   registers, EUIPO DesignView and German work-title protection.
-- Tests for every change (71 tests, standard library only).
+- Tests for every change (231 tests, standard library only).

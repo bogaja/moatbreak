@@ -97,6 +97,15 @@ class Score(unittest.TestCase):
         with redirect_stderr(io.StringIO()):
             self.assertEqual(parity.main([p]), 2)
 
+    def test_extra_fields_name_the_line(self):
+        p = write(self.tmp.name, "comma.csv", "feature,priority,clone,notes\n"
+                  "Booking,must,yes,ok\nExport,should,no,CSV, PDF\n")
+        with self.assertRaises(parity.MatrixError) as ctx:
+            parity.load(p)
+        self.assertIn("line 3 has more fields than the header", str(ctx.exception))
+        with redirect_stderr(io.StringIO()):
+            self.assertEqual(parity.main([p]), 2)
+
     def test_cli_fail_under(self):
         with redirect_stdout(io.StringIO()):
             self.assertEqual(parity.main([self.path, "--fail-under", "80"]), 1)
