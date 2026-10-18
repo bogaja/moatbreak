@@ -3,6 +3,82 @@
 Newest run first. Add a new run above the old ones; do not edit an old run.
 How to run and grade the evals: `README.md` in this folder.
 
+## Run 3: 2026-10-18
+
+| | |
+| --- | --- |
+| Skill | Moatbreak 1.1.1, working tree on branch `fix/recon-sources` on top of commit `9775d93` (1.1.0); not committed yet, so the tested state has no commit of its own |
+| Change since run 2 | `sources.py` also checks the sources table in `teardown/recon.md`; the recon template and `references/recon.md` were tightened to match |
+| Evals run | all 18 (144 assertions), once each; evals 1 and 4 two more times each |
+| Agent | a fresh subagent per eval, model `claude-opus-5-5` (inherited from the session) |
+| Grader | a separate subagent, same model |
+| Web access | matched the `web` field in every eval, as in run 2 |
+| Trigger | judged from the frontmatter description alone; correct in all 18 |
+| Result | 142 of 144 assertions passed in the run of all 18 (the result of record); the four extra runs of evals 1 and 4: 36 of 36 |
+
+### Method
+
+- Same as run 2: each eval's fixtures were copied into its own isolated
+  project folder, and the grader judged every assertion strictly and as
+  written: pass or fail.
+- Measure only: the skill was not changed during this run.
+- Evals 1 and 4 are the two that failed on the sources table in run 2, so
+  each ran two more times. This is a sample, not a benchmark.
+
+### Final results
+
+Mode labels from the table in `README.md`. Every result is from the run of
+all 18 evals.
+
+| id | mode | passed | trigger |
+| --- | --- | --- | --- |
+| 1 | trigger, recon of a shop | 9/9 | correct |
+| 2 | trigger, voice of customer | 9/9 | correct |
+| 3 | discover (step 0) | 9/9 | correct |
+| 4 | recon with estimate | 9/9 | correct |
+| 5 | voice of customer | 9/9 | correct |
+| 6 | voice of customer without sources | 7/7 | correct |
+| 7 | battle card | 9/9 | correct |
+| 8 | "X Alternative" page | 9/9 | correct |
+| 9 | parity | 8/8 | correct |
+| 10 | brand | 8/9 | correct |
+| 11 | clean-room trap | 8/8 | correct |
+| 12 | legal launch in Germany | 9/9 | correct |
+| 13 | negative trigger | 5/5 | correct |
+| 14 | client offer | 9/9 | correct |
+| 15 | visibility without an SEO tool | 8/8 | correct |
+| 16 | build handoff | 8/8 | correct |
+| 17 | negative trigger, near miss | 4/5 | correct |
+| 18 | negative trigger, near miss | 5/5 | correct |
+| | **total, all 18 evals** | **142/144** | **18/18** |
+
+Extra runs: eval 1, runs 2 and 3: 9/9 each; eval 4, runs 2 and 3: 9/9
+each.
+
+The sources-table assertion (eval 1, assertion 4; eval 4, assertion 2)
+passed in all three runs of both evals.
+
+### Assertions that still fail
+
+Two, both of which also failed in run 2 round D. Each assertion is verbatim
+from `evals.json`; the grader's evidence follows it.
+
+- Eval 10, assertion 2: "Each shortlisted name has check rows for at least
+  DPMAregister, EUIPO eSearch plus or TMview, the .de and .at domains, the
+  app stores and handles, and every result is 'to run'; no check is called
+  frei, verfügbar, available or clear". Only Kadeno has a check table (all
+  rows "zu prüfen"); the other shortlisted names have none.
+- Eval 17, assertion 4: "Any price given names its source page and the date
+  it was read, or the answer says it could not be checked; no price is given
+  from memory as current". The source page is named (calendly.com/pricing,
+  plus a source list), but the answer never says when it was read: no
+  "Stand" and no reading date.
+
+### Not covered by this run
+
+- A fix for the two assertions above.
+- More than one run per eval, except evals 1 and 4.
+
 ## Run 2: 2026-10-18
 
 | | |

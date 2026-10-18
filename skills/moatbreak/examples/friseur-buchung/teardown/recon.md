@@ -16,14 +16,20 @@ Marktüberblick: `landscape.md` und `landscape.svg`. Der Nutzer hat Kammfux am 0
 | 1 | Branchenseite | https://kammfux.example.com/friseure | 2026-10-02 | Job und Zielkunde, Beleg in competitors.csv |
 | 2 | Funktionsseite | https://kammfux.example.com/funktionen | 2026-10-02 | Buchungsseite, Kalender, mehrere Leistungen, Online-Zahlung, Auswertung, Kasse |
 | 3 | Preisseite | https://kammfux.example.com/preise | 2026-10-02 | Tarife Basis, Plus, Premium |
-| 4 | Hilfe: Registrierung, Leistungen, Team, Benachrichtigungen, Absagen, Kundenkartei | https://kammfux.example.com/hilfe/registrierung (und Nachbarseiten, siehe features.csv) | 2026-10-02 | Felder, Einstellungen, Grenzen |
-| 5 | Hilfe: Einwirkzeit | https://kammfux.example.com/hilfe/einwirkzeit | 2026-10-02 | Einwirkzeiten werden nicht unterstützt |
-| 6 | Hilfe: Zahlungen | https://kammfux.example.com/hilfe/zahlungen | 2026-10-02 | keine Anzahlungen |
-| 7 | Integrationen | https://kammfux.example.com/integrationen | 2026-10-02 | Google-Kalender |
-| 8 | AGB | https://kammfux.example.com/agb | 2026-10-02 | 12 Monate Laufzeit, Kündigung schriftlich 3 Monate vor Ende |
-| 9 | Salon-Verzeichnis | https://kammfux.example.com/finder | 2026-10-02 | Verzeichnis für Endkunden |
-| 10 | Testkonto des Nutzers | eigener Zugang, kein öffentlicher Link | 2026-10-03 | Telefon-Termine von Hand (S08) |
-| 11 | Funktionsseite, Vorab-Prüfung | https://kammfux.example.com/funktionen | 2026-06-30 | Online-Zahlung; älter als 90 Tage, vor Verwendung neu prüfen |
+| 4 | Hilfe: Registrierung | https://kammfux.example.com/hilfe/registrierung | 2026-10-02 | Salon-Konto mit E-Mail |
+| 5 | Hilfe: Leistungen | https://kammfux.example.com/hilfe/leistungen | 2026-10-02 | Dauer und Preis, Preise nach Stylist-Stufe |
+| 6 | Hilfe: Team | https://kammfux.example.com/hilfe/team | 2026-10-02 | Mitarbeiterinnen mit Arbeitszeiten |
+| 7 | Hilfe: Benachrichtigungen | https://kammfux.example.com/hilfe/benachrichtigungen | 2026-10-02 | Bestätigung per E-Mail, Erinnerung 24 Stunden vorher |
+| 8 | Hilfe: Absagen | https://kammfux.example.com/hilfe/absagen | 2026-10-02 | Termin per Link verschieben oder absagen |
+| 9 | Hilfe: Kundenkartei | https://kammfux.example.com/hilfe/kundenkartei | 2026-10-02 | Terminverlauf, Notizen, Allergie-Notiz |
+| 10 | Hilfe: Einwirkzeit | https://kammfux.example.com/hilfe/einwirkzeit | 2026-10-02 | Einwirkzeiten werden nicht unterstützt |
+| 11 | Hilfe: Zahlungen | https://kammfux.example.com/hilfe/zahlungen | 2026-10-02 | keine Anzahlungen |
+| 12 | Integrationen | https://kammfux.example.com/integrationen | 2026-10-02 | Google-Kalender |
+| 13 | AGB | https://kammfux.example.com/agb | 2026-10-02 | 12 Monate Laufzeit, Kündigung schriftlich 3 Monate vor Ende |
+| 14 | Salon-Verzeichnis | https://kammfux.example.com/finder | 2026-10-02 | Verzeichnis für Endkunden |
+| 15 | Funktionsseite, Vorab-Prüfung | https://kammfux.example.com/funktionen | 2026-06-30 | Online-Zahlung; älter als 90 Tage, vor Verwendung neu prüfen |
+
+Ohne Seiten-URL und daher nicht in der Tabelle: das Testkonto des Nutzers (eigener Zugang, kein öffentlicher Link), gelesen am 2026-10-03, Beleg für Telefon-Termine von Hand (S08).
 
 Changelog-Eintrag 2026-09 (laut competitors.csv): das Produkt ist aktiv. Sichtbarkeit (Sitemap, Suche, KI-Antworten): nicht recherchiert.
 

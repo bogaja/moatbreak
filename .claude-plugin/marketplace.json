@@ -10,7 +10,7 @@
     {
       "name": "moatbreak",
       "description": "Competitor teardown for apps, SaaS, websites and online shops: finds sourced reference products for a niche, recon with effort estimate, search and AI visibility, voice of customer from linked public reviews, build brief with a WCAG 2.2 / BFSG checklist, rebuild parity, a new brand with a distance check, a sourced battle card, launch copy with a store-listing check, and an offline HTML client report. EU/DACH legal checklist, English and German.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/bogaja/moatbreak"

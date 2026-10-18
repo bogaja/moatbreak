@@ -72,7 +72,8 @@ teardown/competitors.csv   candidate products with evidence links, discover only
                            (from $SKILL/templates/competitors.csv)
 teardown/landscape.md      landscape matrix and proposal, from landscape.py
 teardown/landscape.svg     positioning map, from landscape.py --svg
-teardown/recon.md          product map (from $SKILL/templates/recon-map.md)
+teardown/recon.md          product map (from $SKILL/templates/recon-map.md); its sources
+                           table (one page URL and read-on date per row) is checked by sources.py
 teardown/features.csv      feature matrix with effort (from $SKILL/templates/features.csv,
                            a filled example is in templates/features.example.csv; the
                            columns source,checked hold the evidence for claims about the original)
@@ -208,7 +209,7 @@ python3 $SKILL/scripts/report.py teardown --lang de --title "Wettbewerbsanalyse:
 | `contrast.py` | WCAG 2.2 contrast ratio for colour pairs or a palette (`palette` and `pairs` in `teardown/brand.json`): AA and AAA for text and large text, 3:1 for UI components, never rounded up to pass; for every failing pair the nearest darker and lighter variant that passes, calculated not guessed; exit 1 on a fail |
 | `sweep.py` | finds the original's names (with German spelling variants), domains and colours in the codebase, and warns on colours too close to theirs |
 | `battlecard.py` | one-page sales battle card from `feedback.json` and `features.csv`: weak themes with verbatim linked quotes, praise not to attack, our differentiators, objection stubs marked "to write", a SWOT whose every line cites its source row or theme; every claim about the competitor tagged verified / reported / assumed with source and date, checks older than 90 days flagged stale, and the claims fit for a comparison page (verified, fresh, public link) with a warning when the table shows only rows we win |
-| `sources.py` | checks the paper trail: every screenshot in `teardown/screens/` and every proof copy in `teardown/proof/` needs a row in `teardown/sources.csv` with its URL and the day it was read; exit 1 on a file without one, a bad URL or date, or a row whose file is gone |
+| `sources.py` | checks the paper trail: every screenshot in `teardown/screens/` and every proof copy in `teardown/proof/` needs a row in `teardown/sources.csv` with its URL and the day it was read, and every row of the sources table in `teardown/recon.md` exactly one page URL and its read-on date; exit 1 on a file without one, a bad URL or date, a row whose file is gone, a recon.md without a sources table or with an empty one, or a recon row with no URL, several URLs, a search query, a search engine's result page or a pointer to another file |
 | `listing.py` | App Store and Google Play texts against the stores' limits (name and subtitle 30, keywords 100, promotional text 170, description 4000; title 30, short 80, full 4000), empty fields, and the original's names from `brand.json`, with German spelling variants and near spellings; exit 1 on a fail |
 | `report.py` | the teardown's Markdown files as one self-contained, accessible HTML page for the client (`--lang de`): the written report first, the map inlined, the battle card marked internal, "not researched" for every mode that did not run; no external assets |
 
@@ -246,7 +247,9 @@ that are not the user's.
   dated PDF in `teardown/proof/` (`2026-10-17-pricing.pdf`).
 - **The paper trail**: one row per file in `teardown/sources.csv` (file, url,
   read_on), then `sources.py teardown --as-of {today}`; it exits 1 while any
-  file has no URL and date. A screenshot without a source is not evidence.
+  file has no URL and date, or a row of the sources table in recon.md has no
+  single page URL and read-on date. A screenshot without a source is not
+  evidence.
 - The scripts stay offline on purpose: the agent fetches, the scripts check,
   and nothing needs an API key.
 

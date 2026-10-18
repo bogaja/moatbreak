@@ -4,6 +4,33 @@ All notable changes to Moatbreak. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2026-10-18
+
+### Fixed
+
+- The sources table in `teardown/recon.md` is now checked by code, not only
+  by the rule in `references/recon.md`: `sources.py` also reads it (headings
+  `## Sources` or `## Quellen`) and exits 1 on a row whose URL cell does not
+  hold exactly one http(s) URL (no URL, two URLs even without a space
+  between them, a search query, a search engine's result page, a pointer
+  such as "siehe `visibility.md`"), on a read-on date that is missing or
+  after `--as-of`, and on a `recon.md` without a sources table or with an
+  empty one. The table is read the way GitHub renders it: outer pipes
+  optional, `\|` inside a cell, links with brackets or a title, code blocks
+  skipped, every table under the heading. Each message says what to do: one
+  row per page read, with its own URL, the result pages of a web search
+  listed one by one, URLs copied instead of pointing to another file. The
+  recon template and step 2 of the recon reference say the same, put a
+  source without a public page URL (the user's own account, a test order)
+  in one line under the table, and require `sources.py` to exit 0 before
+  recon is handed over; the gate table in `build-handoff.md`, the paper
+  trail in `SKILL.md` and the distance check in `legal-eu-dach.md` match.
+  The worked example's `recon.md` lists each help page on its own row, its
+  README runs `sources.py`, and `report.html` is regenerated. 8 new tests,
+  239 in all. Eval run 3 (`evals/RESULTS.md`): 142 of 144 assertions and 18
+  of 18 triggers in one run of all 18 evals, and evals 1 and 4, which failed
+  on the sources table in run 2, passed in full in three runs each.
+
 ## [1.1.0] - 2026-10-18
 
 ### Added

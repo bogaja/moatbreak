@@ -17,7 +17,8 @@ German throughout.
   products without an evidence link are never proposed, every battle-card
   claim about the competitor is tagged verified, reported or assumed with
   source and date, every SEO number carries its tool and export date, and
-  `sources.py` fails on a screenshot or proof copy without its URL and date.
+  `sources.py` fails on a screenshot, a proof copy or a row of the recon
+  sources table without its own page URL and date.
 - **EU/DACH legal checklist**: UWG imitation and comparative advertising
   (§ 6 UWG), Impressum, DSGVO (including the research data itself), BFSG
   (EN 301 549 / WCAG 2.1 AA; the build brief targets WCAG 2.2 AA), as flags
@@ -25,7 +26,7 @@ German throughout.
 - **Effort in person-days and money**, with contingency, overheads, a day
   rate and an offer template.
 - **English and German** reviews, themes and reports (`--lang de`).
-- **Twelve standard-library Python scripts with 231 tests**, no installs, no
+- **Twelve standard-library Python scripts with 239 tests**, no installs, no
   API keys and no network access. The agent reads pages with the session's
   browser; the scripts check what it brings back.
 
@@ -132,7 +133,7 @@ access. They live in `skills/moatbreak/scripts/`.
 | `contrast.py` | WCAG 2.2 contrast check for colour pairs or a whole palette (AA/AAA text, large text, UI components), with the nearest passing shade or tint calculated for every failing pair |
 | `sweep.py` | finds the original's names (with German spelling variants), domains and colours in a codebase, and warns on colours too close to theirs |
 | `battlecard.py` | turns feedback.json and features.csv into a battle card: every claim about the competitor tagged verified, reported or assumed with source and date, a SWOT with the source of each line, and the claims fit for a public comparison page |
-| `sources.py` | fails when a screenshot or proof copy in `teardown/` has no URL and date in `teardown/sources.csv` |
+| `sources.py` | fails when a screenshot or proof copy in `teardown/` has no URL and date in `teardown/sources.csv`, or a row of the sources table in `teardown/recon.md` has no single page URL and date |
 | `listing.py` | App Store and Google Play texts against the stores' limits, empty fields and the original's names (German spelling variants and near spellings) |
 | `report.py` | the teardown as one self-contained, accessible HTML report in the client's language, with the battle card marked internal and "not researched" where a mode did not run |
 
@@ -172,7 +173,7 @@ The tests check the scripts. Two folders check what the agent writes:
 - [`skills/moatbreak/evals/evals.json`](skills/moatbreak/evals/evals.json):
   18 test prompts with the behaviour expected of the agent, three of them
   prompts the skill must not take, for checking the skill after a change.
-- [`skills/moatbreak/evals/RESULTS.md`](skills/moatbreak/evals/RESULTS.md): latest run (2026-10-18), round D: all 18 evals on the final state, 137 of 144 assertions passed, 18 of 18 triggers correct, one run per eval (a sample, not a benchmark).
+- [`skills/moatbreak/evals/RESULTS.md`](skills/moatbreak/evals/RESULTS.md): latest run (2026-10-18), run 3 on 1.1.1: all 18 evals, 142 of 144 assertions passed, 18 of 18 triggers correct, one run per eval plus two more runs each of evals 1 and 4, 36 of 36 (a sample, not a benchmark).
 
 ## Limits
 

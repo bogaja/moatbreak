@@ -48,7 +48,7 @@ The user wants to build a booking app for hair salons in DACH and names no refer
 | `teardown/report.html` | script: report.py |
 | `teardown/recon.md`, `teardown/fixes.md`, `teardown/build-brief.md`, `teardown/brand.md`, `teardown/legal.md` | written by the agent, only with facts from the inputs |
 
-Not in the example: visibility (`sitemap.py`, `seo.py`, `visibility.md`), screenshots with `sources.py` and `imgdiff.py`, `sweep.py` and `listing.py` (there is no code and no store listing), `offer.md` and a comparison page (`compare.md`). The files say "nicht recherchiert" or "zu prüfen" for them.
+Not in the example: visibility (`sitemap.py`, `seo.py`, `visibility.md`), screenshots with `sources.csv` and `imgdiff.py` (`sources.py` checks only the sources table in `recon.md` here), `sweep.py` and `listing.py` (there is no code and no store listing), `offer.md` and a comparison page (`compare.md`). The files say "nicht recherchiert" or "zu prüfen" for them.
 
 ## Commands
 
@@ -60,6 +60,9 @@ SKILL=../..
 
 # Step 0: market overview and positioning map
 python3 $SKILL/scripts/landscape.py teardown/competitors.csv --lang de --market DACH --title "Buchungs-App für Friseure (fiktiv / synthetic demo data)" --svg teardown/landscape.svg --x price_from --y axis_y --x-label "Preis ab (EUR/Monat, netto)" --y-label "Kernaufgaben laut Website (von 8)" --out teardown/landscape.md
+
+# Step 1: every row of the sources table in recon.md has one page URL and its date
+python3 $SKILL/scripts/sources.py teardown --as-of 2026-10-17 --lang de
 
 # Step 2: voice of customer as a report and as JSON, then check the quotes in fixes.md
 python3 $SKILL/scripts/reviews.py teardown/reviews.csv --lang de --target "Kammfux (fiktiv)" --themes teardown/themes.json --as-of 2026-10-17 --out teardown/feedback.md
