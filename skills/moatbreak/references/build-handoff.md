@@ -268,7 +268,7 @@ gate is run on the build, after a milestone or before launch.
 | contrast | `python3 $SKILL/scripts/contrast.py --palette teardown/brand.json --markdown --out teardown/contrast.md` | exit 0 |
 | leftovers | `python3 $SKILL/scripts/sweep.py . --config teardown/brand.json` | exit 0, near-colour warnings looked at by eye |
 | store listing (apps) | `python3 $SKILL/scripts/listing.py teardown/listing.json --config teardown/brand.json` | exit 0 (`references/launch.md`) |
-| sources | `python3 $SKILL/scripts/sources.py teardown --as-of {today}` | exit 0: every screenshot and proof copy has its URL and date |
+| sources | `python3 $SKILL/scripts/sources.py teardown --as-of {today}` | exit 0: every screenshot and proof copy has its URL and date, and every row of the sources table in recon.md one page URL and its read-on date |
 | distance check | `teardown/legal.md` (`legal-eu-dach.md` section 3) | every row that must be distinct is distinct, no "same" |
 | launch obligations | `teardown/legal.md` (`legal-eu-dach.md` section 5) | every obligation that applies is ticked |
 | accessibility | step 5 checklist in the brief | every item ticked, with the test date |

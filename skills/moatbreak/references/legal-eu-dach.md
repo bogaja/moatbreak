@@ -67,7 +67,7 @@ sweep output, the trademark search with date).
 | images, icons, illustrations | distinct | own, licensed or open-licensed only, with licence noted |
 | overall impression of key screens | similar is acceptable only if every row above is distinct | imgdiff layout score plus the screens side by side, colour included |
 | domain, handles, store listing | distinct | no typo domains, no "X alternative" in the app name |
-| source of knowledge | public or own account only | the recon sources table |
+| source of knowledge | public or own account only | the recon sources table and the line under it for the user's own account |
 
 The rule of thumb: the more rows are "similar", the higher the risk, and a
 "similar" overall impression combined with similar colours, typeface or

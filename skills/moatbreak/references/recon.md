@@ -55,8 +55,14 @@ carry wider ranges and say why.
 
 ## Step 2: sources
 
-Build a sources table first, with a URL and the date read on every row. In
-order of value:
+Build a sources table first, one page per row with its own URL and the date
+read. A web search is not a source: list each result page you read as its
+own row; never point to another file ("see visibility.md"), copy its URLs.
+A source without a public page URL (the user's own account, a test order or
+purchase) goes in one line under the table with what was used and the date,
+not as a table row.
+Run `python3 $SKILL/scripts/sources.py teardown --as-of {today}` before
+recon is handed over; it must exit 0. In order of value:
 
 | source | what it gives you |
 | --- | --- |

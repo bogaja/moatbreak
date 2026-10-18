@@ -19,7 +19,7 @@ Bewertung je Zeile: gleich, ähnlich oder verschieden, mit Beleg. Eine Zeile ohn
 | Bilder, Icons, Illustrationen | verschieden | zu prüfen | Lizenzliste im Projekt fehlt noch |
 | Gesamteindruck der Hauptscreens | ähnlich nur, wenn alle Zeilen oben verschieden sind | zu prüfen | imgdiff.py braucht Screenshots beider Produkte (`parity.md` enthält keinen Layout-Vergleich) |
 | Domain, Handles, Store-Eintrag | verschieden | zu prüfen | Domains und Handles in `brand.md` noch offen; kein „Kammfux“ im App-Namen |
-| Herkunft des Wissens | nur öffentlich oder eigenes Konto | öffentlich und eigenes Konto | Quellentabelle in `recon.md`: öffentliche Seiten und das Testkonto des Nutzers |
+| Herkunft des Wissens | nur öffentlich oder eigenes Konto | öffentlich und eigenes Konto | Quellen in `recon.md`: öffentliche Seiten und das Testkonto des Nutzers |
 
 Ergebnis: nicht startbereit. 8 Zeilen sind noch zu prüfen.
 

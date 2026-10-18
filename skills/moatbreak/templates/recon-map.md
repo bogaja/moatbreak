@@ -7,6 +7,14 @@ Date: {{YYYY-MM-DD}}
 
 ## Sources
 
+<!-- One page per row, with its own URL and the day you read it. A web search
+is not a source: list each result page you read. Never "see file X": copy
+its URLs here. A source without a public page URL (the user's own account, a
+test order or purchase) goes in one line under the table with what was used
+and the date, not as a table row. Then run
+python3 $SKILL/scripts/sources.py teardown --as-of {today}; it must exit 0
+before recon is handed over. -->
+
 | # | source | URL | read on | notes |
 | --- | --- | --- | --- | --- |
 | 1 | help center | | | |
